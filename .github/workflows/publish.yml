@@ -13,10 +13,7 @@ jobs:
       with:
         node-version: 16
         cache: 'npm'
-        
+
     - run: npm ci
     - run: node ./index.js
-    - uses: JS-DevTools/npm-publish@v1
-      with:
-        token: ${{ secrets.NPM_TOKEN }}
-        dry-run: true
+    - run: node ./publish.js
