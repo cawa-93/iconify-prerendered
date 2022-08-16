@@ -3,7 +3,7 @@ A set of independent, generated view components for [iconify](https://iconify.de
 
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-direct-single.svg)](https://stand-with-ukraine.pp.ua)
 
-## Instalation
+## Installation
 Install the appropriate icon set
 ```
 npm i @iconify-prerendered/vue-<icon-set-name>
@@ -31,4 +31,4 @@ import { IconAccount } from '@iconify-prerendered/vue-mdi'
 </a>
 </template>
 ```
-Thats all you need.
+That's all you need.
