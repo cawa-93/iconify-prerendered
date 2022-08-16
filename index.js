@@ -34,47 +34,37 @@ async function buildCollection(collectionName) {
         iconsToRender = iconsToRender.concat(Object.keys(collection.aliases))
     }
 
-    const componentPath = path.resolve('dist', collectionName)
+    let declarations = `import { h } from 'vue';\n`
+    let typeDeclarations = `import type { DefineComponent } from 'vue';\n`
 
     for (const iconName of iconsToRender) {
         const icon = getIconData(collection, iconName, true)
+
+        const svg = iconToSVG(icon, icon) // FIXME: WTF?
+        const props = {
+            'xmlns': 'http://www.w3.org/2000/svg',
+            'xmlns:xlink': 'http://www.w3.org/1999/xlink',
+            innerHTML: svg.body,
+            ...svg.attributes,
+        }
+
+
         const componentName = capitalize(camelize('icon-' + iconName))
-        const componentCode = await renderComponentFile(icon, componentName)
+        const componentCode = renderVueComponent(componentName, props)
 
-        const componentFilename = `${iconName}.js`
-
-        await fs.promises.mkdir(componentPath, {recursive: true})
-        await fs.promises.writeFile(path.resolve(componentPath, componentFilename), componentCode)
+        declarations += `export const ${componentName} = ${componentCode};\n`
+        typeDeclarations += `export declare const ${componentName}: DefineComponent<{}, {}, any>;\n`
     }
+
+    const componentPath = path.resolve('dist', collectionName)
+    await fs.promises.mkdir(componentPath, {recursive: true})
+    await fs.promises.writeFile(path.resolve(componentPath, 'index.js'), declarations)
+    await fs.promises.writeFile(path.resolve(componentPath, 'index.d.ts'), typeDeclarations)
     await fs.promises.writeFile(path.resolve(componentPath, 'package.json'), generatePackageJson(collection))
 }
 
-/**
- *
- * @param {FullIconifyIcon} icon
- * @param {string} componentName
- * @returns {Promise<string>} rendered vue component
- */
-async function renderComponentFile(icon, componentName) {
-    const svg = iconToSVG(icon, icon) // FIXME: WTF?
-    const props = {
-        'xmlns': 'http://www.w3.org/2000/svg',
-        'xmlns:xlink': 'http://www.w3.org/1999/xlink',
-        innerHTML: svg.body,
-        ...svg.attributes,
-    }
-    return `
-import { h } from 'vue';
-export const ${componentName} = ${renderVueComponent(componentName, props)}
-export {${componentName} as default};
-    `.trim()
-}
-
 function renderVueComponent(componentName, props) {
-    return `{
-    name: '${componentName}',
-    setup() { return () => h('svg', ${JSON.stringify(props)}) }
-};`
+    return `{name: '${componentName}', setup() { return () => h('svg', ${JSON.stringify(props)}) }}`
 }
 
 /**
@@ -87,6 +77,8 @@ function generatePackageJson(collection) {
         name: `@iconify-prerendered/vue-${collection.prefix}`,
         version: `0.0.${collection.lastModified}`,
         description: `Pre-rendered into vue components ${collection.info.name}`,
+        main: './index.js',
+        types: './index.d.ts',
         peerDependencies: {
             vue: '*'
         }
