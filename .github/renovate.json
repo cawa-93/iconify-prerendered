@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "config:base",
+    ":semanticCommits",
+    ":semanticCommitTypeAll(deps)",
+    ":disableDependencyDashboard",
+    ":pinVersions",
+    ":automergeMinor",
+    ":automergeBranch",
+    ":onlyNpm"
+  ]
+}
