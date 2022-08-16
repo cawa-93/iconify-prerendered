@@ -2,9 +2,9 @@
 </script>
 
 <template>
-<div>
-  <IconZoomInRounded style="width: 20px" class="icon"/>
-</div>
+  <div>
+    <IconZoomInRounded class="icon" style="width: 20px"/>
+  </div>
 </template>
 
 <style scoped>

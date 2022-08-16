@@ -10,18 +10,18 @@ import SupportIcon from './icons/IconSupport.vue'
 <template>
   <WelcomeItem>
     <template #icon>
-      <DocumentationIcon />
+      <DocumentationIcon/>
     </template>
     <template #heading>Documentation</template>
 
     Vue’s
-    <a target="_blank" href="https://vuejs.org/">official documentation</a>
+    <a href="https://vuejs.org/" target="_blank">official documentation</a>
     provides you with all information you need to get started.
   </WelcomeItem>
 
   <WelcomeItem>
     <template #icon>
-      <ToolingIcon />
+      <ToolingIcon/>
     </template>
     <template #heading>Tooling</template>
 
@@ -32,53 +32,53 @@ import SupportIcon from './icons/IconSupport.vue'
     your components and web pages, check out
     <a href="https://www.cypress.io/" target="_blank">Cypress</a> and
     <a href="https://on.cypress.io/component" target="_blank"
-      >Cypress Component Testing</a
+    >Cypress Component Testing</a
     >.
 
-    <br />
+    <br/>
 
     More instructions are available in <code>README.md</code>.
   </WelcomeItem>
 
   <WelcomeItem>
     <template #icon>
-      <EcosystemIcon />
+      <EcosystemIcon/>
     </template>
     <template #heading>Ecosystem</template>
 
     Get official tools and libraries for your project:
-    <a target="_blank" href="https://pinia.vuejs.org/">Pinia</a>,
-    <a target="_blank" href="https://router.vuejs.org/">Vue Router</a>,
-    <a target="_blank" href="https://test-utils.vuejs.org/">Vue Test Utils</a>, and
-    <a target="_blank" href="https://github.com/vuejs/devtools">Vue Dev Tools</a>. If you need more
+    <a href="https://pinia.vuejs.org/" target="_blank">Pinia</a>,
+    <a href="https://router.vuejs.org/" target="_blank">Vue Router</a>,
+    <a href="https://test-utils.vuejs.org/" target="_blank">Vue Test Utils</a>, and
+    <a href="https://github.com/vuejs/devtools" target="_blank">Vue Dev Tools</a>. If you need more
     resources, we suggest paying
-    <a target="_blank" href="https://github.com/vuejs/awesome-vue">Awesome Vue</a>
+    <a href="https://github.com/vuejs/awesome-vue" target="_blank">Awesome Vue</a>
     a visit.
   </WelcomeItem>
 
   <WelcomeItem>
     <template #icon>
-      <CommunityIcon />
+      <CommunityIcon/>
     </template>
     <template #heading>Community</template>
 
     Got stuck? Ask your question on
-    <a target="_blank" href="https://chat.vuejs.org">Vue Land</a>, our official Discord server, or
-    <a target="_blank" href="https://stackoverflow.com/questions/tagged/vue.js">StackOverflow</a>.
+    <a href="https://chat.vuejs.org" target="_blank">Vue Land</a>, our official Discord server, or
+    <a href="https://stackoverflow.com/questions/tagged/vue.js" target="_blank">StackOverflow</a>.
     You should also subscribe to
-    <a target="_blank" href="https://news.vuejs.org">our mailing list</a> and follow the official
-    <a target="_blank" href="https://twitter.com/vuejs">@vuejs</a>
+    <a href="https://news.vuejs.org" target="_blank">our mailing list</a> and follow the official
+    <a href="https://twitter.com/vuejs" target="_blank">@vuejs</a>
     twitter account for latest news in the Vue world.
   </WelcomeItem>
 
   <WelcomeItem>
     <template #icon>
-      <SupportIcon />
+      <SupportIcon/>
     </template>
     <template #heading>Support Vue</template>
 
     As an independent project, Vue relies on community backing for its sustainability. You can help
     us by
-    <a target="_blank" href="https://vuejs.org/sponsor/">becoming a sponsor</a>.
+    <a href="https://vuejs.org/sponsor/" target="_blank">becoming a sponsor</a>.
   </WelcomeItem>
 </template>
