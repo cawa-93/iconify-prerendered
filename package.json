@@ -20,8 +20,5 @@
     "@iconify/json": "2.1.93",
     "@iconify/utils": "1.0.33",
     "@jsdevtools/npm-publish": "1.4.3"
-  },
-  "dependencies": {
-    "vue": "3.2.37"
   }
 }

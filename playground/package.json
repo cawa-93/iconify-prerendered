@@ -2,13 +2,10 @@
   "name": "playground",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview --port 4173"
+    "dev": "vite"
   },
   "dependencies": {
-    "iconify-standalone-vue": "file:../dist/material-symbols",
-    "material-symbols": "file:../dist/material-symbols",
+    "@iconify-prerendered/vue-bi": "file:../dist/bi",
     "vue": "^3.2.37"
   },
   "devDependencies": {
