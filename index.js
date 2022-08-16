@@ -77,7 +77,7 @@ function renderVueComponent(componentName, props) {
 function generatePackageJson(collection) {
   return JSON.stringify({
     name: `@iconify-prerendered/vue-${collection.prefix}`,
-    version: `0.0.${collection.lastModified}`,
+    version: `${packageJsonBase.version}.${collection.lastModified}`,
     description: `Pre-rendered into vue components ${collection.info.name}`,
     main: './index.js',
     types: './index.d.ts',
