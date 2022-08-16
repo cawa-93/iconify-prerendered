@@ -1,6 +1,8 @@
 # @iconify-prerendered
 A set of independent, generated view components for [iconify](https://iconify.design/) icons.
 
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-direct-single.svg)](https://stand-with-ukraine.pp.ua)
+
 ## Instalation
 Install the appropriate icon set
 ```
