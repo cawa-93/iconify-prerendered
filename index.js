@@ -84,6 +84,7 @@ function generatePackageJson(collection) {
         peerDependencies: {
             vue: '*'
         },
+        license: collection.info.license.spdx,
         author: packageJsonBase.author,
         bugs: packageJsonBase.bugs,
         homepage: packageJsonBase.homepage,
