@@ -1,7 +1,20 @@
 {
   "type": "module",
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "Alex Kozack",
+    "url": "https://kozack.me"
+  },
+  "bugs": {
+    "url": "https://github.com/cawa-93/iconify-prerendered/issues"
+  },
+  "homepage": "https://github.com/cawa-93/iconify-prerendered/",
+  "repository": "github:cawa-93/iconify-prerendered",
+  "keywords": [
+    "vue",
+    "components",
+    "icons",
+    "iconify"
+  ],
   "devDependencies": {
     "@iconify/json": "2.1.93",
     "@iconify/utils": "1.0.33",

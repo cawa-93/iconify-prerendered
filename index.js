@@ -3,6 +3,8 @@ import {getIconData, iconToSVG,} from '@iconify/utils';
 import * as fs from "fs";
 import * as path from "path";
 
+const packageJsonBase = JSON.parse(fs.readFileSync('./package.json', {encoding: 'utf8'}))
+
 /**
  * @param {string} s
  * @returns {string}
@@ -81,7 +83,16 @@ function generatePackageJson(collection) {
         types: './index.d.ts',
         peerDependencies: {
             vue: '*'
-        }
+        },
+        author: packageJsonBase.author,
+        bugs: packageJsonBase.bugs,
+        homepage: packageJsonBase.homepage,
+        repository: packageJsonBase.repository,
+        keywords: [
+          ...packageJsonBase.keywords,
+          collection.prefix,
+          collection.info.name,
+        ],
     })
 }
 
