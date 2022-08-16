@@ -1,5 +1,5 @@
 # @iconify-prerendered
-A set of independent, generated view components for iconify icons.
+A set of independent, generated view components for [iconify](https://iconify.design/) icons.
 
 ## Instalation
 Install the appropriate icon set
