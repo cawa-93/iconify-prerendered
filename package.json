@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@iconify/json": "2.1.93",
+    "@iconify/utils": "1.0.33"
+  },
+  "dependencies": {
+    "vue": "3.2.37"
+  }
+}
