@@ -27,7 +27,7 @@ import { IconAccount } from '@iconify-prerendered/vue-mdi'
 <template>
 <a>
   <IconAccount/>
-  Go to acount
+  Go to account
 </a>
 </template>
 ```
