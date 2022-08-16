@@ -2,8 +2,12 @@ on:
   push:
     branches: [ "main" ]
 
+concurrency:
+  group: publish-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  build:
+  publish:
 
     runs-on: ubuntu-latest
 
