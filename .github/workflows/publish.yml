@@ -1,6 +1,12 @@
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
+      - master
+    paths-ignore:
+      - '**.md'
+      - .editorconfig
+      - .gitignore
 
 concurrency:
   group: publish-${{ github.ref }}
