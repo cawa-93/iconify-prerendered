@@ -20,7 +20,7 @@
     "iconify"
   ],
   "devDependencies": {
-    "@iconify/json": "2.1.93",
+    "@iconify/json": "2.1.95",
     "@iconify/utils": "1.0.33",
     "@jsdevtools/npm-publish": "1.4.3"
   }
