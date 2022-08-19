@@ -66,10 +66,12 @@ async function buildCollection(collectionName) {
 
   const componentPath = path.resolve('dist', collectionName)
   await fs.promises.mkdir(componentPath, {recursive: true})
-  await fs.promises.writeFile(path.resolve(componentPath, 'index.js'), declarations)
-  await fs.promises.writeFile(path.resolve(componentPath, 'index.d.ts'), typeDeclarations)
-  await fs.promises.writeFile(path.resolve(componentPath, 'package.json'), generatePackageJson(collection))
-  await fs.promises.writeFile(path.resolve(componentPath, 'README.md'), generateReadme(collection))
+  await Promise.all([
+    fs.promises.writeFile(path.resolve(componentPath, 'index.js'), declarations),
+    fs.promises.writeFile(path.resolve(componentPath, 'index.d.ts'), typeDeclarations),
+    fs.promises.writeFile(path.resolve(componentPath, 'package.json'), generatePackageJson(collection)),
+    fs.promises.writeFile(path.resolve(componentPath, 'README.md'), generateReadme(collection)),
+  ])
 }
 
 function renderVueComponent(componentName, props) {
@@ -127,7 +129,7 @@ import {
 <template>
   <!-- And just use it in template -->
   ${
-  collection.info.samples.map(getComponentName).map(name => `<${name}/>`).join('\n  ')
+    collection.info.samples.map(getComponentName).map(name => `<${name}/>`).join('\n  ')
   }
 </template>
 \`\`\`
