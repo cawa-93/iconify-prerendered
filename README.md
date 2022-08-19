@@ -1,6 +1,5 @@
 # @iconify-prerendered
-
-A set of independent, generated view components for [iconify](https://iconify.design/) icons.
+A superset standalone icon-components for Vue with zero dependencies. Designed for excellent tree shaking.
 
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-direct-single.svg)](https://stand-with-ukraine.pp.ua)
 
@@ -35,7 +34,7 @@ import { IconAccount } from '@iconify-prerendered/vue-mdi'
 </template>
 ```
 
-That's all you need.
+That's all you need. No bundler plugins or IDE extensions. [It just works](https://twitter.com/alex_kozack/status/1560608558127140865).
 
 ## Available icons sets
 <!-- PACKAGE LIST START -->
