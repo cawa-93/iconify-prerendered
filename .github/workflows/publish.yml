@@ -27,7 +27,7 @@ jobs:
           cache: 'npm'
 
       - run: npm ci
-      - run: node ./index.js
+      - run: node ./build.js
       - run: node ./publish.js
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
