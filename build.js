@@ -22,6 +22,10 @@ function capitalize(s) {
 }
 
 
+function getComponentName(iconName) {
+  return capitalize(camelize('icon-' + iconName));
+}
+
 /**
  *
  * @param {string} collectionName
@@ -53,7 +57,7 @@ async function buildCollection(collectionName) {
     }
 
 
-    const componentName = capitalize(camelize('icon-' + iconName))
+    const componentName = getComponentName(iconName)
     const componentCode = renderVueComponent(componentName, props)
 
     declarations += `export const ${componentName} = ${componentCode};\n`
@@ -65,6 +69,7 @@ async function buildCollection(collectionName) {
   await fs.promises.writeFile(path.resolve(componentPath, 'index.js'), declarations)
   await fs.promises.writeFile(path.resolve(componentPath, 'index.d.ts'), typeDeclarations)
   await fs.promises.writeFile(path.resolve(componentPath, 'package.json'), generatePackageJson(collection))
+  await fs.promises.writeFile(path.resolve(componentPath, 'README.md'), generateReadme(collection))
 }
 
 function renderVueComponent(componentName, props) {
@@ -81,7 +86,7 @@ function generatePackageJson(collection) {
   return JSON.stringify({
     name: `@iconify-prerendered/vue-${collection.prefix}`,
     version: [major, minor, collection.lastModified].join('.'),
-    description: `Pre-rendered into vue components ${collection.info.name}`,
+    description: `A set of standalone icon components for views with zero dependencies. Designed for excellent tree shaking. ${collection.info.name}`,
     main: './index.js',
     types: './index.d.ts',
     peerDependencies: {
@@ -98,6 +103,38 @@ function generatePackageJson(collection) {
       collection.info.name,
     ],
   })
+}
+
+
+/**
+ * @param {IconifyJSON} collection
+ * @returns {string}
+ */
+function generateReadme(collection) {
+  return `
+# ${collection.info.name} components for Vue
+A set of standalone icon-components for Vue with zero dependencies. Designed for excellent tree shaking.
+
+## Usage
+\`\`\`vue
+<script setup>
+// Import components as usual
+import {
+    ${collection.info.samples.map(getComponentName).join(',\n    ')}
+} from '@iconify-prerendered/vue-${collection.prefix}'
+</script>
+
+<template>
+  <!-- And just use it in template -->
+  ${
+  collection.info.samples.map(getComponentName).map(name => `<${name}/>`).join('\n  ')
+  }
+</template>
+\`\`\`
+That's all you need. No bundler plugins or IDE extensions. It just works.
+
+See [full docs](${packageJsonBase.homepage}#readme) or [other available icons sets](${packageJsonBase.homepage}#available-icons-sets).
+`
 }
 
 
