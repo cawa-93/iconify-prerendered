@@ -18,8 +18,6 @@ npm i @iconify-prerendered/vue-bi
 npm i @iconify-prerendered/vue-mdi
 ```
 
-See [all available icon sets](https://icon-sets.iconify.design/)
-
 ## Usage
 
 Just import icon-component from set like usual.
@@ -39,7 +37,7 @@ import { IconAccount } from '@iconify-prerendered/vue-mdi'
 
 That's all you need.
 
-## Available icons packages
+## Available icons sets
 <!-- PACKAGE LIST START -->
 | Icon set | Package | Last modified |
 | --- | --- | --- |
