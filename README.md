@@ -3,6 +3,15 @@ A superset standalone icon-components for Vue with zero dependencies. Designed f
 
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-direct-single.svg)](https://stand-with-ukraine.pp.ua)
 
+Each icon in any set is standalone component, so you can easily use it.
+- No plugins required. Compatible with any builder.
+- The icon code is embedded in your bundle.
+- Supports tree shaking, so only those icons that you have used will be included in the bundle.
+- Works offline.
+- Does not require any external resources like fonts or css.
+- Zero dependencies.
+- Powered by [iconify](https://iconify.design/).
+
 ## Installation
 
 Install the appropriate icon set

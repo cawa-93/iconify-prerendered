@@ -115,7 +115,16 @@ function generatePackageJson(collection) {
 function generateReadme(collection) {
   return `
 # ${collection.info.name} components for Vue
-A set of standalone icon-components for Vue with zero dependencies. Designed for excellent tree shaking.
+A set of icon-components.
+
+Each icon in set is standalone component, so you can easily use it.
+- No plugins required. Compatible with any builder.
+- The icon code is embedded in your bundle.
+- Supports tree shaking, so only those icons that you have used will be included in the bundle.
+- Works offline.
+- Does not require any external resources like fonts or css.
+- Zero dependencies.
+- Powered by [iconify](https://iconify.design/).
 
 ## Usage
 \`\`\`vue
@@ -133,7 +142,7 @@ import {
   }
 </template>
 \`\`\`
-That's all you need. No bundler plugins or IDE extensions. It just works.
+That's all you need. No bundler plugins or IDE extensions. [It just works](https://twitter.com/alex_kozack/status/1560608558127140865).
 
 See [full docs](${packageJsonBase.homepage}#readme) or [other available icons sets](${packageJsonBase.homepage}#available-icons-sets).
 `
