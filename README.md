@@ -174,3 +174,6 @@ That's all you need. No bundler plugins or IDE extensions. [It just works](https
 |	[Zondicons](https://icon-sets.iconify.design/zondicons) | `@iconify-prerendered/vue-zondicons`	|	Sat Jun 25 2022	|
 
 <!-- PACKAGE LIST END -->
+
+## License
+The code for generating the icon sets is distributed under the MIT license. The icon sets themselves are distributed under the license of their author.
