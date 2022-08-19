@@ -3,10 +3,12 @@
     "config:base",
     ":semanticCommits",
     ":semanticCommitTypeAll(deps)",
+    ":semanticCommitScopeDisabled",
     ":disableDependencyDashboard",
     ":pinVersions",
     ":automergeMinor",
     ":automergeBranch",
+    ":skipStatusChecks",
     ":onlyNpm"
   ]
 }
