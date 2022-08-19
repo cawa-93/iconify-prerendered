@@ -18,6 +18,7 @@ jobs:
         with:
           node-version: 16
           cache: 'npm'
+      - run: npm ci
       - run: node build-package-list.js
       - run: git add -A
       - run: "git diff-index --quiet HEAD || git commit -m 'docs: Update packages in readme'"
