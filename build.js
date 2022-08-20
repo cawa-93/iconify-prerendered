@@ -40,10 +40,19 @@ async function buildCollection(collectionName) {
     iconsToRender = iconsToRender.concat(Object.keys(collection.aliases))
   }
 
-  let declarations = `import { h } from 'vue';\n`
-  let typeDeclarations = `import type { DefineComponent } from 'vue';\n`
+  let declarations = new Map()
 
   for (const iconName of iconsToRender) {
+    const componentName = getComponentName(iconName)
+
+    /**
+     * HOTFIX: Preventing components name collision
+     * @see https://github.com/cawa-93/iconify-prerendered/issues/2
+     */
+    if (declarations.has(componentName)) {
+      continue
+    }
+
     const icon = getIconData(collection, iconName, true)
 
     const svg = iconToSVG(icon, icon) // FIXME: WTF?
@@ -57,25 +66,38 @@ async function buildCollection(collectionName) {
     }
 
 
-    const componentName = getComponentName(iconName)
-    const componentCode = renderVueComponent(componentName, props)
+    const componentCode = renderVueComponent(props, componentName)
 
-    declarations += `export const ${componentName} = ${componentCode};\n`
-    typeDeclarations += `export declare const ${componentName}: DefineComponent<{}, {}, any>;\n`
+    declarations.set(componentName, {
+      implementation: `export const ${componentName} = ${componentCode};`,
+      type: `export declare const ${componentName}: DefineComponent<{}, {}, any>;`
+    })
   }
+
+  const {
+    implementationDeclarations,
+    typeDeclarations
+  } = Array.from(declarations.values()).reduce((red, declaration) => {
+    red.implementationDeclarations.push(declaration.implementation)
+    red.typeDeclarations.push(declaration.type)
+    return red
+  }, {implementationDeclarations: [], typeDeclarations: []})
+
+  const fullImplementation = `import {h} from 'vue';\n${implementationDeclarations.join('\n')}`
+  const fullTypeDeclaration = `import type {DefineComponent} from 'vue';\n${typeDeclarations.join('\n')}`
 
   const componentPath = path.resolve('dist', collectionName)
   await fs.promises.mkdir(componentPath, {recursive: true})
   await Promise.all([
-    fs.promises.writeFile(path.resolve(componentPath, 'index.js'), declarations),
-    fs.promises.writeFile(path.resolve(componentPath, 'index.d.ts'), typeDeclarations),
+    fs.promises.writeFile(path.resolve(componentPath, 'index.js'), fullImplementation),
+    fs.promises.writeFile(path.resolve(componentPath, 'index.d.ts'), fullTypeDeclaration),
     fs.promises.writeFile(path.resolve(componentPath, 'package.json'), generatePackageJson(collection)),
     fs.promises.writeFile(path.resolve(componentPath, 'README.md'), generateReadme(collection)),
   ])
 }
 
-function renderVueComponent(componentName, props) {
-  return `{name: '${componentName}', setup() { return () => h('svg', ${JSON.stringify(props)}) }}`
+function renderVueComponent(props, componentName = null) {
+  return `{${componentName ? `name: '${componentName}',` : ''} setup() { return () => h('svg', ${JSON.stringify(props)}) }}`
 }
 
 /**
