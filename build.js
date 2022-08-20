@@ -43,6 +43,9 @@ async function buildCollection(collectionName) {
   let declarations = new Map()
 
   for (const iconName of iconsToRender) {
+    if (collection.icons[iconName]?.hidden || collection.aliases?.[iconName]?.hidden) {
+      continue
+    }
     const componentName = getComponentName(iconName)
 
     /**
