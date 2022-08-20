@@ -53,6 +53,18 @@ async function buildCollection(collectionName) {
       continue
     }
 
+    const isSimpleAlias = collection.aliases && (iconName in collection.aliases) && ('parent' in collection.aliases[iconName]) && Object.keys(collection.aliases[iconName]).length === 1
+    if (isSimpleAlias) {
+      const parentComponentName = getComponentName(collection.aliases[iconName].parent)
+      if (declarations.has(parentComponentName)) {
+        declarations.set(componentName, {
+          implementation: `export const ${componentName} = ${parentComponentName};`,
+          type: `export declare const ${componentName}: typeof ${parentComponentName};`
+        })
+        continue
+      }
+    }
+
     const icon = getIconData(collection, iconName, true)
 
     const svg = iconToSVG(icon, icon) // FIXME: WTF?
