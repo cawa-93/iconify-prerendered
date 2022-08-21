@@ -7,8 +7,6 @@ import {getComponentName} from "./getComponentName.js";
 const packageJsonBase = JSON.parse(fs.readFileSync('./package.json', {encoding: 'utf8'}))
 
 const commonSvgAttrs = {
-  'xmlns': 'http://www.w3.org/2000/svg',
-  'xmlns:xlink': 'http://www.w3.org/1999/xlink',
   'aria-hidden': true,
   'role': 'img',
 }
