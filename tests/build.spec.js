@@ -33,7 +33,7 @@ for (const collectionPrefix of collections) {
         // Component should be defined
         assert.notEqual(component, undefined)
 
-        const [el, props] = component.setup()()
+        const [el, props] = component()
 
         // should be rendered as <svg>
         assert.equal(el, 'svg')
