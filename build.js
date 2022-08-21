@@ -1,30 +1,11 @@
 import {lookupCollection, lookupCollections} from '@iconify/json';
-import {getIconData, iconToSVG,} from '@iconify/utils';
+import {getIconData, iconToSVG} from '@iconify/utils';
 import * as fs from "fs";
 import * as path from "path";
+import {getComponentName} from "./getComponentName.js";
 
 const packageJsonBase = JSON.parse(fs.readFileSync('./package.json', {encoding: 'utf8'}))
 
-/**
- * @param {string} s
- * @returns {string}
- */
-function camelize(s) {
-  return s.replace(/-./g, x => x[1].toUpperCase());
-}
-
-/**
- * @param {string} s
- * @returns {string}
- */
-function capitalize(s) {
-  return s.charAt(0).toUpperCase() + s.slice(1);
-}
-
-
-function getComponentName(iconName) {
-  return capitalize(camelize('icon-' + iconName));
-}
 
 /**
  *
@@ -56,7 +37,11 @@ async function buildCollection(collectionName) {
       continue
     }
 
-    const isSimpleAlias = collection.aliases && (iconName in collection.aliases) && ('parent' in collection.aliases[iconName]) && Object.keys(collection.aliases[iconName]).length === 1
+    const isSimpleAlias = collection.aliases
+      && (iconName in collection.aliases)
+      && ('parent' in collection.aliases[iconName])
+      && Object.keys(collection.aliases[iconName]).length === 1
+
     if (isSimpleAlias) {
       const parentComponentName = getComponentName(collection.aliases[iconName].parent)
       if (declarations.has(parentComponentName)) {
@@ -126,6 +111,7 @@ function generatePackageJson(collection) {
     name: `@iconify-prerendered/vue-${collection.prefix}`,
     version: [major, minor, collection.lastModified].join('.'),
     description: `A set of standalone icon components for views with zero dependencies. Designed for excellent tree shaking. ${collection.info.name}`,
+    type: 'module',
     main: './index.js',
     types: './index.d.ts',
     peerDependencies: {
