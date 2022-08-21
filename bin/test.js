@@ -22,7 +22,7 @@ configure({
     files: ['tests/**/*.spec.js'],
     plugins: [assert()],
     reporters: [specReporter()],
-    importer: (filePath) => esmock(filePath),
+    importer: esmock,
   },
 })
 
