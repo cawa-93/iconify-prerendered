@@ -6,10 +6,6 @@ import {getComponentName} from "./getComponentName.js";
 
 const packageJsonBase = JSON.parse(fs.readFileSync('./package.json', {encoding: 'utf8'}))
 
-const commonSvgAttrs = {
-  'aria-hidden': true,
-  'role': 'img',
-}
 /**
  *
  * @param {string} collectionName
@@ -60,6 +56,8 @@ async function buildCollection(collectionName) {
 
     const svg = iconToSVG(icon, icon) // FIXME: WTF?
     const props = {
+      'aria-hidden': true,
+      'role': 'img',
       innerHTML: svg.body,
       ...svg.attributes,
     }
@@ -82,7 +80,7 @@ async function buildCollection(collectionName) {
     return red
   }, {implementationDeclarations: [], typeDeclarations: []})
 
-  const fullImplementation = `import {h} from 'vue';\nconst _ = ${JSON.stringify(commonSvgAttrs)};\n${implementationDeclarations.join('\n')}`
+  const fullImplementation = `import {h} from 'vue';\n${implementationDeclarations.join('\n')}`
   const fullTypeDeclaration = `import type {DefineComponent} from 'vue';\n${typeDeclarations.join('\n')}`
 
   const componentPath = path.resolve('dist', collectionName)
@@ -96,7 +94,7 @@ async function buildCollection(collectionName) {
 }
 
 function renderVueComponent(props, componentName = null) {
-  return `{${componentName ? `name: '${componentName}',` : ''} setup() { return () => h('svg', Object.assign(${JSON.stringify(props)},_)) }}`
+  return `{${componentName ? `name: '${componentName}',` : ''} setup() { return () => h('svg', ${JSON.stringify(props)}) }}`
 }
 
 /**
