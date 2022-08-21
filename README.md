@@ -12,6 +12,8 @@ Each icon in any set is standalone component, so you can easily use it.
 - Zero dependencies.
 - Powered by [iconify](https://iconify.design/).
 
+**Live demo**: https://stackblitz.com/edit/vitejs-vite-dexxql?file=src/App.vue
+
 ## Installation
 
 Install the appropriate icon set
