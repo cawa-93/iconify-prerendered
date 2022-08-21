@@ -41,17 +41,3 @@ for (const collectionPrefix of collections) {
   })
 
 }
-//
-// const fa = await lookupCollection('mdi')
-// const bridge = {
-//   data: getIconData(fa, 'android-debug-bridge', true),
-//   svg: iconToSVG(getIconData(fa, 'android-debug-bridge', true), getIconData(fa, 'android-debug-bridge', true))
-// }
-//
-// const adb = {
-//   data: getIconData(fa, 'adb', true),
-//   svg: iconToSVG(getIconData(fa, 'adb', true), getIconData(fa, 'adb', true))
-// }
-//
-//
-// console.log({bridge, adb})

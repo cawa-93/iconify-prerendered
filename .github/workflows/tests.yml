@@ -1,6 +1,7 @@
 on:
+  workflow_dispatch:
   push:
-    branches:
+    branches-ignore:
       - main
     paths-ignore:
       - '**.md'
@@ -8,16 +9,11 @@ on:
       - .idea
       - .editorconfig
       - .gitignore
-
-concurrency:
-  group: publish-${{ github.ref }}
-  cancel-in-progress: true
+  pull_request:
 
 jobs:
-  publish:
-
+  unit:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -25,10 +21,6 @@ jobs:
           node-version: 16
           cache: 'npm'
 
-      - uses: ./.github/workflows/tests.yml
       - run: npm ci
       - run: npm run build
       - run: npm run test
-      - run: npm run publish
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -9,15 +9,6 @@ const packageJsonBase = JSON.parse(fs.readFileSync('./package.json', {encoding: 
 
 /**
  *
- * @param {IconifyJSON} collection
- * @return string[]
- */
-function lookupAllIconsToRender(collection) {
-
-}
-
-/**
- *
  * @param {string} collectionName
  * @returns {Promise<void>}
  */
@@ -46,7 +37,11 @@ async function buildCollection(collectionName) {
       continue
     }
 
-    const isSimpleAlias = collection.aliases && (iconName in collection.aliases) && ('parent' in collection.aliases[iconName]) && Object.keys(collection.aliases[iconName]).length === 1
+    const isSimpleAlias = collection.aliases
+      && (iconName in collection.aliases)
+      && ('parent' in collection.aliases[iconName])
+      && Object.keys(collection.aliases[iconName]).length === 1
+
     if (isSimpleAlias) {
       const parentComponentName = getComponentName(collection.aliases[iconName].parent)
       if (declarations.has(parentComponentName)) {

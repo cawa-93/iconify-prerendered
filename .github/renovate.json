@@ -8,7 +8,6 @@
     ":pinVersions",
     ":automergeMinor",
     ":automergeBranch",
-    ":skipStatusChecks",
     ":onlyNpm"
   ]
 }
