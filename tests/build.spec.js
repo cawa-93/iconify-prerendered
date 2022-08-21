@@ -12,7 +12,7 @@ for (const collectionPrefix of collections) {
       h: (...args) => args
     }
   })
-  test.group(`validate collection ${collectionPrefix}`, async (group) => {
+  test.group(`validate collection ${collectionPrefix}`, () => {
     test(`validate ${collectionPrefix}/{name}`)
       .with(async () => {
         const collection = await lookupCollection(collectionPrefix)
@@ -29,12 +29,25 @@ for (const collectionPrefix of collections) {
       })
       .run(({assert}, {name, svg}) => {
         const component = set[getComponentName(name)]
+
+        // Component should be defined
         assert.notEqual(component, undefined)
-        const renderArgs = component.setup()()
-        assert.equal(renderArgs[0], 'svg')
-        assert.equal(renderArgs[1].innerHTML, svg.body)
+
+        const [el, props] = component.setup()()
+
+        // should be rendered as <svg>
+        assert.equal(el, 'svg')
+
+        // should have correct icon-body
+        assert.equal(props.innerHTML, svg.body)
+
+        // should have correct a11y attributes
+        assert.equal(props['aria-hidden'], true)
+        assert.equal(props['role'], 'img')
+
+        // should have correct icon attributes
         for (const attributesKey in svg.attributes) {
-          assert.equal(renderArgs[1][attributesKey], svg.attributes[attributesKey])
+          assert.equal(props[attributesKey], svg.attributes[attributesKey])
         }
       })
 
