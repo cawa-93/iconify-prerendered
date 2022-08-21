@@ -94,7 +94,7 @@ async function buildCollection(collectionName) {
 }
 
 function renderVueComponent(props, componentName = null) {
-  return `{${componentName ? `name: '${componentName}',` : ''} setup() { return () => h('svg', ${JSON.stringify(props)}) }}`
+  return `() => h('svg', ${JSON.stringify(props)})`
 }
 
 /**
