@@ -71,7 +71,7 @@ That's all you need. No bundler plugins or IDE extensions. [It just works](https
 |	[CoreUI Brands](https://icon-sets.iconify.design/cib) | `@iconify-prerendered/vue-cib`	|	Sat Jun 25 2022	|
 |	[CoreUI Flags](https://icon-sets.iconify.design/cif) | `@iconify-prerendered/vue-cif`	|	Sat Jun 25 2022	|
 |	[CoreUI Free](https://icon-sets.iconify.design/cil) | `@iconify-prerendered/vue-cil`	|	Sat Jun 25 2022	|
-|	[Cryptocurrency Icons](https://icon-sets.iconify.design/cryptocurrency) | `@iconify-prerendered/vue-cryptocurrency`	|	Sat Jun 25 2022	|
+|	[Cryptocurrency Icons](https://icon-sets.iconify.design/cryptocurrency) | `@iconify-prerendered/vue-cryptocurrency`	|	Wed Aug 24 2022	|
 |	[css.gg](https://icon-sets.iconify.design/gg) | `@iconify-prerendered/vue-gg`	|	Sat Jun 25 2022	|
 |	[Dashicons](https://icon-sets.iconify.design/dashicons) | `@iconify-prerendered/vue-dashicons`	|	Sat Jun 25 2022	|
 |	[Elegant](https://icon-sets.iconify.design/et) | `@iconify-prerendered/vue-et`	|	Sat Jun 25 2022	|
@@ -89,7 +89,7 @@ That's all you need. No bundler plugins or IDE extensions. [It just works](https
 |	[Feather Icons](https://icon-sets.iconify.design/feather) | `@iconify-prerendered/vue-feather`	|	Sat Jun 25 2022	|
 |	[File Icons](https://icon-sets.iconify.design/file-icons) | `@iconify-prerendered/vue-file-icons`	|	Sat Jun 25 2022	|
 |	[Firefox OS Emoji](https://icon-sets.iconify.design/fxemoji) | `@iconify-prerendered/vue-fxemoji`	|	Sat Jun 25 2022	|
-|	[Flag Icons](https://icon-sets.iconify.design/flag) | `@iconify-prerendered/vue-flag`	|	Mon Aug 22 2022	|
+|	[Flag Icons](https://icon-sets.iconify.design/flag) | `@iconify-prerendered/vue-flag`	|	Wed Aug 24 2022	|
 |	[Flagpack](https://icon-sets.iconify.design/flagpack) | `@iconify-prerendered/vue-flagpack`	|	Sat Jun 25 2022	|
 |	[Flat Color Icons](https://icon-sets.iconify.design/flat-color-icons) | `@iconify-prerendered/vue-flat-color-icons`	|	Sat Jun 25 2022	|
 |	[Flat UI Icons](https://icon-sets.iconify.design/flat-ui) | `@iconify-prerendered/vue-flat-ui`	|	Sat Jun 25 2022	|
@@ -115,8 +115,9 @@ That's all you need. No bundler plugins or IDE extensions. [It just works](https
 |	[Gridicons](https://icon-sets.iconify.design/gridicons) | `@iconify-prerendered/vue-gridicons`	|	Sat Jun 25 2022	|
 |	[Grommet Icons](https://icon-sets.iconify.design/grommet-icons) | `@iconify-prerendered/vue-grommet-icons`	|	Sat Jun 25 2022	|
 |	[Health Icons](https://icon-sets.iconify.design/healthicons) | `@iconify-prerendered/vue-healthicons`	|	Sat Jun 25 2022	|
-|	[HeroIcons Outline](https://icon-sets.iconify.design/heroicons-outline) | `@iconify-prerendered/vue-heroicons-outline`	|	Sat Jun 25 2022	|
-|	[HeroIcons Solid](https://icon-sets.iconify.design/heroicons-solid) | `@iconify-prerendered/vue-heroicons-solid`	|	Sat Jun 25 2022	|
+|	[HeroIcons](https://icon-sets.iconify.design/heroicons) | `@iconify-prerendered/vue-heroicons`	|	Wed Aug 24 2022	|
+|	[HeroIcons Outline](https://icon-sets.iconify.design/heroicons-outline) | `@iconify-prerendered/vue-heroicons-outline`	|	Wed Aug 24 2022	|
+|	[HeroIcons Solid](https://icon-sets.iconify.design/heroicons-solid) | `@iconify-prerendered/vue-heroicons-solid`	|	Wed Aug 24 2022	|
 |	[Humbleicons](https://icon-sets.iconify.design/humbleicons) | `@iconify-prerendered/vue-humbleicons`	|	Mon Jul 25 2022	|
 |	[Icalicons](https://icon-sets.iconify.design/il) | `@iconify-prerendered/vue-il`	|	Sat Jun 25 2022	|
 |	[IcoMoon Free](https://icon-sets.iconify.design/icomoon-free) | `@iconify-prerendered/vue-icomoon-free`	|	Sat Jun 25 2022	|
@@ -142,7 +143,7 @@ That's all you need. No bundler plugins or IDE extensions. [It just works](https
 |	[Material Line Icons](https://icon-sets.iconify.design/line-md) | `@iconify-prerendered/vue-line-md`	|	Mon Aug 08 2022	|
 |	[Material Symbols](https://icon-sets.iconify.design/material-symbols) | `@iconify-prerendered/vue-material-symbols`	|	Fri Aug 12 2022	|
 |	[Medical Icons](https://icon-sets.iconify.design/medical-icon) | `@iconify-prerendered/vue-medical-icon`	|	Sat Jun 25 2022	|
-|	[MingCute Icon](https://icon-sets.iconify.design/mingcute) | `@iconify-prerendered/vue-mingcute`	|	Sun Aug 21 2022	|
+|	[MingCute Icon](https://icon-sets.iconify.design/mingcute) | `@iconify-prerendered/vue-mingcute`	|	Wed Aug 24 2022	|
 |	[Mono Icons](https://icon-sets.iconify.design/mi) | `@iconify-prerendered/vue-mi`	|	Sat Jun 25 2022	|
 |	[Mono Icons](https://icon-sets.iconify.design/mono-icons) | `@iconify-prerendered/vue-mono-icons`	|	Sat Jun 25 2022	|
 |	[Nimbus](https://icon-sets.iconify.design/nimbus) | `@iconify-prerendered/vue-nimbus`	|	Sat Jun 25 2022	|
@@ -167,7 +168,7 @@ That's all you need. No bundler plugins or IDE extensions. [It just works](https
 |	[Subway Icon Set](https://icon-sets.iconify.design/subway) | `@iconify-prerendered/vue-subway`	|	Sat Jun 25 2022	|
 |	[SVG Logos](https://icon-sets.iconify.design/logos) | `@iconify-prerendered/vue-logos`	|	Mon Aug 01 2022	|
 |	[System UIcons](https://icon-sets.iconify.design/system-uicons) | `@iconify-prerendered/vue-system-uicons`	|	Sat Jun 25 2022	|
-|	[Tabler Icons](https://icon-sets.iconify.design/tabler) | `@iconify-prerendered/vue-tabler`	|	Mon Aug 22 2022	|
+|	[Tabler Icons](https://icon-sets.iconify.design/tabler) | `@iconify-prerendered/vue-tabler`	|	Wed Aug 24 2022	|
 |	[Teenyicons](https://icon-sets.iconify.design/teenyicons) | `@iconify-prerendered/vue-teenyicons`	|	Sun Jun 26 2022	|
 |	[TopCoat Icons](https://icon-sets.iconify.design/topcoat) | `@iconify-prerendered/vue-topcoat`	|	Sat Jun 25 2022	|
 |	[Twitter Emoji](https://icon-sets.iconify.design/twemoji) | `@iconify-prerendered/vue-twemoji`	|	Sat Jun 25 2022	|
