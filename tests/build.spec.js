@@ -6,12 +6,18 @@ import {getComponentName} from "../getComponentName.js";
 
 const collections = Object.keys(await lookupCollections())
 
+
+function importIconSet(prefix) {
+  return esmock(`../dist/${prefix}/index.js`, {
+    vue: {h: (...args) => args}
+  }, {}, {
+    isPackageNotFoundError: false
+  });
+}
+
 for (const collectionPrefix of collections) {
-  const set = await esmock(`../dist/${collectionPrefix}/index.js`, {}, {
-    vue: {
-      h: (...args) => args
-    }
-  })
+  const set = await importIconSet(collectionPrefix)
+
   test.group(`validate collection ${collectionPrefix}`, () => {
     test(`validate ${collectionPrefix}/{name}`)
       .with(async () => {
