@@ -28,6 +28,6 @@
     "@japa/runner": "2.0.9",
     "@japa/spec-reporter": "1.1.12",
     "@jsdevtools/npm-publish": "1.4.3",
-    "esmock": "1.9.7"
+    "esmock": "1.9.8"
   }
 }
