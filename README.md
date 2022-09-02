@@ -101,9 +101,9 @@ That's all you need. No bundler plugins or IDE extensions. [It just works](https
 |	[Font Awesome 5 Brands](https://icon-sets.iconify.design/fa-brands) | `@iconify-prerendered/vue-fa-brands`	|	Sat Jun 25 2022	|
 |	[Font Awesome 5 Regular](https://icon-sets.iconify.design/fa-regular) | `@iconify-prerendered/vue-fa-regular`	|	Sat Jun 25 2022	|
 |	[Font Awesome 5 Solid](https://icon-sets.iconify.design/fa-solid) | `@iconify-prerendered/vue-fa-solid`	|	Sat Jun 25 2022	|
-|	[Font Awesome Brands](https://icon-sets.iconify.design/fa6-brands) | `@iconify-prerendered/vue-fa6-brands`	|	Tue Jul 26 2022	|
+|	[Font Awesome Brands](https://icon-sets.iconify.design/fa6-brands) | `@iconify-prerendered/vue-fa6-brands`	|	Fri Sep 02 2022	|
 |	[Font Awesome Regular](https://icon-sets.iconify.design/fa6-regular) | `@iconify-prerendered/vue-fa6-regular`	|	Tue Jul 26 2022	|
-|	[Font Awesome Solid](https://icon-sets.iconify.design/fa6-solid) | `@iconify-prerendered/vue-fa6-solid`	|	Tue Jul 26 2022	|
+|	[Font Awesome Solid](https://icon-sets.iconify.design/fa6-solid) | `@iconify-prerendered/vue-fa6-solid`	|	Fri Sep 02 2022	|
 |	[Font-GIS](https://icon-sets.iconify.design/gis) | `@iconify-prerendered/vue-gis`	|	Sat Jun 25 2022	|
 |	[FontAudio](https://icon-sets.iconify.design/fad) | `@iconify-prerendered/vue-fad`	|	Sat Jun 25 2022	|
 |	[Fontelico](https://icon-sets.iconify.design/fontelico) | `@iconify-prerendered/vue-fontelico`	|	Sat Jun 25 2022	|
@@ -166,9 +166,9 @@ That's all you need. No bundler plugins or IDE extensions. [It just works](https
 |	[Simple line icons](https://icon-sets.iconify.design/simple-line-icons) | `@iconify-prerendered/vue-simple-line-icons`	|	Sat Jun 25 2022	|
 |	[SmartIcons Glyph](https://icon-sets.iconify.design/si-glyph) | `@iconify-prerendered/vue-si-glyph`	|	Sun Jun 26 2022	|
 |	[Subway Icon Set](https://icon-sets.iconify.design/subway) | `@iconify-prerendered/vue-subway`	|	Sat Jun 25 2022	|
-|	[SVG Logos](https://icon-sets.iconify.design/logos) | `@iconify-prerendered/vue-logos`	|	Mon Aug 01 2022	|
+|	[SVG Logos](https://icon-sets.iconify.design/logos) | `@iconify-prerendered/vue-logos`	|	Fri Sep 02 2022	|
 |	[System UIcons](https://icon-sets.iconify.design/system-uicons) | `@iconify-prerendered/vue-system-uicons`	|	Sat Jun 25 2022	|
-|	[Tabler Icons](https://icon-sets.iconify.design/tabler) | `@iconify-prerendered/vue-tabler`	|	Mon Aug 29 2022	|
+|	[Tabler Icons](https://icon-sets.iconify.design/tabler) | `@iconify-prerendered/vue-tabler`	|	Fri Sep 02 2022	|
 |	[Teenyicons](https://icon-sets.iconify.design/teenyicons) | `@iconify-prerendered/vue-teenyicons`	|	Sun Jun 26 2022	|
 |	[TopCoat Icons](https://icon-sets.iconify.design/topcoat) | `@iconify-prerendered/vue-topcoat`	|	Sat Jun 25 2022	|
 |	[Twitter Emoji](https://icon-sets.iconify.design/twemoji) | `@iconify-prerendered/vue-twemoji`	|	Sat Jun 25 2022	|
