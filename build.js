@@ -135,15 +135,20 @@ function generatePackageJson(collection) {
 function generateReadme(collection) {
   return `
 # ${collection.info.name} components for Vue
-A set of icon-components.
 
-Each icon in set is standalone component, so you can easily use it.
-- No plugins required. Compatible with any builder.
-- The icon code is embedded in your bundle.
-- Supports tree shaking, so only those icons that you have used will be included in the bundle.
-- Works offline.
-- Does not require any external resources like fonts or css.
-- Zero dependencies.
+Each icon in set is standalone component.
+
+## Features
+- **Easy to use**
+  - No plugins required! Compatible with any build tools.
+  - Zero dependencies.
+  - SSR / SSG friendly.
+  - TypeScript support.
+- **High performance**
+  - Does not require any external resources like fonts, css, images.
+  - The icon code is embedded in your bundle.
+  - Supports tree shaking, so only those icons that you have used will be included in the bundle.
+  - Works offline.
 - Powered by [iconify](https://iconify.design/).
 
 ## Usage

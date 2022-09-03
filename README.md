@@ -1,15 +1,23 @@
 # @iconify-prerendered
 A superset standalone icon-components for Vue with zero dependencies. Designed for excellent tree shaking.
 
+---
+
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-direct-single.svg)](https://stand-with-ukraine.pp.ua)
 
-Each icon in any set is standalone component, so you can easily use it.
-- No plugins required. Compatible with any builder.
-- The icon code is embedded in your bundle.
-- Supports tree shaking, so only those icons that you have used will be included in the bundle.
-- Works offline.
-- Does not require any external resources like fonts or css.
-- Zero dependencies.
+---
+
+## Features
+- **Easy to use**
+  - No plugins required! Compatible with any build tools.
+  - Zero dependencies.
+  - SSR / SSG friendly.
+  - TypeScript support.
+- **High performance**
+  - Does not require any external resources like fonts, css, images.
+  - The icon code is embedded in your bundle.
+  - Supports tree shaking, so only those icons that you have used will be included in the bundle.
+  - Works offline.
 - Powered by [iconify](https://iconify.design/).
 
 **Live demo**: https://stackblitz.com/edit/iconify-prerendered-demo?file=src%2FApp.vue
