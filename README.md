@@ -1,5 +1,5 @@
 # @iconify-prerendered
-A superset standalone icon-components for Vue with zero dependencies. Designed for excellent tree shaking.
+A superset standalone icon-components for Vue with zero dependencies. Designed for ease of use and high performance.
 
 ---
 
@@ -41,19 +41,24 @@ npm i @iconify-prerendered/vue-mdi
 Just import icon-component from set like usual.
 
 ```vue
-<script setup>
-import { IconAccount } from '@iconify-prerendered/vue-mdi' 
+<script setup lang="ts">
+// Import two icons from Font Awesome Brands
+import { IconVuejs, IconJs } from '@iconify-prerendered/vue-fa-brands';
+// Import one Icon from Material Design icons
+import { IconCardsHeart } from '@iconify-prerendered/vue-mdi';
 </script>
 
 <template>
-<a>
-  <IconAccount/>
-  Go to account
-</a>
+  <p>
+    <IconJs class="icon" style="color: #efd81d" />
+    <IconCardsHeart class="icon" style="color: #f03a17" />
+    <IconVuejs class="icon" style="color: #3fb27f" />
+  </p>
 </template>
 ```
+Only these three icons will be included in your bundle. All other icons may be tree-shaken by your bundler.
 
-That's all you need. No bundler plugins or IDE extensions. [It just works](https://twitter.com/alex_kozack/status/1560608558127140865).
+That's all you need. No plugins, extra configs, IDE extensions or something else. [It just works](https://twitter.com/alex_kozack/status/1560608558127140865).
 
 ## Available icons sets
 <!-- PACKAGE LIST START -->

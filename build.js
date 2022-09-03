@@ -107,7 +107,7 @@ function generatePackageJson(collection) {
   return JSON.stringify({
     name: `@iconify-prerendered/vue-${collection.prefix}`,
     version: [major, minor, collection.lastModified].join('.'),
-    description: `A set of standalone icon components for views with zero dependencies. Designed for excellent tree shaking. ${collection.info.name}`,
+    description: `${collection.info.name} components for Vue. Designed for ease of use and high performance`,
     type: 'module',
     main: './index.js',
     types: './index.d.ts',
@@ -134,7 +134,8 @@ function generatePackageJson(collection) {
  */
 function generateReadme(collection) {
   return `
-# ${collection.info.name} components for Vue
+# ${collection.info.name} components for Vue. Designed for ease of use and high performance
+
 
 Each icon in set is standalone component.
 
@@ -167,7 +168,10 @@ import {
   }
 </template>
 \`\`\`
-That's all you need. No bundler plugins or IDE extensions. [It just works](https://twitter.com/alex_kozack/status/1560608558127140865).
+
+Only these three icons will be included in your bundle. All other icons may be tree-shaken by your bundler.
+
+That's all you need. No plugins, extra configs, IDE extensions or something else. [It just works](https://twitter.com/alex_kozack/status/1560608558127140865).
 
 See [full docs](${packageJsonBase.homepage}#readme) or [other available icons sets](${packageJsonBase.homepage}#available-icons-sets).
 `
