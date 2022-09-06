@@ -94,7 +94,7 @@ export abstract class Builder {
     let declarations = new Map()
 
     for (const iconName of icons) {
-      const componentName = getComponentName(iconName)
+      const componentName = this.getComponentName(iconName)
 
       if (declarations.has(componentName)) {
         continue
@@ -102,7 +102,7 @@ export abstract class Builder {
 
 
       if (this.isSimpleAlias(collection, iconName)) {
-        const parentComponentName = getComponentName(collection.aliases[iconName].parent)
+        const parentComponentName = this.getComponentName(collection.aliases[iconName].parent)
         if (declarations.has(parentComponentName)) {
           declarations.set(componentName, {
             implementation: `export const ${componentName} = ${parentComponentName};`,
