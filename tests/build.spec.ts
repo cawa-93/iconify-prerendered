@@ -3,8 +3,8 @@ import {getIconData, iconToSVG} from "@iconify/utils";
 import {test} from "@japa/runner";
 import esmock from "esmock";
 import {getComponentName} from "../getComponentName.js";
-import * as fs from "node:fs";
 import * as path from "node:path";
+import {isFileEmpty, isFileExist, isValidJsonFile} from "../utils";
 
 const collections = Object.keys(await lookupCollections())
 
@@ -19,24 +19,6 @@ function importIconSet(prefix) {
   }, {}, {
     isModuleNotFoundError: false
   });
-}
-
-function isFileExist(filepath) {
-  return fs.promises.access(filepath, fs.constants.F_OK)
-    .then(() => true)
-    .catch(() => false)
-}
-
-function isFileEmpty(filepath) {
-  return fs.promises.readFile(filepath, {encoding: 'utf8'})
-    .then((content) => content.trim().length === 0)
-}
-
-function isValidJsonFile(filepath) {
-  return fs.promises.readFile(filepath, {encoding: 'utf8'})
-    .then(JSON.parse)
-    .then(() => true)
-    .catch(() => false)
 }
 
 for (const collectionPrefix of collections) {
