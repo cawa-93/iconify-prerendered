@@ -2,7 +2,7 @@ import {lookupCollection, lookupCollections} from "@iconify/json";
 import {getIconData, iconToSVG} from "@iconify/utils";
 import {test} from "@japa/runner";
 import esmock from "esmock";
-import {getComponentName} from "../getComponentName.js";
+import {getComponentName} from "../getComponentName.ts";
 import * as fs from "node:fs";
 import * as path from "node:path";
 

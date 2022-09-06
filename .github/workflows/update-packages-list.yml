@@ -19,7 +19,7 @@ jobs:
           node-version: 16
           cache: 'npm'
       - run: npm ci
-      - run: node build-package-list.js
+      - run: ts-node build-package-list.ts
       - run: git config user.name github-actions
       - run: git config user.email github-actions@github.com
       - run: git add -A

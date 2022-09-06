@@ -1,5 +1,5 @@
 import { test } from '@japa/runner'
-import {getComponentName} from "../getComponentName.js";
+import {getComponentName} from "../getComponentName.ts";
 
 
 test('validate component name - "{icon}"')

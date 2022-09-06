@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "sourceMap": true,
+    "moduleResolution": "Node"
+  },
+  "ts-node": {
+    "esm": true,
+    "experimentalResolverFeatures": true,
+  },
+  "files": [
+    "build.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

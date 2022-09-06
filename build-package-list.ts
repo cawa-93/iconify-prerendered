@@ -3,6 +3,7 @@ import * as fs from "node:fs";
 
 const packages = []
 for (const collectionName in await lookupCollections()) {
+  // @ts-expect-error https://github.com/iconify/iconify/pull/168
   const {info, lastModified} = await lookupCollection(collectionName)
   const iconUrl = `https://icon-sets.iconify.design/${collectionName}`
   packages.push({

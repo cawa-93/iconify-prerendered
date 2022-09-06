@@ -54,7 +54,7 @@ async function buildCollection(collectionName) {
 
     const icon = getIconData(collection, iconName, true)
 
-    const svg = iconToSVG(icon, icon) // FIXME: WTF?
+    const svg = iconToSVG(icon, icon as any) // FIXME: WTF?
     const props = {
       'aria-hidden': true,
       'role': 'img',
