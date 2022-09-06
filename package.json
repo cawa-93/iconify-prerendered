@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "ts-node build.ts",
-    "publish": "node ./publish.js",
+    "publish": "node publish.ts",
     "test": "node --loader=esmock ./bin/test.js"
   },
   "homepage": "https://github.com/cawa-93/iconify-prerendered/",
