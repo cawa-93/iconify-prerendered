@@ -2,7 +2,7 @@ import {lookupCollection, lookupCollections} from "@iconify/json";
 import {getIconData, iconToSVG} from "@iconify/utils";
 import {test} from "@japa/runner";
 import esmock from "esmock";
-import {getComponentName} from "../getComponentName.ts";
+import {getComponentName} from "../getComponentName.js";
 import * as fs from "node:fs";
 import * as path from "node:path";
 
@@ -45,6 +45,8 @@ for (const collectionPrefix of collections) {
   test.group(`validate collection ${collectionPrefix}`, () => {
     test('should have {$self}')
       .with(['README.md', 'package.json'])
+
+      // @ts-ignore
       .run(async ({assert}, file) => {
         const filePath = getCollectionFile(collectionPrefix, file)
 
@@ -67,9 +69,11 @@ for (const collectionPrefix of collections) {
 
         return iconsToRender.map(name => {
           const data = getIconData(collection, name, true)
-          return ({name, data, svg: iconToSVG(data, data)});
-        }).filter(({data}) => !data.hidden)
+          return ({name, data, svg: iconToSVG(data, data as any)});
+        }).filter(({data}) => !(data as any).hidden)
       })
+
+      // @ts-ignore
       .run(({assert}, {name, svg}) => {
         const component = set[getComponentName(name)]
 

@@ -19,7 +19,7 @@ import esmock from "esmock";
 configure({
   ...processCliArgs(process.argv.slice(2)),
   ...{
-    files: ['tests/**/*.spec.js'],
+    files: ['tests/**/*.spec.ts'],
     plugins: [assert()],
     reporters: [specReporter()],
     importer: esmock,
