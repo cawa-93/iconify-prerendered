@@ -1,7 +1,6 @@
-import {Builder} from "./builder.js";
+import {Builder} from "../builder/builder.js";
 import {IconifyIconBuildResult} from "@iconify/utils/lib/svg/build";
 import {IconifyJSON} from "@iconify/types";
-import {getComponentName} from "./getComponentName.js";
 
 class VueBuilder extends Builder {
   framework = 'vue';
@@ -54,14 +53,14 @@ Each icon in set is standalone component.
 <script setup>
 // Import components as usual
 import {
-    ${collection.info.samples.map(getComponentName).join(',\n    ')}
+    ${collection.info.samples.map(this.getComponentName).join(',\n    ')}
 } from '@iconify-prerendered/vue-${collection.prefix}'
 </script>
 
 <template>
   <!-- And just use it in template -->
   ${
-      collection.info.samples.map(getComponentName).map(name => `<${name}/>`).join('\n  ')
+      collection.info.samples.map(this.getComponentName).map(name => `<${name}/>`).join('\n  ')
     }
 </template>
 \`\`\`
@@ -84,4 +83,4 @@ See [full docs](${packageJsonBase.homepage}#readme) or [other available icons se
 }
 
 
-await new VueBuilder().buildAllCollections()
+export default new VueBuilder()

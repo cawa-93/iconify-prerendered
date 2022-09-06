@@ -1,10 +1,10 @@
 import {lookupCollection, lookupCollections} from "@iconify/json";
 import type {IconifyJSON} from '@iconify/types'
-import {getIconData, iconToSVG} from "@iconify/utils";
-import {getComponentName} from "./getComponentName.js";
+import {camelize, getIconData, iconToSVG} from "@iconify/utils";
 import {IconifyIconBuildResult} from "@iconify/utils/lib/svg/build";
 import {resolve} from "path";
 import {mkdir, readFile, writeFile} from "fs/promises";
+import {capitalize} from "./utils.js";
 
 
 const packageJsonBase = JSON.parse(await readFile('./package.json', {encoding: 'utf8'}))
@@ -14,6 +14,17 @@ export abstract class Builder {
 
   abstract framework: string
 
+  abstract componentImplementation(svg: IconifyIconBuildResult): string
+
+  abstract componentTypeDeclaration(svg: IconifyIconBuildResult): string
+
+  abstract joinImplementations(implementations: string[]): string
+
+  abstract joinTypeDeclarations(typeDeclarations: string[]): string
+
+  abstract generateReadme(collection: IconifyJSON): string
+
+
   svgAttrs = {
     'aria-hidden': true,
     role: 'img',
@@ -21,6 +32,7 @@ export abstract class Builder {
 
   output = 'dist'
 
+  componentPrefix = 'icon'
 
   lookupCollections() {
     return lookupCollections().then(Object.keys)
@@ -28,7 +40,29 @@ export abstract class Builder {
 
 
   lookupCollection = lookupCollection
-  getComponentName = getComponentName
+
+  getComponentName(iconName) {
+
+    /**
+     * The names of some icons cannot be automatically resolved to valid component names so that they do not conflict with other components.
+     * For such cases, individual conversion rules apply
+     * @type {Map<string, string>}
+     */
+    const specialCases = new Map([
+      ['menu-alt-2', 'IconMenuAltDash2'] // dashicon/menu-alt-2 will be resolved as `IconMenuAlt2` but it's alias for `IconMenuAlt3`
+    ])
+
+
+    if (specialCases.has(iconName)) {
+      return specialCases.get(iconName)
+    }
+
+    let name = capitalize(camelize(`${this.componentPrefix}${iconName.startsWith('-') ? iconName : `-${iconName}`}`));
+    if (name.endsWith('-')) {
+      name = name.replace(/-$/, 'Minus')
+    }
+    return name
+  }
 
 
   lookupIconsInCollection(collection: IconifyJSON, omitHidden = true) {
@@ -58,10 +92,6 @@ export abstract class Builder {
   }
 
 
-  abstract componentImplementation(svg: IconifyIconBuildResult): string
-
-  abstract componentTypeDeclaration(svg: IconifyIconBuildResult): string
-
   generatePackageJson(collection: IconifyJSON) {
     const [major, minor] = packageJsonBase.version.split('.')
     return {
@@ -85,7 +115,6 @@ export abstract class Builder {
     }
   }
 
-  abstract generateReadme(collection: IconifyJSON): string
 
   async buildCollection(collectionName: string) {
     const collection = await this.lookupCollection(collectionName)
@@ -154,7 +183,4 @@ export abstract class Builder {
     }
   }
 
-  abstract joinImplementations(implementations: string[]): string
-
-  abstract joinTypeDeclarations(typeDeclarations: string[]): string
 }
