@@ -9,14 +9,13 @@
     "url": "https://github.com/cawa-93/iconify-prerendered/issues"
   },
   "scripts": {
-    "build": "ts-node build.ts",
+    "build": "ts-node vue.ts",
     "publish": "ts-node publish.ts",
     "test": "node --loader=ts-node/esm --loader=esmock bin/test.ts"
   },
   "homepage": "https://github.com/cawa-93/iconify-prerendered/",
   "repository": "github:cawa-93/iconify-prerendered",
   "keywords": [
-    "vue",
     "components",
     "icons",
     "iconify"

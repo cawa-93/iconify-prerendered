@@ -9,9 +9,6 @@
     "esm": true,
     "experimentalResolverFeatures": true,
   },
-  "files": [
-    "build.ts"
-  ],
   "exclude": [
     "node_modules",
     "dist"
