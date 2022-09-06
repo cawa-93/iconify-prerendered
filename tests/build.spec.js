@@ -17,7 +17,7 @@ function importIconSet(prefix) {
   return esmock(getCollectionFile(prefix, 'index.js'), {
     vue: {h: (...args) => args}
   }, {}, {
-    isPackageNotFoundError: false
+    isModuleNotFoundError: false
   });
 }
 
