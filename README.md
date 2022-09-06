@@ -50,9 +50,9 @@ import { IconCardsHeart } from '@iconify-prerendered/vue-mdi';
 
 <template>
   <p>
-    <IconJs class="icon" style="color: #efd81d" />
-    <IconCardsHeart class="icon" style="color: #f03a17" />
-    <IconVuejs class="icon" style="color: #3fb27f" />
+    <IconJs />
+    <IconCardsHeart />
+    <IconVuejs />
   </p>
 </template>
 ```
