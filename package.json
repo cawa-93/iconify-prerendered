@@ -25,7 +25,7 @@
     "@iconify/json": "2.1.104",
     "@iconify/utils": "1.0.33",
     "@japa/assert": "1.3.5",
-    "@japa/runner": "2.1.1",
+    "@japa/runner": "2.1.3",
     "@japa/spec-reporter": "1.2.0",
     "@jsdevtools/npm-publish": "1.4.3",
     "esmock": "2.0.0"
