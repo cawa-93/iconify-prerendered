@@ -4,7 +4,6 @@
     ":semanticCommits",
     ":semanticCommitTypeAll(deps)",
     ":semanticCommitScopeDisabled",
-    ":disableDependencyDashboard",
     ":pinVersions",
     ":automergeMinor",
     ":automergeBranch",
