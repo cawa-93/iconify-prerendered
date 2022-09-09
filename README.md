@@ -154,7 +154,7 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 |	[Material Design Icons](https://icon-sets.iconify.design/mdi) | `@iconify-prerendered/vue-mdi`	|	Fri Aug 26 2022	|
 |	[Material Design Light](https://icon-sets.iconify.design/mdi-light) | `@iconify-prerendered/vue-mdi-light`	|	Sat Jun 25 2022	|
 |	[Material Line Icons](https://icon-sets.iconify.design/line-md) | `@iconify-prerendered/vue-line-md`	|	Mon Aug 08 2022	|
-|	[Material Symbols](https://icon-sets.iconify.design/material-symbols) | `@iconify-prerendered/vue-material-symbols`	|	Wed Aug 31 2022	|
+|	[Material Symbols](https://icon-sets.iconify.design/material-symbols) | `@iconify-prerendered/vue-material-symbols`	|	Fri Sep 09 2022	|
 |	[Medical Icons](https://icon-sets.iconify.design/medical-icon) | `@iconify-prerendered/vue-medical-icon`	|	Sat Jun 25 2022	|
 |	[MingCute Icon](https://icon-sets.iconify.design/mingcute) | `@iconify-prerendered/vue-mingcute`	|	Wed Aug 24 2022	|
 |	[Mono Icons](https://icon-sets.iconify.design/mi) | `@iconify-prerendered/vue-mi`	|	Sat Jun 25 2022	|
@@ -181,7 +181,7 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 |	[Subway Icon Set](https://icon-sets.iconify.design/subway) | `@iconify-prerendered/vue-subway`	|	Sat Jun 25 2022	|
 |	[SVG Logos](https://icon-sets.iconify.design/logos) | `@iconify-prerendered/vue-logos`	|	Fri Sep 02 2022	|
 |	[System UIcons](https://icon-sets.iconify.design/system-uicons) | `@iconify-prerendered/vue-system-uicons`	|	Sat Jun 25 2022	|
-|	[Tabler Icons](https://icon-sets.iconify.design/tabler) | `@iconify-prerendered/vue-tabler`	|	Wed Sep 07 2022	|
+|	[Tabler Icons](https://icon-sets.iconify.design/tabler) | `@iconify-prerendered/vue-tabler`	|	Fri Sep 09 2022	|
 |	[Teenyicons](https://icon-sets.iconify.design/teenyicons) | `@iconify-prerendered/vue-teenyicons`	|	Sun Jun 26 2022	|
 |	[TopCoat Icons](https://icon-sets.iconify.design/topcoat) | `@iconify-prerendered/vue-topcoat`	|	Sat Jun 25 2022	|
 |	[Twitter Emoji](https://icon-sets.iconify.design/twemoji) | `@iconify-prerendered/vue-twemoji`	|	Sat Jun 25 2022	|
