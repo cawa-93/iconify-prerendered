@@ -1,6 +1,12 @@
 import {lookupCollection, lookupCollections} from '@iconify/json';
 import * as fs from "node:fs";
 
+const {format} = new Intl.DateTimeFormat('en', {
+  day: 'numeric',
+  month: 'short',
+  year: 'numeric'
+})
+
 const packages = []
 for (const collectionName in await lookupCollections()) {
   const {info, lastModified} = await lookupCollection(collectionName)
@@ -22,7 +28,7 @@ let packList = '| Icon set | Package | Last modified |\n| --- | --- | --- |\n'
       return 0;
     })
     .reduce((s, pack) => {
-      return s + `|\t[${pack.name}](${pack.url}) | \`${pack.package}\`\t|\t${pack.lastModified.toDateString()}\t|\n`
+      return s + `|\t[${pack.name}](${pack.url}) | \`${pack.package}\`\t|\t${format(pack.lastModified)}\t|\n`
     }, '')
 
 
