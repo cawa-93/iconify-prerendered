@@ -106,9 +106,9 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 |	[Flagpack](https://icon-sets.iconify.design/flagpack) | `@iconify-prerendered/vue-flagpack`	|	Jun 25, 2022	|
 |	[Flat Color Icons](https://icon-sets.iconify.design/flat-color-icons) | `@iconify-prerendered/vue-flat-color-icons`	|	Jun 25, 2022	|
 |	[Flat UI Icons](https://icon-sets.iconify.design/flat-ui) | `@iconify-prerendered/vue-flat-ui`	|	Jun 25, 2022	|
-|	[Fluent Emoji](https://icon-sets.iconify.design/fluent-emoji) | `@iconify-prerendered/vue-fluent-emoji`	|	Aug 12, 2022	|
-|	[Fluent Emoji Flat](https://icon-sets.iconify.design/fluent-emoji-flat) | `@iconify-prerendered/vue-fluent-emoji-flat`	|	Aug 13, 2022	|
-|	[Fluent Emoji High Contrast](https://icon-sets.iconify.design/fluent-emoji-high-contrast) | `@iconify-prerendered/vue-fluent-emoji-high-contrast`	|	Aug 13, 2022	|
+|	[Fluent Emoji](https://icon-sets.iconify.design/fluent-emoji) | `@iconify-prerendered/vue-fluent-emoji`	|	Sep 14, 2022	|
+|	[Fluent Emoji Flat](https://icon-sets.iconify.design/fluent-emoji-flat) | `@iconify-prerendered/vue-fluent-emoji-flat`	|	Sep 14, 2022	|
+|	[Fluent Emoji High Contrast](https://icon-sets.iconify.design/fluent-emoji-high-contrast) | `@iconify-prerendered/vue-fluent-emoji-high-contrast`	|	Sep 14, 2022	|
 |	[Fluent UI System Icons](https://icon-sets.iconify.design/fluent) | `@iconify-prerendered/vue-fluent`	|	Aug 22, 2022	|
 |	[Font Awesome 4](https://icon-sets.iconify.design/fa) | `@iconify-prerendered/vue-fa`	|	Jun 25, 2022	|
 |	[Font Awesome 5 Brands](https://icon-sets.iconify.design/fa-brands) | `@iconify-prerendered/vue-fa-brands`	|	Jun 25, 2022	|
@@ -128,7 +128,7 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 |	[Gridicons](https://icon-sets.iconify.design/gridicons) | `@iconify-prerendered/vue-gridicons`	|	Jun 25, 2022	|
 |	[Grommet Icons](https://icon-sets.iconify.design/grommet-icons) | `@iconify-prerendered/vue-grommet-icons`	|	Jun 25, 2022	|
 |	[Health Icons](https://icon-sets.iconify.design/healthicons) | `@iconify-prerendered/vue-healthicons`	|	Jun 25, 2022	|
-|	[HeroIcons](https://icon-sets.iconify.design/heroicons) | `@iconify-prerendered/vue-heroicons`	|	Aug 31, 2022	|
+|	[HeroIcons](https://icon-sets.iconify.design/heroicons) | `@iconify-prerendered/vue-heroicons`	|	Sep 14, 2022	|
 |	[HeroIcons v1 Outline](https://icon-sets.iconify.design/heroicons-outline) | `@iconify-prerendered/vue-heroicons-outline`	|	Aug 24, 2022	|
 |	[HeroIcons v1 Solid](https://icon-sets.iconify.design/heroicons-solid) | `@iconify-prerendered/vue-heroicons-solid`	|	Aug 26, 2022	|
 |	[Humbleicons](https://icon-sets.iconify.design/humbleicons) | `@iconify-prerendered/vue-humbleicons`	|	Jul 25, 2022	|
@@ -163,14 +163,14 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 |	[Noto Emoji](https://icon-sets.iconify.design/noto) | `@iconify-prerendered/vue-noto`	|	Jun 25, 2022	|
 |	[Noto Emoji (v1)](https://icon-sets.iconify.design/noto-v1) | `@iconify-prerendered/vue-noto-v1`	|	Jun 25, 2022	|
 |	[Octicons](https://icon-sets.iconify.design/octicon) | `@iconify-prerendered/vue-octicon`	|	Aug 31, 2022	|
-|	[OOUI](https://icon-sets.iconify.design/ooui) | `@iconify-prerendered/vue-ooui`	|	Aug 17, 2022	|
+|	[OOUI](https://icon-sets.iconify.design/ooui) | `@iconify-prerendered/vue-ooui`	|	Sep 14, 2022	|
 |	[Open Iconic](https://icon-sets.iconify.design/oi) | `@iconify-prerendered/vue-oi`	|	Jun 25, 2022	|
 |	[OpenMoji](https://icon-sets.iconify.design/openmoji) | `@iconify-prerendered/vue-openmoji`	|	Jul 26, 2022	|
 |	[Pepicons](https://icon-sets.iconify.design/pepicons) | `@iconify-prerendered/vue-pepicons`	|	Jul 2, 2022	|
 |	[Phosphor](https://icon-sets.iconify.design/ph) | `@iconify-prerendered/vue-ph`	|	Jun 25, 2022	|
 |	[Pixelarticons](https://icon-sets.iconify.design/pixelarticons) | `@iconify-prerendered/vue-pixelarticons`	|	Aug 22, 2022	|
 |	[PrestaShop Icons](https://icon-sets.iconify.design/ps) | `@iconify-prerendered/vue-ps`	|	Jun 25, 2022	|
-|	[Prime Icons](https://icon-sets.iconify.design/prime) | `@iconify-prerendered/vue-prime`	|	Jun 25, 2022	|
+|	[Prime Icons](https://icon-sets.iconify.design/prime) | `@iconify-prerendered/vue-prime`	|	Sep 14, 2022	|
 |	[Quill Icons](https://icon-sets.iconify.design/quill) | `@iconify-prerendered/vue-quill`	|	Jun 25, 2022	|
 |	[Radix Icons](https://icon-sets.iconify.design/radix-icons) | `@iconify-prerendered/vue-radix-icons`	|	Jun 25, 2022	|
 |	[Raphael](https://icon-sets.iconify.design/raphael) | `@iconify-prerendered/vue-raphael`	|	Jun 25, 2022	|
@@ -179,9 +179,9 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 |	[Simple line icons](https://icon-sets.iconify.design/simple-line-icons) | `@iconify-prerendered/vue-simple-line-icons`	|	Jun 25, 2022	|
 |	[SmartIcons Glyph](https://icon-sets.iconify.design/si-glyph) | `@iconify-prerendered/vue-si-glyph`	|	Jun 26, 2022	|
 |	[Subway Icon Set](https://icon-sets.iconify.design/subway) | `@iconify-prerendered/vue-subway`	|	Jun 25, 2022	|
-|	[SVG Logos](https://icon-sets.iconify.design/logos) | `@iconify-prerendered/vue-logos`	|	Sep 2, 2022	|
+|	[SVG Logos](https://icon-sets.iconify.design/logos) | `@iconify-prerendered/vue-logos`	|	Sep 14, 2022	|
 |	[System UIcons](https://icon-sets.iconify.design/system-uicons) | `@iconify-prerendered/vue-system-uicons`	|	Jun 25, 2022	|
-|	[Tabler Icons](https://icon-sets.iconify.design/tabler) | `@iconify-prerendered/vue-tabler`	|	Sep 12, 2022	|
+|	[Tabler Icons](https://icon-sets.iconify.design/tabler) | `@iconify-prerendered/vue-tabler`	|	Sep 14, 2022	|
 |	[Teenyicons](https://icon-sets.iconify.design/teenyicons) | `@iconify-prerendered/vue-teenyicons`	|	Jun 26, 2022	|
 |	[TopCoat Icons](https://icon-sets.iconify.design/topcoat) | `@iconify-prerendered/vue-topcoat`	|	Jun 25, 2022	|
 |	[Twitter Emoji](https://icon-sets.iconify.design/twemoji) | `@iconify-prerendered/vue-twemoji`	|	Jun 25, 2022	|
