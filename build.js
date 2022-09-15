@@ -52,9 +52,9 @@ async function buildCollection(collectionName) {
       }
     }
 
-    const icon = getIconData(collection, iconName, true)
+    const icon = getIconData(collection, iconName)
 
-    const svg = iconToSVG(icon, icon) // FIXME: WTF?
+    const svg = iconToSVG(icon)
     const props = {
       'aria-hidden': true,
       'role': 'img',

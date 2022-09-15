@@ -66,8 +66,9 @@ for (const collectionPrefix of collections) {
         }
 
         return iconsToRender.map(name => {
-          const data = getIconData(collection, name, true)
-          return ({name, data, svg: iconToSVG(data, data)});
+          const data = getIconData(collection, name)
+
+          return ({name, data, svg: iconToSVG(data)});
         }).filter(({data}) => !data.hidden)
       })
       .run(({assert}, {name, svg}) => {
@@ -89,11 +90,10 @@ for (const collectionPrefix of collections) {
         assert.equal(props['role'], 'img')
 
         // should have correct icon attributes
-        for (const attributesKey in svg.attributes) {
-          assert.equal(props[attributesKey], svg.attributes[attributesKey])
+        for (const attribute in svg.attributes) {
+          assert.equal(props[attribute], svg.attributes[attribute], `${attribute} check`)
         }
       })
 
   })
-
 }
