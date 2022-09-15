@@ -65,11 +65,16 @@ for (const collectionPrefix of collections) {
           iconsToRender = iconsToRender.concat(Object.keys(collection.aliases))
         }
 
-        return iconsToRender.map(name => {
+        return iconsToRender.reduce((icons, name) => {
           const data = getIconData(collection, name)
-
-          return ({name, data, svg: iconToSVG(data)});
-        }).filter(({data}) => !data.hidden)
+          if (!data.hidden) {
+            icons.push({
+              name,
+              svg: iconToSVG(data)
+            })
+          }
+          return icons
+        }, [])
       })
       .run(({assert}, {name, svg}) => {
         const component = set[getComponentName(name)]
