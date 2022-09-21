@@ -108,13 +108,13 @@ async function buildCollection(collectionName) {
   ])
 }
 
-function renderVueComponent(props, componentName = null) {
+function renderVueComponent(props) {
   return `() => h('svg', ${JSON.stringify(props)})`
 }
 
 /**
  *
- * @param {IconifyJSON} collection
+ * @param {import('@iconify/types').IconifyJSON} collection
  * @returns {string}
  */
 function generatePackageJson(collection) {
@@ -144,7 +144,7 @@ function generatePackageJson(collection) {
 
 
 /**
- * @param {IconifyJSON} collection
+ * @param {import('@iconify/types').IconifyJSON} collection
  * @returns {string}
  */
 function generateReadme(collection) {
