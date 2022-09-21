@@ -1,9 +1,24 @@
 import {lookupCollection, lookupCollections} from '@iconify/json';
-import {getIconData, iconToSVG} from '@iconify/utils';
+import {getIconData, iconToSVG, replaceIDs} from '@iconify/utils';
 import * as fs from "fs";
 import * as path from "path";
 import {getComponentName} from "./getComponentName.js";
 
+/**
+ * Many icons may have elements with unique IDs, such as masks. IDs are meant to be unique.
+ * If generated icon is embedded in HTML, it cannot have IDs that might be present in
+ * another icon. To solve that, replacing IDs in content with randomly generated IDs.
+ *
+ * But randomly generated IDs will fail tests.
+ * That's why ```--no-replace-ids``` should disable IDs replacement for test build
+ * @type {boolean}
+ */
+const SHOULD_REPLACE_IDS = !process.argv.includes('--no-replace-ids')
+
+/**
+ *
+ * @type {any}
+ */
 const packageJsonBase = JSON.parse(fs.readFileSync('./package.json', {encoding: 'utf8'}))
 
 /**
@@ -58,7 +73,7 @@ async function buildCollection(collectionName) {
     const props = {
       'aria-hidden': true,
       'role': 'img',
-      innerHTML: svg.body,
+      innerHTML: SHOULD_REPLACE_IDS ? replaceIDs(svg.body, collectionName+iconName) : svg.body,
       ...svg.attributes,
     }
 
