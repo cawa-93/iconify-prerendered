@@ -109,7 +109,8 @@ async function buildCollection(collectionName) {
 }
 
 function renderVueComponent(props) {
-  return `() => h('svg', ${JSON.stringify(props)})`
+  const attributesString = JSON.stringify(props).replace(/}$/, ',...props}')
+  return `(props) => h('svg', ${attributesString})`
 }
 
 /**

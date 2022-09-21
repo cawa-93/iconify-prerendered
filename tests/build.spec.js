@@ -82,7 +82,20 @@ for (const collectionPrefix of collections) {
         // Component should be defined
         assert.notEqual(component, undefined)
 
-        const [el, props] = component()
+        // should have correct default a11y attributes
+        const [, defaultProps] = component()
+        assert.equal(defaultProps['aria-hidden'], true)
+        assert.equal(defaultProps['role'], 'img')
+
+
+        const userAttributes = {
+          'aria-hidden': false,
+          'data-foo': 'foo',
+          'name': 'name',
+          'aria-label': 'aria-label'
+        }
+
+        const [el, props] = component(userAttributes)
 
         // should be rendered as <svg>
         assert.equal(el, 'svg')
@@ -90,15 +103,15 @@ for (const collectionPrefix of collections) {
         // should have correct icon-body
         assert.equal(props.innerHTML, svg.body)
 
-        // should have correct a11y attributes
-        assert.equal(props['aria-hidden'], true)
-        assert.equal(props['role'], 'img')
-
         // should have correct icon attributes
-        for (const attribute in svg.attributes) {
-          assert.equal(props[attribute], svg.attributes[attribute], `${attribute} check`)
+        const allExpectedAttributes = {
+          ...svg.attributes,
+          ...userAttributes,
+        }
+
+        for (const attribute in allExpectedAttributes) {
+          assert.equal(props[attribute], allExpectedAttributes[attribute], `${attribute} check`)
         }
       })
-
   })
 }
