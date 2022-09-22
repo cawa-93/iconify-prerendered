@@ -41,7 +41,7 @@ npm i @iconify-prerendered/vue-mdi
 Just import icon-component from set like usual.
 
 ```vue
-<script setup lang="ts">
+<script setup>
 // Import two icons from Font Awesome Brands
 import { IconVuejs, IconJs } from '@iconify-prerendered/vue-fa-brands';
 // Import one Icon from Material Design icons
