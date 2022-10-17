@@ -64,7 +64,7 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 <!-- PACKAGE LIST START -->
 | Icon set | Package | Last modified |
 | --- | --- | --- |
-|	[Academicons](https://icon-sets.iconify.design/academicons) | `@iconify-prerendered/vue-academicons`	|	Jun 25, 2022	|
+|	[Academicons](https://icon-sets.iconify.design/academicons) | `@iconify-prerendered/vue-academicons`	|	Oct 17, 2022	|
 |	[Akar Icons](https://icon-sets.iconify.design/akar-icons) | `@iconify-prerendered/vue-akar-icons`	|	Oct 14, 2022	|
 |	[Ant Design Icons](https://icon-sets.iconify.design/ant-design) | `@iconify-prerendered/vue-ant-design`	|	Jun 25, 2022	|
 |	[Arcticons](https://icon-sets.iconify.design/arcticons) | `@iconify-prerendered/vue-arcticons`	|	Sep 24, 2022	|
@@ -75,7 +75,7 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 |	[BPMN](https://icon-sets.iconify.design/bpmn) | `@iconify-prerendered/vue-bpmn`	|	Jun 25, 2022	|
 |	[Brandico](https://icon-sets.iconify.design/brandico) | `@iconify-prerendered/vue-brandico`	|	Jun 25, 2022	|
 |	[Bytesize Icons](https://icon-sets.iconify.design/bytesize) | `@iconify-prerendered/vue-bytesize`	|	Jun 25, 2022	|
-|	[Carbon](https://icon-sets.iconify.design/carbon) | `@iconify-prerendered/vue-carbon`	|	Sep 19, 2022	|
+|	[Carbon](https://icon-sets.iconify.design/carbon) | `@iconify-prerendered/vue-carbon`	|	Oct 17, 2022	|
 |	[Charm Icons](https://icon-sets.iconify.design/charm) | `@iconify-prerendered/vue-charm`	|	Aug 15, 2022	|
 |	[Circle Flags](https://icon-sets.iconify.design/circle-flags) | `@iconify-prerendered/vue-circle-flags`	|	Oct 7, 2022	|
 |	[Clarity](https://icon-sets.iconify.design/clarity) | `@iconify-prerendered/vue-clarity`	|	Jun 25, 2022	|
@@ -106,9 +106,9 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 |	[Flagpack](https://icon-sets.iconify.design/flagpack) | `@iconify-prerendered/vue-flagpack`	|	Jun 25, 2022	|
 |	[Flat Color Icons](https://icon-sets.iconify.design/flat-color-icons) | `@iconify-prerendered/vue-flat-color-icons`	|	Jun 25, 2022	|
 |	[Flat UI Icons](https://icon-sets.iconify.design/flat-ui) | `@iconify-prerendered/vue-flat-ui`	|	Jun 25, 2022	|
-|	[Fluent Emoji](https://icon-sets.iconify.design/fluent-emoji) | `@iconify-prerendered/vue-fluent-emoji`	|	Oct 1, 2022	|
-|	[Fluent Emoji Flat](https://icon-sets.iconify.design/fluent-emoji-flat) | `@iconify-prerendered/vue-fluent-emoji-flat`	|	Oct 1, 2022	|
-|	[Fluent Emoji High Contrast](https://icon-sets.iconify.design/fluent-emoji-high-contrast) | `@iconify-prerendered/vue-fluent-emoji-high-contrast`	|	Sep 14, 2022	|
+|	[Fluent Emoji](https://icon-sets.iconify.design/fluent-emoji) | `@iconify-prerendered/vue-fluent-emoji`	|	Oct 17, 2022	|
+|	[Fluent Emoji Flat](https://icon-sets.iconify.design/fluent-emoji-flat) | `@iconify-prerendered/vue-fluent-emoji-flat`	|	Oct 17, 2022	|
+|	[Fluent Emoji High Contrast](https://icon-sets.iconify.design/fluent-emoji-high-contrast) | `@iconify-prerendered/vue-fluent-emoji-high-contrast`	|	Oct 17, 2022	|
 |	[Fluent UI MDL2](https://icon-sets.iconify.design/fluent-mdl2) | `@iconify-prerendered/vue-fluent-mdl2`	|	Oct 13, 2022	|
 |	[Fluent UI System Icons](https://icon-sets.iconify.design/fluent) | `@iconify-prerendered/vue-fluent`	|	Aug 22, 2022	|
 |	[Font Awesome 4](https://icon-sets.iconify.design/fa) | `@iconify-prerendered/vue-fa`	|	Jun 25, 2022	|
@@ -137,7 +137,7 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 |	[Humbleicons](https://icon-sets.iconify.design/humbleicons) | `@iconify-prerendered/vue-humbleicons`	|	Jul 25, 2022	|
 |	[Icalicons](https://icon-sets.iconify.design/il) | `@iconify-prerendered/vue-il`	|	Jun 25, 2022	|
 |	[IcoMoon Free](https://icon-sets.iconify.design/icomoon-free) | `@iconify-prerendered/vue-icomoon-free`	|	Jun 25, 2022	|
-|	[Iconoir](https://icon-sets.iconify.design/iconoir) | `@iconify-prerendered/vue-iconoir`	|	Sep 24, 2022	|
+|	[Iconoir](https://icon-sets.iconify.design/iconoir) | `@iconify-prerendered/vue-iconoir`	|	Oct 17, 2022	|
 |	[IconPark](https://icon-sets.iconify.design/icon-park) | `@iconify-prerendered/vue-icon-park`	|	Aug 31, 2022	|
 |	[IconPark Outline](https://icon-sets.iconify.design/icon-park-outline) | `@iconify-prerendered/vue-icon-park-outline`	|	Aug 31, 2022	|
 |	[IconPark Solid](https://icon-sets.iconify.design/icon-park-solid) | `@iconify-prerendered/vue-icon-park-solid`	|	Aug 31, 2022	|
@@ -178,7 +178,7 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 |	[Radix Icons](https://icon-sets.iconify.design/radix-icons) | `@iconify-prerendered/vue-radix-icons`	|	Jun 25, 2022	|
 |	[Raphael](https://icon-sets.iconify.design/raphael) | `@iconify-prerendered/vue-raphael`	|	Jun 25, 2022	|
 |	[Remix Icon](https://icon-sets.iconify.design/ri) | `@iconify-prerendered/vue-ri`	|	Jun 25, 2022	|
-|	[Simple Icons](https://icon-sets.iconify.design/simple-icons) | `@iconify-prerendered/vue-simple-icons`	|	Oct 10, 2022	|
+|	[Simple Icons](https://icon-sets.iconify.design/simple-icons) | `@iconify-prerendered/vue-simple-icons`	|	Oct 17, 2022	|
 |	[Simple line icons](https://icon-sets.iconify.design/simple-line-icons) | `@iconify-prerendered/vue-simple-line-icons`	|	Jun 25, 2022	|
 |	[SmartIcons Glyph](https://icon-sets.iconify.design/si-glyph) | `@iconify-prerendered/vue-si-glyph`	|	Jun 26, 2022	|
 |	[Subway Icon Set](https://icon-sets.iconify.design/subway) | `@iconify-prerendered/vue-subway`	|	Oct 11, 2022	|
@@ -196,7 +196,7 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 |	[Unicons Thin Line](https://icon-sets.iconify.design/uit) | `@iconify-prerendered/vue-uit`	|	Jun 25, 2022	|
 |	[Vaadin Icons](https://icon-sets.iconify.design/vaadin) | `@iconify-prerendered/vue-vaadin`	|	Jun 25, 2022	|
 |	[Vesper Icons](https://icon-sets.iconify.design/vs) | `@iconify-prerendered/vue-vs`	|	Jun 25, 2022	|
-|	[VSCode Icons](https://icon-sets.iconify.design/vscode-icons) | `@iconify-prerendered/vue-vscode-icons`	|	Oct 10, 2022	|
+|	[VSCode Icons](https://icon-sets.iconify.design/vscode-icons) | `@iconify-prerendered/vue-vscode-icons`	|	Oct 17, 2022	|
 |	[Weather Icons](https://icon-sets.iconify.design/wi) | `@iconify-prerendered/vue-wi`	|	Jun 25, 2022	|
 |	[Web Symbols Liga](https://icon-sets.iconify.design/websymbol) | `@iconify-prerendered/vue-websymbol`	|	Jun 25, 2022	|
 |	[WebHostingHub Glyphs](https://icon-sets.iconify.design/whh) | `@iconify-prerendered/vue-whh`	|	Jun 25, 2022	|
