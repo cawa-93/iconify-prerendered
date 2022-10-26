@@ -106,7 +106,7 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 |	[Flagpack](https://icon-sets.iconify.design/flagpack) | `@iconify-prerendered/vue-flagpack`	|	Jun 25, 2022	|
 |	[Flat Color Icons](https://icon-sets.iconify.design/flat-color-icons) | `@iconify-prerendered/vue-flat-color-icons`	|	Jun 25, 2022	|
 |	[Flat UI Icons](https://icon-sets.iconify.design/flat-ui) | `@iconify-prerendered/vue-flat-ui`	|	Jun 25, 2022	|
-|	[Fluent Emoji](https://icon-sets.iconify.design/fluent-emoji) | `@iconify-prerendered/vue-fluent-emoji`	|	Oct 17, 2022	|
+|	[Fluent Emoji](https://icon-sets.iconify.design/fluent-emoji) | `@iconify-prerendered/vue-fluent-emoji`	|	Oct 26, 2022	|
 |	[Fluent Emoji Flat](https://icon-sets.iconify.design/fluent-emoji-flat) | `@iconify-prerendered/vue-fluent-emoji-flat`	|	Oct 17, 2022	|
 |	[Fluent Emoji High Contrast](https://icon-sets.iconify.design/fluent-emoji-high-contrast) | `@iconify-prerendered/vue-fluent-emoji-high-contrast`	|	Oct 17, 2022	|
 |	[Fluent UI MDL2](https://icon-sets.iconify.design/fluent-mdl2) | `@iconify-prerendered/vue-fluent-mdl2`	|	Oct 13, 2022	|
@@ -184,7 +184,7 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 |	[Subway Icon Set](https://icon-sets.iconify.design/subway) | `@iconify-prerendered/vue-subway`	|	Oct 11, 2022	|
 |	[SVG Logos](https://icon-sets.iconify.design/logos) | `@iconify-prerendered/vue-logos`	|	Oct 10, 2022	|
 |	[System UIcons](https://icon-sets.iconify.design/system-uicons) | `@iconify-prerendered/vue-system-uicons`	|	Jun 25, 2022	|
-|	[Tabler Icons](https://icon-sets.iconify.design/tabler) | `@iconify-prerendered/vue-tabler`	|	Oct 23, 2022	|
+|	[Tabler Icons](https://icon-sets.iconify.design/tabler) | `@iconify-prerendered/vue-tabler`	|	Oct 26, 2022	|
 |	[Teenyicons](https://icon-sets.iconify.design/teenyicons) | `@iconify-prerendered/vue-teenyicons`	|	Jun 26, 2022	|
 |	[TopCoat Icons](https://icon-sets.iconify.design/topcoat) | `@iconify-prerendered/vue-topcoat`	|	Jun 25, 2022	|
 |	[Twitter Emoji](https://icon-sets.iconify.design/twemoji) | `@iconify-prerendered/vue-twemoji`	|	Jun 25, 2022	|
