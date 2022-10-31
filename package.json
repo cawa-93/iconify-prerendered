@@ -9,14 +9,13 @@
     "url": "https://github.com/cawa-93/iconify-prerendered/issues"
   },
   "scripts": {
-    "build": "node ./build.js",
+    "build": "node build-vue.js",
     "publish": "node ./publish.js",
-    "test": "node ./build.js --no-replace-ids && node --loader=esmock ./bin/test.js"
+    "test": "node build-vue.js --no-replace-ids && node --loader=esmock ./bin/test.js"
   },
   "homepage": "https://github.com/cawa-93/iconify-prerendered/",
   "repository": "github:cawa-93/iconify-prerendered",
   "keywords": [
-    "vue",
     "components",
     "icons",
     "iconify"
