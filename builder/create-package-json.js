@@ -1,7 +1,8 @@
 import fs from "node:fs";
 import * as path from "path";
+import {getPackageJson} from "./get-package-json.js";
 
-const packageJsonBase = JSON.parse(fs.readFileSync('./package.json', {encoding: 'utf8'}))
+const packageJsonBase = getPackageJson()
 
 const defaultPackageJsonProperties = {
   type: 'module',

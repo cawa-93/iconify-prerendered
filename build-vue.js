@@ -2,7 +2,7 @@ import {forEachCollection} from "./builder/for-each-collection.js";
 import {lookupCollection} from "@iconify/json";
 import {collectionToPackage, createPackageJson} from "./builder/create-package-json.js";
 import * as path from "node:path";
-
+import {collectionToReadmeParts, createReadme} from "./builder/create-readme.js";
 
 await forEachCollection(async (collectionName) => {
   /**
@@ -14,9 +14,10 @@ await forEachCollection(async (collectionName) => {
 
   const collection = await lookupCollection(collectionName)
   const packageDist = path.resolve('dist', 'vue-'+collectionName)
+  const packageNamePrefix = '@iconify-prerendered/vue-';
 
   // package.json
-  const collectionPackageProperties = collectionToPackage({collection, namePrefix: '@iconify-prerendered/vue-'})
+  const collectionPackageProperties = collectionToPackage({collection, namePrefix: packageNamePrefix})
   collectionPackageProperties.peerDependencies = {vue: '*'}
   collectionPackageProperties.description = collectionPackageProperties.description.replace('. Designed for', ' for Vue. Designed for')
   collectionPackageProperties.keywords.push('vue')
@@ -26,7 +27,13 @@ await forEachCollection(async (collectionName) => {
     dist: packageDist
   })
 
-  console.log({collectionName, packageDist})
+
+  // README
+  const readmeParts = collectionToReadmeParts({collection, namePrefix: packageNamePrefix})
+  readmeParts.title += ' for Vue'
+
+  await createReadme({properties: readmeParts, dist: packageDist})
+  console.log({readmeParts})
 });
 
 //
