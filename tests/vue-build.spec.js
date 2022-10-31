@@ -10,7 +10,7 @@ const collections = Object.keys(await lookupCollections())
 
 
 function getCollectionFile(prefix, file) {
-  return path.resolve('dist', prefix, file);
+  return path.resolve('dist', 'vue-'+prefix, file);
 }
 
 function importIconSet(prefix) {

@@ -1,6 +1,6 @@
 import {getComponentName} from "./getComponentName.js";
 import {getPackageJson} from "./get-package-json.js";
-import fs from "node:fs";
+import fs from "node:fs/promises";
 import path from "path";
 
 const packageJsonBase = getPackageJson()
@@ -78,7 +78,6 @@ import {
  *     footer
  *   }} properties
  * @param {string} dist
- * @returns {string}
  */
 export async function createReadme({properties, dist}) {
   const {title, description, features, usage, usageDescription, footer} = properties
@@ -98,7 +97,7 @@ ${usageDescription}
 ${footer}
 `
 
-  await fs.promises.mkdir(dist, {recursive: true})
+  await fs.mkdir(dist, {recursive: true})
 
-  return fs.promises.writeFile(path.resolve(dist, 'README.md'), readme, {encoding: 'utf8'})
+  return fs.writeFile(path.resolve(dist, 'README.md'), readme, {encoding: 'utf8'})
 }
