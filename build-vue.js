@@ -3,7 +3,7 @@ import {lookupCollection} from "@iconify/json";
 import {collectionToPackage, createPackageJson} from "./builder/create-package-json.js";
 import * as path from "node:path";
 import {collectionToReadmeParts, createReadme} from "./builder/create-readme.js";
-import {createVueComponents} from "./create-vue-components.js";
+import {createVueComponents} from "./builder/create-vue-components.js";
 
 
 await forEachIconsCollection(async (collectionName) => {

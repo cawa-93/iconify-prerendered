@@ -1,4 +1,4 @@
-import {getComponentName} from "./builder/getComponentName.js";
+import {getComponentName} from "./getComponentName.js";
 import {getIconData, iconToSVG, replaceIDs} from "@iconify/utils";
 import * as fs from "node:fs";
 import * as path from "node:path";
