@@ -2,7 +2,7 @@ import {lookupCollection, lookupCollections} from "@iconify/json";
 import {getIconData, iconToSVG} from "@iconify/utils";
 import {test} from "@japa/runner";
 import esmock from "esmock";
-import {getComponentName} from "../getComponentName.js";
+import {getComponentName} from "../builder/getComponentName.js";
 import * as fs from "node:fs";
 import * as path from "node:path";
 
@@ -10,7 +10,7 @@ const collections = Object.keys(await lookupCollections())
 
 
 function getCollectionFile(prefix, file) {
-  return path.resolve('dist', prefix, file);
+  return path.resolve('dist', 'vue-'+prefix, file);
 }
 
 function importIconSet(prefix) {
