@@ -21,7 +21,7 @@
     "iconify"
   ],
   "devDependencies": {
-    "@iconify/json": "2.1.132",
+    "@iconify/json": "2.1.133",
     "@iconify/utils": "2.0.1",
     "@japa/assert": "1.3.6",
     "@japa/runner": "2.2.2",
