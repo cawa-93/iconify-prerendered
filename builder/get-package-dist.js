@@ -1,7 +1,7 @@
 import path from "node:path";
 import {ORG_SCOPE} from "./get-package-name.js";
 
-const DIST_ROOT = 'dist'
+export const DIST_ROOT = 'dist'
 
 
 /**
