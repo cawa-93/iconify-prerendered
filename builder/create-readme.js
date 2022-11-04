@@ -29,17 +29,17 @@ See [full docs](${packageJsonBase.homepage}#readme) or [other available icons se
 
 /**
  * @param {import('@iconify/types').IconifyJSON} collection
- * @param {string} namePrefix
+ * @param {string} name
  * @return {{
  *     title,
  *     usage,
  *     description,
  *     features,
  *     usageDescription,
- *     footer,
+ *     afterwords,
  *   }}
  */
-export function collectionToReadmeParts({collection, namePrefix}) {
+export function collectionToReadmeParts({collection, name}) {
   const title = `${collection.info.name} components`
   const sampleIcons = collection.info.samples.map(getComponentName)
   const usage = `
@@ -48,11 +48,11 @@ export function collectionToReadmeParts({collection, namePrefix}) {
 // Import components as usual
 import {
     ${sampleIcons.join(',\n    ')}
-} from '${namePrefix}${collection.prefix}'</script>
+} from '${name}'</script>
 
 <template>
   <!-- And just use it in template -->
-  ${sampleIcons.map(name => `<${name}/>`).join('\n  ')}
+  ${sampleIcons.map(c => `<${c}/>`).join('\n  ')}
 </template>
 \`\`\`
   `
@@ -63,7 +63,7 @@ import {
     description,
     features,
     usageDescription,
-    footer: afterwords,
+    afterwords,
   }
 }
 
@@ -75,12 +75,12 @@ import {
  *     description,
  *     features,
  *     usageDescription,
- *     footer
+ *     afterwords
  *   }} properties
  * @param {string} dist
  */
 export async function createReadme({properties, dist}) {
-  const {title, description, features, usage, usageDescription, footer} = properties
+  const {title, description, features, usage, usageDescription, afterwords} = properties
   const readme = `
 # ${title}
 
@@ -94,7 +94,7 @@ ${usage}
 
 ${usageDescription}
 
-${footer}
+${afterwords}
 `
 
   await fs.mkdir(dist, {recursive: true})

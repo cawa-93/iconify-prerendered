@@ -18,19 +18,16 @@ const defaultPackageJsonProperties = {
 /**
  *
  * @param {import('@iconify/types').IconifyJSON} collection
- * @param {string} namePrefix
  * @return {{
  *     version,
- *     name,
  *     description,
  *     license,
  *     keywords,
  *   }}
  */
-export function collectionToPackage({collection, namePrefix}) {
+export function collectionToPackage({collection}) {
   const [major, minor] = packageJsonBase.version.split('.')
   const version = [major, minor, collection.lastModified].join('.')
-  const name = namePrefix + collection.prefix
   const description = `${collection.info.name} components. Designed for ease of use and high performance`
   const license = collection.info.license.spdx
   const keywords = [
@@ -41,7 +38,6 @@ export function collectionToPackage({collection, namePrefix}) {
 
   return {
     version,
-    name,
     description,
     license,
     keywords,
