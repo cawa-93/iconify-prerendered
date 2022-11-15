@@ -126,7 +126,7 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 |	[Gala Icons](https://icon-sets.iconify.design/gala) | `@iconify-prerendered/vue-gala`	|	Oct 19, 2022	|
 |	[Game Icons](https://icon-sets.iconify.design/game-icons) | `@iconify-prerendered/vue-game-icons`	|	Sep 27, 2022	|
 |	[GeoGlyphs](https://icon-sets.iconify.design/geo) | `@iconify-prerendered/vue-geo`	|	Jun 25, 2022	|
-|	[Gitlab SVGs](https://icon-sets.iconify.design/pajamas) | `@iconify-prerendered/vue-pajamas`	|	Nov 4, 2022	|
+|	[Gitlab SVGs](https://icon-sets.iconify.design/pajamas) | `@iconify-prerendered/vue-pajamas`	|	Nov 15, 2022	|
 |	[Google Material Icons](https://icon-sets.iconify.design/ic) | `@iconify-prerendered/vue-ic`	|	Aug 13, 2022	|
 |	[Gridicons](https://icon-sets.iconify.design/gridicons) | `@iconify-prerendered/vue-gridicons`	|	Sep 20, 2022	|
 |	[Grommet Icons](https://icon-sets.iconify.design/grommet-icons) | `@iconify-prerendered/vue-grommet-icons`	|	Jun 25, 2022	|
