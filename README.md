@@ -104,7 +104,7 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 |	[File Icons](https://icon-sets.iconify.design/file-icons) | `@iconify-prerendered/vue-file-icons`	|	Jun 25, 2022	|
 |	[Firefox OS Emoji](https://icon-sets.iconify.design/fxemoji) | `@iconify-prerendered/vue-fxemoji`	|	Jun 25, 2022	|
 |	[Flag Icons](https://icon-sets.iconify.design/flag) | `@iconify-prerendered/vue-flag`	|	Oct 21, 2022	|
-|	[Flagpack](https://icon-sets.iconify.design/flagpack) | `@iconify-prerendered/vue-flagpack`	|	Jun 25, 2022	|
+|	[Flagpack](https://icon-sets.iconify.design/flagpack) | `@iconify-prerendered/vue-flagpack`	|	Nov 22, 2022	|
 |	[Flat Color Icons](https://icon-sets.iconify.design/flat-color-icons) | `@iconify-prerendered/vue-flat-color-icons`	|	Jun 25, 2022	|
 |	[Flat UI Icons](https://icon-sets.iconify.design/flat-ui) | `@iconify-prerendered/vue-flat-ui`	|	Jun 25, 2022	|
 |	[Fluent Emoji](https://icon-sets.iconify.design/fluent-emoji) | `@iconify-prerendered/vue-fluent-emoji`	|	Nov 4, 2022	|
@@ -127,7 +127,7 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 |	[Gala Icons](https://icon-sets.iconify.design/gala) | `@iconify-prerendered/vue-gala`	|	Oct 19, 2022	|
 |	[Game Icons](https://icon-sets.iconify.design/game-icons) | `@iconify-prerendered/vue-game-icons`	|	Sep 27, 2022	|
 |	[GeoGlyphs](https://icon-sets.iconify.design/geo) | `@iconify-prerendered/vue-geo`	|	Jun 25, 2022	|
-|	[Gitlab SVGs](https://icon-sets.iconify.design/pajamas) | `@iconify-prerendered/vue-pajamas`	|	Nov 18, 2022	|
+|	[Gitlab SVGs](https://icon-sets.iconify.design/pajamas) | `@iconify-prerendered/vue-pajamas`	|	Nov 22, 2022	|
 |	[Google Material Icons](https://icon-sets.iconify.design/ic) | `@iconify-prerendered/vue-ic`	|	Aug 13, 2022	|
 |	[Gridicons](https://icon-sets.iconify.design/gridicons) | `@iconify-prerendered/vue-gridicons`	|	Sep 20, 2022	|
 |	[Grommet Icons](https://icon-sets.iconify.design/grommet-icons) | `@iconify-prerendered/vue-grommet-icons`	|	Jun 25, 2022	|
@@ -150,7 +150,7 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 |	[Jam Icons](https://icon-sets.iconify.design/jam) | `@iconify-prerendered/vue-jam`	|	Jun 25, 2022	|
 |	[Ligature Symbols](https://icon-sets.iconify.design/ls) | `@iconify-prerendered/vue-ls`	|	Jun 25, 2022	|
 |	[Line Awesome](https://icon-sets.iconify.design/la) | `@iconify-prerendered/vue-la`	|	Jun 25, 2022	|
-|	[Lucide](https://icon-sets.iconify.design/lucide) | `@iconify-prerendered/vue-lucide`	|	Nov 16, 2022	|
+|	[Lucide](https://icon-sets.iconify.design/lucide) | `@iconify-prerendered/vue-lucide`	|	Nov 22, 2022	|
 |	[Majesticons](https://icon-sets.iconify.design/majesticons) | `@iconify-prerendered/vue-majesticons`	|	Jul 6, 2022	|
 |	[Maki](https://icon-sets.iconify.design/maki) | `@iconify-prerendered/vue-maki`	|	Oct 21, 2022	|
 |	[Map Icons](https://icon-sets.iconify.design/map) | `@iconify-prerendered/vue-map`	|	Jun 25, 2022	|
@@ -188,7 +188,7 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 |	[Tabler Icons](https://icon-sets.iconify.design/tabler) | `@iconify-prerendered/vue-tabler`	|	Nov 18, 2022	|
 |	[Teenyicons](https://icon-sets.iconify.design/teenyicons) | `@iconify-prerendered/vue-teenyicons`	|	Jun 26, 2022	|
 |	[TopCoat Icons](https://icon-sets.iconify.design/topcoat) | `@iconify-prerendered/vue-topcoat`	|	Jun 25, 2022	|
-|	[Twitter Emoji](https://icon-sets.iconify.design/twemoji) | `@iconify-prerendered/vue-twemoji`	|	Jun 25, 2022	|
+|	[Twitter Emoji](https://icon-sets.iconify.design/twemoji) | `@iconify-prerendered/vue-twemoji`	|	Nov 22, 2022	|
 |	[Typicons](https://icon-sets.iconify.design/typcn) | `@iconify-prerendered/vue-typcn`	|	Jun 25, 2022	|
 |	[uiw icons](https://icon-sets.iconify.design/uiw) | `@iconify-prerendered/vue-uiw`	|	Jun 25, 2022	|
 |	[Unicons](https://icon-sets.iconify.design/uil) | `@iconify-prerendered/vue-uil`	|	Jun 25, 2022	|
@@ -201,7 +201,7 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 |	[Weather Icons](https://icon-sets.iconify.design/wi) | `@iconify-prerendered/vue-wi`	|	Jun 25, 2022	|
 |	[Web Symbols Liga](https://icon-sets.iconify.design/websymbol) | `@iconify-prerendered/vue-websymbol`	|	Jun 25, 2022	|
 |	[WebHostingHub Glyphs](https://icon-sets.iconify.design/whh) | `@iconify-prerendered/vue-whh`	|	Jun 25, 2022	|
-|	[Zondicons](https://icon-sets.iconify.design/zondicons) | `@iconify-prerendered/vue-zondicons`	|	Jun 25, 2022	|
+|	[Zondicons](https://icon-sets.iconify.design/zondicons) | `@iconify-prerendered/vue-zondicons`	|	Nov 22, 2022	|
 
 <!-- PACKAGE LIST END -->
 
