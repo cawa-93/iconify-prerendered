@@ -48,7 +48,8 @@ export function collectionToReadmeParts({collection, name}) {
 // Import components as usual
 import {
     ${sampleIcons.join(',\n    ')}
-} from '${name}'</script>
+} from '${name}'
+</script>
 
 <template>
   <!-- And just use it in template -->
