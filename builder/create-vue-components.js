@@ -1,5 +1,5 @@
 import {getComponentName} from "./getComponentName.js";
-import {getIconData, iconToSVG, replaceIDs} from "@iconify/utils";
+import {iconToSVG, parseIconSet, replaceIDs} from "@iconify/utils";
 import * as fs from "node:fs";
 import * as path from "node:path";
 
@@ -21,18 +21,14 @@ const SHOULD_REPLACE_IDS = !process.argv.includes('--no-replace-ids')
  * @returns {Promise<void>}
  */
 export async function createVueComponents({collection, dist}) {
-  let iconsToRender = Array.from(Object.keys(collection.icons))
-
-  if (collection.aliases) {
-    iconsToRender = iconsToRender.concat(Object.keys(collection.aliases))
-  }
-
   let declarations = new Map()
 
-  for (const iconName of iconsToRender) {
-    if (collection.icons[iconName]?.hidden || collection.aliases?.[iconName]?.hidden) {
-      continue
+  parseIconSet(collection, (iconName, data) => {
+    // Hidden icons should NOT be rendered
+    if (!data || data.hidden) {
+      return
     }
+
     const componentName = getComponentName(iconName)
 
     /**
@@ -40,7 +36,7 @@ export async function createVueComponents({collection, dist}) {
      * @see https://github.com/cawa-93/iconify-prerendered/issues/2
      */
     if (declarations.has(componentName)) {
-      continue
+      return;
     }
 
     const isSimpleAlias = collection.aliases
@@ -55,13 +51,11 @@ export async function createVueComponents({collection, dist}) {
           implementation: `export const ${componentName} = ${parentComponentName};`,
           type: `export declare const ${componentName}: typeof ${parentComponentName};`
         })
-        continue
+        return;
       }
     }
 
-    const icon = getIconData(collection, iconName)
-
-    const svg = iconToSVG(icon)
+    const svg = iconToSVG(data)
     const props = {
       'aria-hidden': true,
       'role': 'img',
@@ -76,7 +70,7 @@ export async function createVueComponents({collection, dist}) {
       implementation: `export const ${componentName} = ${componentCode};`,
       type: `export declare const ${componentName}: DefineComponent<{}, {}, any>;`
     })
-  }
+  })
 
   const {
     implementationDeclarations,
@@ -98,6 +92,7 @@ export async function createVueComponents({collection, dist}) {
 }
 
 function renderVueComponent(props) {
-  const attributesString = JSON.stringify(props).replace(/}$/, ',...props}')
-  return `(props) => h('svg', ${attributesString})`
+  const paramName = 'p'
+  const attributesString = JSON.stringify(props).replace(/}$/, `,...${paramName}`)
+  return `(${paramName}) => h('svg', ${attributesString})`
 }

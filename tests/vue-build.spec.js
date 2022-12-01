@@ -31,14 +31,16 @@ for (const prefix in await lookupCollections()) {
       const componentName = getComponentName(name)
       const component = set[componentName]
 
-      test(`[vue-${collection.prefix}] ${componentName} component should${data.hidden ? ' NOT ' : ' '}be exported`, ({assert}) => {
-        assert[data.hidden ? 'notExists' : 'exists'](component)
+      const isIconHidden = !data || data.hidden
+
+      test(`[vue-${collection.prefix}] ${componentName} component should${isIconHidden ? ' NOT ' : ' '}be exported`, ({assert}) => {
+        assert[isIconHidden ? 'notExists' : 'exists'](component)
       })
 
       /**
        * No reason for testing hidden icons since they never should be rendered
        */
-      if (data.hidden) {
+      if (isIconHidden) {
         return
       }
 
