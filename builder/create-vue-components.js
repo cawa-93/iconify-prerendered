@@ -48,7 +48,7 @@ export async function createVueComponents({collection, dist}) {
       const parentComponentName = getComponentName(collection.aliases[iconName].parent)
       if (declarations.has(parentComponentName)) {
         declarations.set(componentName, {
-          implementation: `export const ${componentName} = ${parentComponentName};`,
+          implementation: `export const ${componentName}=${parentComponentName};`,
           type: `export declare const ${componentName}: typeof ${parentComponentName};`
         })
         return;
@@ -67,7 +67,7 @@ export async function createVueComponents({collection, dist}) {
     const componentCode = renderVueComponent(props, componentName)
 
     declarations.set(componentName, {
-      implementation: `export const ${componentName} = ${componentCode};`,
+      implementation: `export const ${componentName}=${componentCode};`,
       type: `export declare const ${componentName}: DefineComponent<{}, {}, any>;`
     })
   })
@@ -93,6 +93,6 @@ export async function createVueComponents({collection, dist}) {
 
 function renderVueComponent(props) {
   const paramName = 'p'
-  const attributesString = JSON.stringify(props).replace(/}$/, `,...${paramName}`)
-  return `(${paramName}) => h('svg', ${attributesString})`
+  const attributesString = JSON.stringify(props).replace(/}$/, `,...${paramName}}`)
+  return `${paramName}=>h('svg', ${attributesString})`
 }
