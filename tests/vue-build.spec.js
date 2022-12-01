@@ -1,12 +1,10 @@
-import {lookupCollection, lookupCollections} from "@iconify/json";
-import {getIconData, iconToSVG} from "@iconify/utils";
 import {test} from "@japa/runner";
-import esmock from "esmock";
+import {lookupCollection, lookupCollections} from "@iconify/json";
+import {iconToSVG, parseIconSet, validateIconSet} from "@iconify/utils";
 import {getComponentName} from "../builder/getComponentName.js";
-import * as path from "node:path";
+import path from "node:path";
 import {DIST_ROOT} from "../builder/get-package-dist.js";
-
-const collections = Object.keys(await lookupCollections())
+import esmock from "esmock";
 
 
 function getCollectionFile(prefix, file) {
@@ -21,66 +19,70 @@ function importIconSet(prefix) {
   });
 }
 
-for (const collectionPrefix of collections) {
-  const set = await importIconSet(collectionPrefix)
 
-  test.group(`validate vue components ${collectionPrefix}`, () => {
-    test(`validate icon ${collectionPrefix}/{name}`)
-      .with(async () => {
-        const collection = await lookupCollection(collectionPrefix)
-        let iconsToRender = Array.from(Object.keys(collection.icons))
+for (const prefix in await lookupCollections()) {
+  const set = await importIconSet(prefix)
+  const collection = await lookupCollection(prefix)
 
-        if (collection.aliases) {
-          iconsToRender = iconsToRender.concat(Object.keys(collection.aliases))
-        }
+  test.group(`[vue-${collection.prefix}]`, () => {
+    validateIconSet(collection)
+    parseIconSet(collection, (name, data) => {
 
-        return iconsToRender.reduce((icons, name) => {
-          const data = getIconData(collection, name)
-          if (!data.hidden) {
-            icons.push({
-              name,
-              svg: iconToSVG(data)
-            })
-          }
-          return icons
-        }, [])
+      const componentName = getComponentName(name)
+      const component = set[componentName]
+
+      test(`[vue-${collection.prefix}] ${componentName} component should${data.hidden ? ' NOT ' : ' '}be exported`, ({assert}) => {
+        assert[data.hidden ? 'notExists' : 'exists'](component)
       })
-      .run(({assert}, {name, svg}) => {
-        const component = set[getComponentName(name)]
 
-        // Component should be defined
-        assert.notEqual(component, undefined)
-
-        // should have correct default a11y attributes
-        const [, defaultProps] = component()
-        assert.equal(defaultProps['aria-hidden'], true)
-        assert.equal(defaultProps['role'], 'img')
+      /**
+       * No reason for testing hidden icons since they never should be rendered
+       */
+      if (data.hidden) {
+        return
+      }
 
 
-        const userAttributes = {
-          'aria-hidden': false,
-          'data-foo': 'foo',
-          'name': 'name',
-          'aria-label': 'aria-label'
-        }
-
+      /**
+       * @param {import('@japa/assert').Assert} assert
+       * @param {IconifyIconBuildResult} svg
+       * @param {Record<string, any>} userAttributes
+       */
+      const validateComponent = (assert, svg, userAttributes = {}) => {
         const [el, props] = component(userAttributes)
 
-        // should be rendered as <svg>
-        assert.equal(el, 'svg')
-
-        // should have correct icon-body
-        assert.equal(props.innerHTML, svg.body)
-
-        // should have correct icon attributes
+        // Validate root <svg> element
+        assert.equal(el, 'svg', 'expect rendered as <svg>')
         const allExpectedAttributes = {
           ...svg.attributes,
-          ...userAttributes,
+          ...userAttributes, // User attributes should rewrite defaults
         }
 
         for (const attribute in allExpectedAttributes) {
-          assert.equal(props[attribute], allExpectedAttributes[attribute], `${attribute} check`)
+          assert.equal(props[attribute], allExpectedAttributes[attribute], `expect correct ${attribute} attribute`)
         }
+
+        // Validate <svg> body
+        assert.equal(props.innerHTML, svg.body, 'expect correct svg body')
+      }
+
+      test(`[vue-${collection.prefix}] ${componentName} should render correctly without user props`, ({assert}) => {
+        validateComponent(assert, iconToSVG(data))
       })
+
+      test(`[vue-${collection.prefix}] ${componentName} should render correctly with user props`, ({assert}) => {
+        const userAttributes = {
+          // Redefine default svg attribute
+          'aria-hidden': false,
+          // Test `class` as special case
+          class: 'foo',
+          // Test `style` as special case
+          style: 'color: red',
+          // Test random string
+          [String(Date.now())]: Date.now(),
+        }
+        validateComponent(assert, iconToSVG(data), userAttributes)
+      })
+    })
   })
 }
