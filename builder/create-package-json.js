@@ -8,6 +8,7 @@ const defaultPackageJsonProperties = {
   type: 'module',
   main: './index.js',
   types: './index.d.ts',
+  sideEffects: false,
   author: packageJsonBase.author,
   bugs: packageJsonBase.bugs,
   homepage: packageJsonBase.homepage,
