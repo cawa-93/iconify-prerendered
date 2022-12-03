@@ -7,8 +7,11 @@
  * -- create license (?)
  * [x] write tests
  * - publish script
- * - write docs
+ * [x] write docs
  * - auto-updates
+ * -- Auto-update packages in readme
+ * -- Auto-update dependencies
+ * - CI
  */
 
 import {lookupCollection, lookupCollections} from './npm-deps.ts'
