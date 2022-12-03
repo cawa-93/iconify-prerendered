@@ -3,9 +3,8 @@ import {PackageJson} from "../utils/pkg-type.ts";
 import {outdent} from "https://deno.land/x/outdent@v0.8.0/src/index.ts";
 import {iconToSVG, parseIconSet, replaceIDs} from '../npm-deps.ts'
 
-// TODO: implement optional id replacment
 const SHOULD_REPLACE_IDS = Deno.args.includes('--replace-ids')
-console.log({SHOULD_REPLACE_IDS})
+
 export class BuilderVue extends BuilderBase {
 
     defaultSvgAttrs = {

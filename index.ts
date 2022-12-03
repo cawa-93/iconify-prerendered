@@ -5,7 +5,7 @@
  * [x] create package.json
  * [x] create readme
  * -- create license (?)
- * - write tests
+ * [x] write tests
  * - publish script
  * - write docs
  * - auto-updates
@@ -17,7 +17,7 @@ import {BuilderVue} from "./builders/BuilderVue.ts";
 
 
 for (const prefix in await lookupCollections()) {
-    console.log(`Build ${prefix}`)
+    console.log(`Building ${prefix}...`)
 
     const pkgName = `vue-${prefix}`
     const output = resolve(Deno.cwd(), 'dist', pkgName)

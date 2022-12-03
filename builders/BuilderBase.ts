@@ -37,7 +37,7 @@ export class BuilderBase implements Builder {
     }
 
 
-    public static getComponentName(iconName: string) {
+    public static getComponentName(iconName: string): string {
         /**
          * The names of some icons cannot be automatically resolved to valid component names so that they do not conflict with other components.
          * For such cases, individual conversion rules apply
@@ -47,9 +47,9 @@ export class BuilderBase implements Builder {
             ['menu-alt-2', 'IconMenuAltDash2'] // dashicon/menu-alt-2 will be resolved as `IconMenuAlt2` but it's alias for `IconMenuAlt3`
         ])
 
-
-        if (specialCases.has(iconName)) {
-            return specialCases.get(iconName)
+        const specialCase = specialCases.get(iconName)
+        if (specialCase) {
+            return specialCase
         }
 
         let name = capitalize(camelize(`icon${iconName.startsWith('-') ? iconName : `-${iconName}`}`));
