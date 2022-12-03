@@ -1,3 +1,7 @@
 {
-  "importMap": "./mock.import.map.json"
+  "importMap": "./mock.import.map.json",
+  "tasks": {
+    "build": "deno run --allow-read --allow-env --allow-write=./dist index.ts",
+    "test": "deno test --allow-read --allow-env"
+  }
 }

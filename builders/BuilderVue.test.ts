@@ -1,5 +1,5 @@
 import {assertEquals, assertExists, assertNotEquals} from "https://deno.land/std@0.167.0/testing/asserts.ts";
-import {lookupCollection, lookupCollections, parseIconSet, iconToSVG, ExtendedIconifyIcon} from "../npm-deps.ts";
+import {ExtendedIconifyIcon, iconToSVG, lookupCollection, lookupCollections, parseIconSet} from "../npm-deps.ts";
 import {PackageJson} from "../utils/pkg-type.ts";
 import {BuilderVue} from "./BuilderVue.ts";
 
@@ -39,8 +39,6 @@ for (const prefix in await lookupCollections()) {
             })
 
             await t.step('should render correctly', () => {
-
-
                 parseIconSet(collection, (iconName, iconData) => {
                     const isIconHidden = !iconData || iconData.hidden
                     if (isIconHidden) {
