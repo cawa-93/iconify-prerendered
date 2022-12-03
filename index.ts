@@ -17,14 +17,16 @@ import {BuilderVue} from "./builders/BuilderVue.ts";
 
 
 for (const prefix in await lookupCollections()) {
+    console.log(`Build ${prefix}`)
+
     const pkgName = `vue-${prefix}`
     const output = resolve(Deno.cwd(), 'dist', pkgName)
     const collection = await lookupCollection(prefix)
+
     await (new BuilderVue({
         collection,
         output,
         name: `@iconify-prerendered/${pkgName}`
     }))
         .build()
-    break
 }
