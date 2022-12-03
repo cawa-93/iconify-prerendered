@@ -1,0 +1,30 @@
+/**
+ * TODO:
+ * [x] parse all iconify collections
+ * - for each collection:
+ * -- create package.json
+ * -- create readme
+ * -- create license (?)
+ * - write tests
+ * - publish script
+ * - write docs
+ * - auto-updates
+ */
+
+import {lookupCollection, lookupCollections} from './npm-deps.ts'
+import {resolve} from "https://deno.land/std@0.167.0/path/mod.ts";
+import {BuilderVue} from "./builders/BuilderVue.ts";
+
+
+for (const prefix in await lookupCollections()) {
+    const pkgName = `vue-${prefix}`
+    const output = resolve(Deno.cwd(), 'dist', pkgName)
+    const collection = await lookupCollection(prefix)
+    await (new BuilderVue({
+        collection,
+        output,
+        name: `@iconify-prerendered/${pkgName}`
+    }))
+        .build()
+    break
+}
