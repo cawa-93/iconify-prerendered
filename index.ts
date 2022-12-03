@@ -2,8 +2,8 @@
  * TODO:
  * [x] parse all iconify collections
  * - for each collection:
- * -- create package.json
- * -- create readme
+ * [x] create package.json
+ * [x] create readme
  * -- create license (?)
  * - write tests
  * - publish script

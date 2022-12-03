@@ -1,7 +1,10 @@
 import type {IconifyJSON} from '../npm-deps.ts'
+import {camelize} from '../npm-deps.ts'
 import {resolve} from "https://deno.land/std@0.167.0/path/mod.ts";
 import {ensureDir} from "https://deno.land/std@0.167.0/fs/mod.ts";
 import {PackageJson} from "../utils/pkg-type.ts";
+import {capitalize} from "../utils/capitalize.ts";
+import outdent from 'http://deno.land/x/outdent/mod.ts';
 
 export interface Builder {
     build(collection: IconifyJSON): void | Promise<void>
@@ -12,7 +15,11 @@ export class BuilderBase implements Builder {
     readonly collection: IconifyJSON;
     readonly name: string;
 
-    constructor({collection, output, name}: { readonly collection: IconifyJSON, readonly output: string, name: string}) {
+    constructor({collection, output, name}: {
+        readonly collection: IconifyJSON,
+        readonly output: string,
+        readonly name: string
+    }) {
         this.output = output
         this.collection = collection
         this.name = name
@@ -27,6 +34,29 @@ export class BuilderBase implements Builder {
     private async writeFile(filename: string, content: string) {
         await ensureDir(this.output)
         return Deno.writeTextFile(resolve(this.output, filename), content)
+    }
+
+
+    public static getComponentName(iconName: string) {
+        /**
+         * The names of some icons cannot be automatically resolved to valid component names so that they do not conflict with other components.
+         * For such cases, individual conversion rules apply
+         * @type {Map<string, string>}
+         */
+        const specialCases = new Map([
+            ['menu-alt-2', 'IconMenuAltDash2'] // dashicon/menu-alt-2 will be resolved as `IconMenuAlt2` but it's alias for `IconMenuAlt3`
+        ])
+
+
+        if (specialCases.has(iconName)) {
+            return specialCases.get(iconName)
+        }
+
+        let name = capitalize(camelize(`icon${iconName.startsWith('-') ? iconName : `-${iconName}`}`));
+        if (name.endsWith('-')) {
+            name = name.replace(/-$/, 'Minus')
+        }
+        return name
     }
 
 
@@ -62,8 +92,48 @@ export class BuilderBase implements Builder {
         return await this.writeFile('package.json', JSON.stringify(this.packageJsonObject));
     }
 
-    createReadme() {
-        return this.writeFile('README.md', '# Hello');
+    get readmeText(): string {
+        const title = `Prerendered ${this.collection.info?.name || this.collection.prefix}`
+        const description = 'Designed for ease of use and high performance. Each icon in set is standalone component.'
+        const features = outdent`
+            - **Easy to use**
+              - No plugins required! Compatible with any build tools.
+              - Zero dependencies.
+              - SSR / SSG friendly.
+              - TypeScript support.
+            - **High performance**
+              - Does not require any external resources like fonts, css, images.
+              - The icon code is embedded in your bundle.
+              - Supports tree shaking, so only those icons that you have used will be included in the bundle.
+              - Works offline.
+            - Powered by [iconify](https://iconify.design/).
+        `
+        const usage = '<!-- USAGE NOT IMPLEMENTED -->'
+        const usageNote = 'Only these three icons will be included in your bundle. All other icons may be tree-shaken by your bundler.'
+        const afterwords = outdent`
+            That's all you need. No plugins, extra configs, IDE extensions or something else. [It just works](https://twitter.com/alex_kozack/status/1560608558127140865).
+            
+            See [full docs](${this.packageJsonObject.homepage}#readme) or [other available icons sets](${this.packageJsonObject.homepage}#available-icons-sets).
+        `
+
+        return outdent`
+            # ${title}
+        
+            ${description}
+            
+            ## Features
+            ${features}
+            
+            ## Usage
+            ${usage}
+            ${usageNote}
+            
+            ${afterwords}
+        `
+    }
+
+    writeReadme() {
+        return this.writeFile('README.md', this.readmeText);
     }
 
     async renderCollection() {
@@ -74,7 +144,7 @@ export class BuilderBase implements Builder {
 
     async build() {
         await Promise.all([
-            this.createReadme(),
+            this.writeReadme(),
             this.writePackageJson(),
             this.renderCollection()
         ])
