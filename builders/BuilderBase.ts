@@ -1,6 +1,5 @@
 import type {IconifyJSON} from '../npm-deps.ts'
 import {camelize} from '../npm-deps.ts'
-import {resolve} from "https://deno.land/std@0.167.0/path/mod.ts";
 import {ensureDir} from "https://deno.land/std@0.167.0/fs/mod.ts";
 import {PackageJson} from "../utils/pkg-type.ts";
 import {capitalize} from "../utils/capitalize.ts";
@@ -11,13 +10,13 @@ export interface Builder {
 }
 
 export class BuilderBase implements Builder {
-    readonly output: string;
+    readonly output: string | URL;
     readonly collection: IconifyJSON;
     readonly name: string;
 
     constructor({collection, output, name}: {
         readonly collection: IconifyJSON,
-        readonly output: string,
+        readonly output: string | URL,
         readonly name: string
     }) {
         this.output = output
@@ -32,8 +31,11 @@ export class BuilderBase implements Builder {
      * @private
      */
     public async writeFile(filename: string, content: string) {
-        await ensureDir(this.output)
-        return Deno.writeTextFile(resolve(this.output, filename), content)
+        await ensureDir(new URL(this.output))
+        return Deno.writeTextFile(
+            new URL(filename, this.output),
+            content
+        )
     }
 
 
