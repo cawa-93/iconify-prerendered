@@ -25,13 +25,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          cache: 'npm'
-
-      - run: npm ci
-      - run: npm run build
-      - run: npm run publish
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+#      - uses: actions/setup-node@v3
+#        with:
+#          node-version: 16
+#          cache: 'npm'
+#
+#      - run: npm ci
+#      - run: npm run build
+#      - run: npm run publish
+#        env:
+#          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
