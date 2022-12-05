@@ -21,6 +21,20 @@ import {writeAllSync} from "https://deno.land/std@0.167.0/streams/write_all.ts";
 
 const OUTPUT = import.meta.resolve(`../dist/`)
 
+// Try to remove previous build or ignore error if that doesn't exist
+try {
+    await Deno.remove(new URL(OUTPUT), {
+        recursive: true
+    })
+} catch (e) {
+    if (!(e instanceof Deno.errors.NotFound)) {
+        throw e
+    }
+}
+
+/**
+ * Needs to output log but without new line
+ */
 const textEncoder = new TextEncoder()
 
 for (const prefix in await lookupCollections()) {

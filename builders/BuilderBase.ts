@@ -31,7 +31,7 @@ export class BuilderBase implements Builder {
      * @private
      */
     public async writeFile(filename: string, content: string) {
-        await ensureDir(this.output.toString())
+        await ensureDir(new URL(this.output))
         return Deno.writeTextFile(
             new URL(filename, this.output),
             content
