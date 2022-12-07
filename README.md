@@ -80,7 +80,7 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 |	[Circle Flags](https://icon-sets.iconify.design/circle-flags) | `@iconify-prerendered/vue-circle-flags`	|	Nov 9, 2022	|
 |	[Circum Icons](https://icon-sets.iconify.design/circum) | `@iconify-prerendered/vue-circum`	|	Nov 26, 2022	|
 |	[Clarity](https://icon-sets.iconify.design/clarity) | `@iconify-prerendered/vue-clarity`	|	Jun 25, 2022	|
-|	[Codicons](https://icon-sets.iconify.design/codicon) | `@iconify-prerendered/vue-codicon`	|	Nov 30, 2022	|
+|	[Codicons](https://icon-sets.iconify.design/codicon) | `@iconify-prerendered/vue-codicon`	|	Dec 7, 2022	|
 |	[coolicons](https://icon-sets.iconify.design/ci) | `@iconify-prerendered/vue-ci`	|	Oct 11, 2022	|
 |	[CoreUI Brands](https://icon-sets.iconify.design/cib) | `@iconify-prerendered/vue-cib`	|	Jun 25, 2022	|
 |	[CoreUI Flags](https://icon-sets.iconify.design/cif) | `@iconify-prerendered/vue-cif`	|	Jun 25, 2022	|
@@ -170,7 +170,7 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 |	[Octicons](https://icon-sets.iconify.design/octicon) | `@iconify-prerendered/vue-octicon`	|	Dec 2, 2022	|
 |	[OOUI](https://icon-sets.iconify.design/ooui) | `@iconify-prerendered/vue-ooui`	|	Dec 2, 2022	|
 |	[Open Iconic](https://icon-sets.iconify.design/oi) | `@iconify-prerendered/vue-oi`	|	Jun 25, 2022	|
-|	[OpenMoji](https://icon-sets.iconify.design/openmoji) | `@iconify-prerendered/vue-openmoji`	|	Dec 2, 2022	|
+|	[OpenMoji](https://icon-sets.iconify.design/openmoji) | `@iconify-prerendered/vue-openmoji`	|	Dec 7, 2022	|
 |	[Pepicons](https://icon-sets.iconify.design/pepicons) | `@iconify-prerendered/vue-pepicons`	|	Oct 5, 2022	|
 |	[Phosphor](https://icon-sets.iconify.design/ph) | `@iconify-prerendered/vue-ph`	|	Jun 25, 2022	|
 |	[Pixelarticons](https://icon-sets.iconify.design/pixelarticons) | `@iconify-prerendered/vue-pixelarticons`	|	Aug 22, 2022	|
@@ -180,7 +180,7 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 |	[Radix Icons](https://icon-sets.iconify.design/radix-icons) | `@iconify-prerendered/vue-radix-icons`	|	Jun 25, 2022	|
 |	[Raphael](https://icon-sets.iconify.design/raphael) | `@iconify-prerendered/vue-raphael`	|	Jun 25, 2022	|
 |	[Remix Icon](https://icon-sets.iconify.design/ri) | `@iconify-prerendered/vue-ri`	|	Jun 25, 2022	|
-|	[Simple Icons](https://icon-sets.iconify.design/simple-icons) | `@iconify-prerendered/vue-simple-icons`	|	Nov 28, 2022	|
+|	[Simple Icons](https://icon-sets.iconify.design/simple-icons) | `@iconify-prerendered/vue-simple-icons`	|	Dec 7, 2022	|
 |	[Simple line icons](https://icon-sets.iconify.design/simple-line-icons) | `@iconify-prerendered/vue-simple-line-icons`	|	Jun 25, 2022	|
 |	[SmartIcons Glyph](https://icon-sets.iconify.design/si-glyph) | `@iconify-prerendered/vue-si-glyph`	|	Jun 26, 2022	|
 |	[Subway Icon Set](https://icon-sets.iconify.design/subway) | `@iconify-prerendered/vue-subway`	|	Oct 11, 2022	|
