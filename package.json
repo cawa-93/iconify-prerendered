@@ -22,7 +22,7 @@
   ],
   "devDependencies": {
     "@iconify/json": "2.1.150",
-    "@iconify/utils": "2.0.2",
+    "@iconify/utils": "2.0.3",
     "@japa/assert": "1.3.6",
     "@japa/runner": "2.2.2",
     "@japa/spec-reporter": "1.3.2",
