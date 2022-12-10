@@ -13,6 +13,7 @@ const defaultPackageJsonProperties = {
   bugs: packageJsonBase.bugs,
   homepage: packageJsonBase.homepage,
   repository: packageJsonBase.repository,
+  funding: packageJsonBase.funding,
   peerDependencies: {},
 }
 

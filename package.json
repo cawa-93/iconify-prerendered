@@ -13,6 +13,7 @@
     "publish": "node ./publish.js",
     "test": "node build-vue.js --no-replace-ids && node --loader=esmock ./bin/test.js"
   },
+  "funding": "https://www.buymeacoffee.com/kozack/",
   "homepage": "https://github.com/cawa-93/iconify-prerendered/",
   "repository": "github:cawa-93/iconify-prerendered",
   "keywords": [
