@@ -104,7 +104,7 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 |	[Feather Icons](https://icon-sets.iconify.design/feather) | `@iconify-prerendered/vue-feather`	|	Jun 25, 2022	|
 |	[File Icons](https://icon-sets.iconify.design/file-icons) | `@iconify-prerendered/vue-file-icons`	|	Jun 25, 2022	|
 |	[Firefox OS Emoji](https://icon-sets.iconify.design/fxemoji) | `@iconify-prerendered/vue-fxemoji`	|	Jun 25, 2022	|
-|	[Flag Icons](https://icon-sets.iconify.design/flag) | `@iconify-prerendered/vue-flag`	|	Oct 21, 2022	|
+|	[Flag Icons](https://icon-sets.iconify.design/flag) | `@iconify-prerendered/vue-flag`	|	Dec 21, 2022	|
 |	[Flagpack](https://icon-sets.iconify.design/flagpack) | `@iconify-prerendered/vue-flagpack`	|	Nov 22, 2022	|
 |	[Flat Color Icons](https://icon-sets.iconify.design/flat-color-icons) | `@iconify-prerendered/vue-flat-color-icons`	|	Jun 25, 2022	|
 |	[Flat UI Icons](https://icon-sets.iconify.design/flat-ui) | `@iconify-prerendered/vue-flat-ui`	|	Jun 25, 2022	|
@@ -167,7 +167,7 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 |	[Nimbus](https://icon-sets.iconify.design/nimbus) | `@iconify-prerendered/vue-nimbus`	|	Oct 28, 2022	|
 |	[Noto Emoji](https://icon-sets.iconify.design/noto) | `@iconify-prerendered/vue-noto`	|	Sep 20, 2022	|
 |	[Noto Emoji (v1)](https://icon-sets.iconify.design/noto-v1) | `@iconify-prerendered/vue-noto-v1`	|	Jun 25, 2022	|
-|	[Octicons](https://icon-sets.iconify.design/octicon) | `@iconify-prerendered/vue-octicon`	|	Dec 14, 2022	|
+|	[Octicons](https://icon-sets.iconify.design/octicon) | `@iconify-prerendered/vue-octicon`	|	Dec 21, 2022	|
 |	[OOUI](https://icon-sets.iconify.design/ooui) | `@iconify-prerendered/vue-ooui`	|	Dec 2, 2022	|
 |	[Open Iconic](https://icon-sets.iconify.design/oi) | `@iconify-prerendered/vue-oi`	|	Jun 25, 2022	|
 |	[OpenMoji](https://icon-sets.iconify.design/openmoji) | `@iconify-prerendered/vue-openmoji`	|	Dec 7, 2022	|
