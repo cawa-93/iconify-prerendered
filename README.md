@@ -156,7 +156,7 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 |	[Maki](https://icon-sets.iconify.design/maki) | `@iconify-prerendered/vue-maki`	|	Oct 21, 2022	|
 |	[Map Icons](https://icon-sets.iconify.design/map) | `@iconify-prerendered/vue-map`	|	Jun 25, 2022	|
 |	[Material Design Iconic Font](https://icon-sets.iconify.design/zmdi) | `@iconify-prerendered/vue-zmdi`	|	Jun 25, 2022	|
-|	[Material Design Icons](https://icon-sets.iconify.design/mdi) | `@iconify-prerendered/vue-mdi`	|	Dec 28, 2022	|
+|	[Material Design Icons](https://icon-sets.iconify.design/mdi) | `@iconify-prerendered/vue-mdi`	|	Dec 30, 2022	|
 |	[Material Design Light](https://icon-sets.iconify.design/mdi-light) | `@iconify-prerendered/vue-mdi-light`	|	Dec 16, 2022	|
 |	[Material Line Icons](https://icon-sets.iconify.design/line-md) | `@iconify-prerendered/vue-line-md`	|	Nov 28, 2022	|
 |	[Material Symbols](https://icon-sets.iconify.design/material-symbols) | `@iconify-prerendered/vue-material-symbols`	|	Dec 9, 2022	|
@@ -182,13 +182,13 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 |	[Radix Icons](https://icon-sets.iconify.design/radix-icons) | `@iconify-prerendered/vue-radix-icons`	|	Jun 25, 2022	|
 |	[Raphael](https://icon-sets.iconify.design/raphael) | `@iconify-prerendered/vue-raphael`	|	Jun 25, 2022	|
 |	[Remix Icon](https://icon-sets.iconify.design/ri) | `@iconify-prerendered/vue-ri`	|	Jun 25, 2022	|
-|	[Simple Icons](https://icon-sets.iconify.design/simple-icons) | `@iconify-prerendered/vue-simple-icons`	|	Dec 12, 2022	|
+|	[Simple Icons](https://icon-sets.iconify.design/simple-icons) | `@iconify-prerendered/vue-simple-icons`	|	Dec 30, 2022	|
 |	[Simple line icons](https://icon-sets.iconify.design/simple-line-icons) | `@iconify-prerendered/vue-simple-line-icons`	|	Jun 25, 2022	|
 |	[SmartIcons Glyph](https://icon-sets.iconify.design/si-glyph) | `@iconify-prerendered/vue-si-glyph`	|	Jun 26, 2022	|
 |	[Subway Icon Set](https://icon-sets.iconify.design/subway) | `@iconify-prerendered/vue-subway`	|	Oct 11, 2022	|
 |	[SVG Logos](https://icon-sets.iconify.design/logos) | `@iconify-prerendered/vue-logos`	|	Oct 28, 2022	|
 |	[System UIcons](https://icon-sets.iconify.design/system-uicons) | `@iconify-prerendered/vue-system-uicons`	|	Jun 25, 2022	|
-|	[Tabler Icons](https://icon-sets.iconify.design/tabler) | `@iconify-prerendered/vue-tabler`	|	Dec 23, 2022	|
+|	[Tabler Icons](https://icon-sets.iconify.design/tabler) | `@iconify-prerendered/vue-tabler`	|	Dec 30, 2022	|
 |	[Teenyicons](https://icon-sets.iconify.design/teenyicons) | `@iconify-prerendered/vue-teenyicons`	|	Jun 26, 2022	|
 |	[TopCoat Icons](https://icon-sets.iconify.design/topcoat) | `@iconify-prerendered/vue-topcoat`	|	Jun 25, 2022	|
 |	[Twitter Emoji](https://icon-sets.iconify.design/twemoji) | `@iconify-prerendered/vue-twemoji`	|	Nov 22, 2022	|
