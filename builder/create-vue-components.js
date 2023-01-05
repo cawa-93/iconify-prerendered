@@ -68,7 +68,7 @@ export async function createVueComponents({collection, dist}) {
 
     declarations.set(componentName, {
       implementation: `export const ${componentName}=${componentCode};`,
-      type: `export declare const ${componentName}: DefineComponent<{}, {}, any>;`
+      type: `export declare const ${componentName}: (p: SVGAttributes) => VNode;`
     })
   })
 
@@ -82,7 +82,7 @@ export async function createVueComponents({collection, dist}) {
   }, {implementationDeclarations: [], typeDeclarations: []})
 
   const fullImplementation = `import {h} from 'vue';\n${implementationDeclarations.join('\n')}`
-  const fullTypeDeclaration = `import type {DefineComponent} from 'vue';\n${typeDeclarations.join('\n')}`
+  const fullTypeDeclaration = `import type {VNode, SVGAttributes} from 'vue';\n${typeDeclarations.join('\n')}`
 
   await fs.promises.mkdir(dist, {recursive: true})
   await Promise.all([
