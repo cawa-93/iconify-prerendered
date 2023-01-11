@@ -78,7 +78,7 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 |	[Carbon](https://icon-sets.iconify.design/carbon) | `@iconify-prerendered/vue-carbon`	|	Jan 2, 2023	|
 |	[Charm Icons](https://icon-sets.iconify.design/charm) | `@iconify-prerendered/vue-charm`	|	Dec 2, 2022	|
 |	[Circle Flags](https://icon-sets.iconify.design/circle-flags) | `@iconify-prerendered/vue-circle-flags`	|	Jan 2, 2023	|
-|	[Circum Icons](https://icon-sets.iconify.design/circum) | `@iconify-prerendered/vue-circum`	|	Jan 2, 2023	|
+|	[Circum Icons](https://icon-sets.iconify.design/circum) | `@iconify-prerendered/vue-circum`	|	Jan 11, 2023	|
 |	[Clarity](https://icon-sets.iconify.design/clarity) | `@iconify-prerendered/vue-clarity`	|	Jan 2, 2023	|
 |	[Codicons](https://icon-sets.iconify.design/codicon) | `@iconify-prerendered/vue-codicon`	|	Dec 16, 2022	|
 |	[coolicons](https://icon-sets.iconify.design/ci) | `@iconify-prerendered/vue-ci`	|	Jan 2, 2023	|
@@ -104,7 +104,7 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 |	[Feather Icons](https://icon-sets.iconify.design/feather) | `@iconify-prerendered/vue-feather`	|	Jun 25, 2022	|
 |	[File Icons](https://icon-sets.iconify.design/file-icons) | `@iconify-prerendered/vue-file-icons`	|	Jun 25, 2022	|
 |	[Firefox OS Emoji](https://icon-sets.iconify.design/fxemoji) | `@iconify-prerendered/vue-fxemoji`	|	Jun 25, 2022	|
-|	[Flag Icons](https://icon-sets.iconify.design/flag) | `@iconify-prerendered/vue-flag`	|	Jan 2, 2023	|
+|	[Flag Icons](https://icon-sets.iconify.design/flag) | `@iconify-prerendered/vue-flag`	|	Jan 11, 2023	|
 |	[Flagpack](https://icon-sets.iconify.design/flagpack) | `@iconify-prerendered/vue-flagpack`	|	Jan 2, 2023	|
 |	[Flat Color Icons](https://icon-sets.iconify.design/flat-color-icons) | `@iconify-prerendered/vue-flat-color-icons`	|	Jan 2, 2023	|
 |	[Flat UI Icons](https://icon-sets.iconify.design/flat-ui) | `@iconify-prerendered/vue-flat-ui`	|	Jan 2, 2023	|
@@ -128,7 +128,7 @@ That's all you need. No plugins, extra configs, IDE extensions or something else
 |	[Gala Icons](https://icon-sets.iconify.design/gala) | `@iconify-prerendered/vue-gala`	|	Jan 2, 2023	|
 |	[Game Icons](https://icon-sets.iconify.design/game-icons) | `@iconify-prerendered/vue-game-icons`	|	Sep 27, 2022	|
 |	[GeoGlyphs](https://icon-sets.iconify.design/geo) | `@iconify-prerendered/vue-geo`	|	Jun 25, 2022	|
-|	[Gitlab SVGs](https://icon-sets.iconify.design/pajamas) | `@iconify-prerendered/vue-pajamas`	|	Dec 16, 2022	|
+|	[Gitlab SVGs](https://icon-sets.iconify.design/pajamas) | `@iconify-prerendered/vue-pajamas`	|	Jan 11, 2023	|
 |	[Google Material Icons](https://icon-sets.iconify.design/ic) | `@iconify-prerendered/vue-ic`	|	Jan 2, 2023	|
 |	[Gridicons](https://icon-sets.iconify.design/gridicons) | `@iconify-prerendered/vue-gridicons`	|	Jan 2, 2023	|
 |	[Grommet Icons](https://icon-sets.iconify.design/grommet-icons) | `@iconify-prerendered/vue-grommet-icons`	|	Jun 25, 2022	|
