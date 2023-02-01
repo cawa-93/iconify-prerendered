@@ -12,7 +12,7 @@ export class Generator implements IGenerator {
     }
 
     generate(collection: IconifyJSON) {
-        let output = `import {h, type SVGAttributes} from 'npm:vue@latest';\n`
+        let output = `import {h, type SVGAttributes} from 'https://vue@latest';\n` // FIXME: temp workaround https://github.com/denoland/dnt/issues/250
 
         parseIconSet(collection, (name: string, data: ExtendedIconifyIcon | null) => {
             // Hidden icons should NOT be rendered

@@ -16,15 +16,18 @@
  */
 
 import type {IconifyJSON} from '../npm-deps.ts'
-import {writeAllSync} from "https://deno.land/std@0.167.0/streams/write_all.ts";
 import {build} from 'https://deno.land/x/dnt/mod.ts';
-import {PackageJson} from "../utils/pkg-type.ts";
+import {PackageJson} from '../utils/pkg-type.ts';
+import {render} from 'https://deno.land/x/eta@v1.11.0/mod.ts'
+import {getComponentName} from "../builders/getComponentName.ts";
+import {emptyDir} from "https://deno.land/std@0.171.0/fs/empty_dir.ts";
 
-
-const VERSION = (Deno.args[0] || '0.0').split('.').slice(0,2).join('.')
+const VERSION = (Deno.args[0] || '0.0').split('.').slice(0, 2).join('.')
 
 const INPUT = import.meta.resolve(`../generated/sources/`)
 const OUTPUT = import.meta.resolve(`../generated/npm/`)
+
+const README_TEMPLATE = Deno.readTextFileSync(new URL(import.meta.resolve(`../README.npm.md`)))
 
 // Try to remove previous build or ignore error if that doesn't exist
 try {
@@ -37,35 +40,17 @@ try {
     }
 }
 
-/**
- * Needs to output log but without new line
- */
-const textEncoder = new TextEncoder()
 
 for (const {name, isDirectory} of Deno.readDirSync(new URL(INPUT))) {
     if (!isDirectory) {
         continue
     }
 
-    writeAllSync(Deno.stdout, textEncoder.encode(`Building ${name} ...`))
-
-    const startTime = performance.now()
-
     try {
+        console.group(name)
         await buildNpmCollection(name)
-
-        // await (new BuilderVue({
-        //     collection: collection,
-        //     output: new URL(`${pkgName}/`, OUTPUT),
-        //     name: `@iconify-prerendered/${pkgName}`
-        // }))
-        //     .build()
-
-        console.log(` %cok %c(${Math.round(performance.now() - startTime)}ms)`, "color: green", "color: gray")
-        break
-    } catch (e) {
-        console.log(` %cfail %c(${Math.round(performance.now() - startTime)}ms)`, "color: red", "color: gray")
-        throw e
+    } finally {
+        console.groupEnd()
     }
 }
 
@@ -75,6 +60,8 @@ async function buildNpmCollection(name: string) {
     const outputDir = new URL(`${name}/`, OUTPUT);
     const collection: Omit<IconifyJSON, 'icons' | 'aliases'> = JSON.parse(Deno.readTextFileSync(inputDir))
     const pkgName = `@iconify-prerendered/${name}`
+
+    await emptyDir(outputDir)
 
     await build({
         entryPoints: [new URL('index.ts', inputDir).href],
@@ -96,6 +83,26 @@ async function buildNpmCollection(name: string) {
             }
         }
     })
+
+
+    // Render README.md
+    const content = await render(README_TEMPLATE, {
+        pkgName,
+        name,
+        collection,
+        sampleComponents: (collection.info?.samples || []).map(getComponentName)
+    }, {
+        async: true,
+        cache: true,
+        name: 'readme',
+        filename: 'README.md'
+    })
+
+    if (typeof content !== 'string') {
+        throw new Error('README content is not a string.')
+    }
+
+    await Deno.writeTextFile(new URL(`README.md`, outputDir), content)
 }
 
 function getDescription(collection: Pick<IconifyJSON, "info" | "prefix">) {
@@ -109,7 +116,7 @@ function getPackageJson<F extends PackageJson>(collection: Omit<IconifyJSON, 'ic
         type: 'module',
         version: `${VERSION}.${collection.lastModified || 0}`,
         license: collection.info?.license.spdx,
-        funding:"https://www.buymeacoffee.com/kozack/",
+        funding: "https://www.buymeacoffee.com/kozack/",
         sideEffects: false,
         bugs: 'https://github.com/cawa-93/iconify-prerendered/issues',
         homepage: 'https://github.com/cawa-93/iconify-prerendered/',

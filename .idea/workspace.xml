@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de0e6679-00f3-4482-8d48-a75b9ec7a8ca" name="Changes" comment="refactor: Better JS generation">
+      <change afterPath="$PROJECT_DIR$/README.npm.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/builders/getComponentName.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builders/Generator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/builders/Generator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deno.lock" beforeDir="false" afterPath="$PROJECT_DIR$/deno.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tasks/build.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/build.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/generate.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/generate.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,23 +38,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "js.last.introduce.type": "CONST",
-    "last_opened_file_path": "C:/Users/kozac/Dev/iconify-standalone-vue/tasks",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.intellij.deno.DenoConfigurable",
-    "ts.external.directory.path": "C:\\Users\\kozac\\AppData\\Local\\JetBrains\\Toolbox\\apps\\WebStorm\\ch-1\\223.8617.44\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kozac/Dev/iconify-standalone-vue/tasks&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.deno.DenoConfigurable&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\kozac\\AppData\\Local\\JetBrains\\Toolbox\\apps\\WebStorm\\ch-1\\223.8617.44\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\kozac\Dev\iconify-standalone-vue\tasks" />
@@ -57,9 +63,12 @@
       <recent name="C:\Users\kozac\Dev\iconify-standalone-vue\tasks" />
     </key>
   </component>
-  <component name="RunManager" selected="Deno.Deno: Generator.ts">
+  <component name="RunManager" selected="Deno.Deno: tt.ts">
     <configuration name="Deno: Generator.ts" type="DenoConfigurationType" temporary="true" nameIsGenerated="true" inputPath="$PROJECT_DIR$/builders/Generator.ts" programParameters="run" workingDirectory="$PROJECT_DIR$/builders">
       <option name="applicationArguments" value="--allow-read" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Deno: tt.ts" type="DenoConfigurationType" temporary="true" nameIsGenerated="true" inputPath="$PROJECT_DIR$/generated/sources/vue-akar-icons/tt.ts" programParameters="run" workingDirectory="$PROJECT_DIR$/generated/sources/vue-akar-icons">
       <method v="2" />
     </configuration>
     <configuration name="build" type="DenoConfigurationType" inputPath="build" programParameters="task">
@@ -67,6 +76,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Deno.Deno: tt.ts" />
         <item itemvalue="Deno.Deno: Generator.ts" />
       </list>
     </recent_temporary>
@@ -83,6 +93,7 @@
       <workItem from="1670149589842" duration="24000" />
       <workItem from="1670149634421" duration="3604000" />
       <workItem from="1670237889951" duration="833000" />
+      <workItem from="1675245472833" duration="2132000" />
     </task>
     <task id="LOCAL-00001" summary="deps: update deno.lock">
       <created>1670154436938</created>
@@ -119,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675243528181</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="refactor: Better JS generation">
+      <created>1675243559241</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675243559241</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

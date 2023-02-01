@@ -1,11 +1,8 @@
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-direct-single.svg)](https://stand-with-ukraine.pp.ua)
+---
+
 # @iconify-prerendered
 A superset standalone icon-components for Vue with zero dependencies. Designed for ease of use and high performance.
-
----
-
-[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-direct-single.svg)](https://stand-with-ukraine.pp.ua)
-
----
 
 ## Features
 - **Easy to use**
