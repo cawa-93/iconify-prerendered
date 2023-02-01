@@ -146,8 +146,8 @@ export class BuilderBase implements Builder {
 
     async build() {
         await Promise.all([
-            this.writeReadme(),
-            this.writePackageJson(),
+            // this.writeReadme(),
+            // this.writePackageJson(),
             this.renderCollection()
         ])
 

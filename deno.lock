@@ -37,13 +37,17 @@
   "npm": {
     "specifiers": {
       "@iconify/json@2.1.147": "@iconify/json@2.1.147",
+      "@iconify/json@latest": "@iconify/json@2.2.14",
       "@iconify/types@2.0.0": "@iconify/types@2.0.0",
       "@iconify/utils@2.0.2": "@iconify/utils@2.0.2"
     },
     "packages": {
       "@antfu/install-pkg@0.1.1": {
         "integrity": "sha512-LyB/8+bSfa0DFGC06zpCEfs89/XoWZwws5ygEa5D+Xsm3OfI+aXQ86VgVG7Acyef+rSZ5HE7J8rrxzrQeM3PjQ==",
-        "dependencies": { "execa": "execa@5.1.1", "find-up": "find-up@5.0.0" }
+        "dependencies": {
+          "execa": "execa@5.1.1",
+          "find-up": "find-up@5.0.0"
+        }
       },
       "@antfu/utils@0.5.2": {
         "integrity": "sha512-CQkeV+oJxUazwjlHD0/3ZD08QWKuGQkhnrKo3e6ly5pd48VUpXbb77q0xMU4+vc2CkJnDS02Eq/M9ugyX20XZA==",
@@ -54,6 +58,13 @@
         "dependencies": {
           "@iconify/types": "@iconify/types@2.0.0",
           "pathe": "pathe@0.3.9"
+        }
+      },
+      "@iconify/json@2.2.14": {
+        "integrity": "sha512-mwdnybfFZOGQpCnEW/i/YW3G7Spb8c3XqhjngO/WVrFcr73os0dZmMiJxs79FAqxOQ8gxJc4FevnwqfSq9JIrA==",
+        "dependencies": {
+          "@iconify/types": "@iconify/types@2.0.0",
+          "pathe": "pathe@1.0.0"
         }
       },
       "@iconify/types@2.0.0": {
@@ -81,7 +92,9 @@
       },
       "debug@4.3.4": {
         "integrity": "sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==",
-        "dependencies": { "ms": "ms@2.1.2" }
+        "dependencies": {
+          "ms": "ms@2.1.2"
+        }
       },
       "execa@5.1.1": {
         "integrity": "sha512-8uSpZZocAZRBAPIEINJj3Lo9HyGitllczc27Eh5YYojjMFMn8yHMDMaUHE2Jqfq05D/wucwI4JGURyXt1vchyg==",
@@ -130,7 +143,9 @@
       },
       "locate-path@6.0.0": {
         "integrity": "sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==",
-        "dependencies": { "p-locate": "p-locate@5.0.0" }
+        "dependencies": {
+          "p-locate": "p-locate@5.0.0"
+        }
       },
       "merge-stream@2.0.0": {
         "integrity": "sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==",
@@ -146,19 +161,27 @@
       },
       "npm-run-path@4.0.1": {
         "integrity": "sha512-S48WzZW777zhNIrn7gxOlISNAqi9ZC/uQFnRdbeIHhZhCA6UqpkOT8T1G7BvfdgP4Er8gF4sUbaS0i7QvIfCWw==",
-        "dependencies": { "path-key": "path-key@3.1.1" }
+        "dependencies": {
+          "path-key": "path-key@3.1.1"
+        }
       },
       "onetime@5.1.2": {
         "integrity": "sha512-kbpaSSGJTWdAY5KPVeMOKXSrPtr8C8C7wodJbcsd51jRnmD+GZu8Y0VoU6Dm5Z4vWr0Ig/1NKuWRKf7j5aaYSg==",
-        "dependencies": { "mimic-fn": "mimic-fn@2.1.0" }
+        "dependencies": {
+          "mimic-fn": "mimic-fn@2.1.0"
+        }
       },
       "p-limit@3.1.0": {
         "integrity": "sha512-TYOanM3wGwNGsZN2cVTYPArw454xnXj5qmWF1bEoAc4+cU/ol7GVh7odevjp1FNHduHc3KZMcFduxU5Xc6uJRQ==",
-        "dependencies": { "yocto-queue": "yocto-queue@0.1.0" }
+        "dependencies": {
+          "yocto-queue": "yocto-queue@0.1.0"
+        }
       },
       "p-locate@5.0.0": {
         "integrity": "sha512-LaNjtRWUBY++zB5nE/NwcaoMylSPk+S+ZHNB1TzdbMJMny6dynpAGt7X/tl/QYq3TIeE6nxHppbo2LGymrG5Pw==",
-        "dependencies": { "p-limit": "p-limit@3.1.0" }
+        "dependencies": {
+          "p-limit": "p-limit@3.1.0"
+        }
       },
       "path-exists@4.0.0": {
         "integrity": "sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==",
@@ -172,9 +195,15 @@
         "integrity": "sha512-6Y6s0vT112P3jD8dGfuS6r+lpa0qqNrLyHPOwvXMnyNTQaYiwgau2DP3aNDsR13xqtGj7rrPo+jFUATpU6/s+g==",
         "dependencies": {}
       },
+      "pathe@1.0.0": {
+        "integrity": "sha512-nPdMG0Pd09HuSsr7QOKUXO2Jr9eqaDiZvDwdyIhNG5SHYujkQHYKDfGQkulBxvbDHz8oHLsTgKN86LSwYzSHAg==",
+        "dependencies": {}
+      },
       "shebang-command@2.0.0": {
         "integrity": "sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==",
-        "dependencies": { "shebang-regex": "shebang-regex@3.0.0" }
+        "dependencies": {
+          "shebang-regex": "shebang-regex@3.0.0"
+        }
       },
       "shebang-regex@3.0.0": {
         "integrity": "sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==",
@@ -190,7 +219,9 @@
       },
       "which@2.0.2": {
         "integrity": "sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==",
-        "dependencies": { "isexe": "isexe@2.0.0" }
+        "dependencies": {
+          "isexe": "isexe@2.0.0"
+        }
       },
       "yocto-queue@0.1.0": {
         "integrity": "sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==",

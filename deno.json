@@ -2,6 +2,7 @@
   "importMap": "./mock.import.map.json",
   "tasks": {
     "build": "deno run --allow-read --allow-env --allow-write=./dist tasks/build.ts",
+    "generate": "deno run --allow-read --allow-env --allow-write=./generated/sources/ tasks/generate.ts",
     "test": "deno test --allow-read --allow-env"
   }
 }
