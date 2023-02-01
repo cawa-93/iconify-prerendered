@@ -1,6 +1,6 @@
-import {camelize, IconifyJSON, lookupCollection} from "../npm-deps.ts";
+import type {IconifyJSON} from "../npm-deps.ts";
 import {iconToSVG, parseIconSet, replaceIDs, type ExtendedIconifyIcon } from '../npm-deps.ts'
-import {capitalize} from "../utils/capitalize.ts";
+import {getComponentName} from "./getComponentName.ts";
 
 export interface IGenerator {
     generate(collection: IconifyJSON): string | Promise<string>
@@ -35,34 +35,9 @@ export class Generator implements IGenerator {
             && ('parent' in collection.aliases[name]) // current icon has parent icon
             && Object.keys(collection.aliases[name]).length === 1 // current icon doesn't have any changed properties from parent
 
-
-        const implementation = isSimpleAlias
-            ? this.getComponentName(collection.aliases![name].parent)
-            : this.getComponentImplementation({data, name, prefix: collection.prefix});
-
-        return `export const ${this.getComponentName(name)} = ${implementation}`;
-    }
-
-    private getComponentName(iconName: string): string {
-        /**
-         * The names of some icons cannot be automatically resolved to valid component names so that they do not conflict with other components.
-         * For such cases, individual conversion rules apply
-         * @type {Map<string, string>}
-         */
-        const specialCases = new Map([
-            ['menu-alt-2', 'IconMenuAltDash2'] // dashicon/menu-alt-2 will be resolved as `IconMenuAlt2` but it's alias for `IconMenuAlt3`
-        ])
-
-        const specialCase = specialCases.get(iconName)
-        if (specialCase) {
-            return specialCase
-        }
-
-        let name = capitalize(camelize(`icon${iconName.startsWith('-') ? iconName : `-${iconName}`}`));
-        if (name.endsWith('-')) {
-            name = name.replace(/-$/, 'Minus')
-        }
-        return name
+        return isSimpleAlias
+            ? `export {${getComponentName(collection.aliases[name].parent)} as ${getComponentName(name)}}`
+            : `export const ${getComponentName(name)} = ${this.getComponentImplementation({data, name, prefix: collection.prefix})}`;
     }
 
     private getComponentImplementation({data, name, prefix}: { data: ExtendedIconifyIcon, name: string, prefix: string }): string {

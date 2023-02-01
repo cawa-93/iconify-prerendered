@@ -24,7 +24,7 @@ const textEncoder = new TextEncoder()
 const generator = new Generator(true)
 
 for (const prefix in await lookupCollections()) {
-    writeAllSync(Deno.stdout, textEncoder.encode(`Building ${prefix} ...`))
+    writeAllSync(Deno.stdout, textEncoder.encode(`Generating ${prefix} ...`))
 
     const startTime = performance.now()
 
