@@ -74,9 +74,7 @@ const textEncoder = new TextEncoder();
 
 const generator = new VueGenerator(false);
 
-
 async function generate(prefix: string) {
-
   writeAllSync(Deno.stdout, textEncoder.encode(`Generating ${prefix} ...`));
 
   const startTime = performance.now();
@@ -98,19 +96,18 @@ async function generate(prefix: string) {
       name: `@iconify-prerendered/${pkgName}`,
       keywords: ["vue"],
       description: getDescription(collection).replace(
-          "components",
-          "components for Vue",
+        "components",
+        "components for Vue",
       ),
       peerDependencies: {
-        vue: '^3.0.0'
-      }
+        vue: "^3.0.0",
+      },
     });
 
     await Deno.writeTextFile(
-        new URL("package.json", pkgDir),
-        JSON.stringify(pkg),
+      new URL("package.json", pkgDir),
+      JSON.stringify(pkg),
     );
-
 
     // README.md
     const content = await render(README_TEMPLATE, {
@@ -131,21 +128,23 @@ async function generate(prefix: string) {
     await Deno.writeTextFile(new URL(`README.md`, pkgDir), content);
 
     console.log(
-        ` %cok %c(${Math.round(performance.now() - startTime)}ms)`,
-        "color: green",
-        "color: gray",
+      ` %cok %c(${Math.round(performance.now() - startTime)}ms)`,
+      "color: green",
+      "color: gray",
     );
   } catch (e) {
     console.log(
-        ` %cfail %c(${Math.round(performance.now() - startTime)}ms)`,
-        "color: red",
-        "color: gray",
+      ` %cfail %c(${Math.round(performance.now() - startTime)}ms)`,
+      "color: red",
+      "color: gray",
     );
     throw e;
   }
 }
 
-const TO_GENERATE = Deno.args[1] ? [...Deno.args[1].split(' ')] : Object.keys(await lookupCollections())
+const TO_GENERATE = Deno.args[1]
+  ? [...Deno.args[1].split(" ")]
+  : Object.keys(await lookupCollections());
 for (const prefix of TO_GENERATE) {
-  await generate(prefix)
+  await generate(prefix);
 }

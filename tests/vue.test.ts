@@ -1,7 +1,8 @@
 import {
   assertEquals,
   assertExists,
-  assertNotEquals, assertNotMatch,
+  assertNotEquals,
+  assertNotMatch,
 } from "https://deno.land/std@0.176.0/testing/asserts.ts";
 import {
   ExtendedIconifyIcon,
@@ -37,7 +38,10 @@ for (const prefix in await lookupCollections()) {
       );
 
       // dependencies
-      assertExists(pkg.peerDependencies?.vue, 'Package should contain vue in peerDependencies');
+      assertExists(
+        pkg.peerDependencies?.vue,
+        "Package should contain vue in peerDependencies",
+      );
 
       // version
       assertExists(pkg.version);

@@ -12,7 +12,8 @@ export class VueGenerator {
   }
 
   generate(collection: IconifyJSON) {
-    let implementationOutput = `/// <reference types="./index.d.ts" />\nimport {h} from 'vue';\n`;
+    let implementationOutput =
+      `/// <reference types="./index.d.ts" />\nimport {h} from 'vue';\n`;
     let typesOutput = `import type {SVGAttributes, VNode} from 'vue';\n`;
 
     const aliases = new Map<string, string>();

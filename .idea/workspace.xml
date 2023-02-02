@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0e6679-00f3-4482-8d48-a75b9ec7a8ca" name="Changes" comment="test: improve type checking">
+    <list default="true" id="de0e6679-00f3-4482-8d48-a75b9ec7a8ca" name="Changes" comment="test: allow partial generation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deno.json" beforeDir="false" afterPath="$PROJECT_DIR$/deno.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generators/VueGenerator.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/generators/VueGenerator.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/generate.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/generate.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generators/VueGenerator.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tests/vue.test.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +54,7 @@
       <recent name="C:\Users\kozac\Dev\iconify-standalone-vue\tasks" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kozac\Dev\iconify-standalone-vue\tests" />
       <recent name="C:\Users\kozac\Dev\iconify-standalone-vue\utils" />
       <recent name="C:\Users\kozac\Dev\iconify-standalone-vue\tasks" />
     </key>
@@ -95,7 +96,7 @@
       <workItem from="1675278980400" duration="6598000" />
       <workItem from="1675349281026" duration="3585000" />
       <workItem from="1675353877952" duration="528000" />
-      <workItem from="1675366236666" duration="1467000" />
+      <workItem from="1675366236666" duration="1762000" />
     </task>
     <task id="LOCAL-00001" summary="deps: update deno.lock">
       <created>1670154436938</created>
@@ -181,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675366886900</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="test: allow partial generation">
+      <created>1675367745066</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1675367745067</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,7 +214,8 @@
     <MESSAGE value="Worked prototype" />
     <MESSAGE value="ci: fix deno task" />
     <MESSAGE value="test: improve type checking" />
-    <option name="LAST_COMMIT_MESSAGE" value="test: improve type checking" />
+    <MESSAGE value="test: allow partial generation" />
+    <option name="LAST_COMMIT_MESSAGE" value="test: allow partial generation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
