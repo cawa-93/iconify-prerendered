@@ -1,7 +1,7 @@
 {
   "importMap": "import.map.json",
   "tasks": {
-    "generate": "deno run --allow-env --allow-read --allow-write=./generated tasks/generate.ts",
+    "generate": "deno run --allow-env --allow-read --allow-write=./generated --check --reload=npm:@iconify/json tasks/generate.ts",
     "test": "deno test --allow-read --allow-env --check"
   },
   "fmt": {

@@ -1,78 +1,46 @@
-import {
-  IconifyJSON,
-  lookupCollection,
-  lookupCollections,
-} from "../npm-deps.ts";
-import { writeAllSync } from "https://deno.land/std@0.167.0/streams/write_all.ts";
-import { VueGenerator } from "../generators/VueGenerator.ts";
-import { emptyDir } from "https://deno.land/std@0.171.0/fs/empty_dir.ts";
-import { PackageJson } from "../utils/pkg-type.ts";
-import { render } from "https://deno.land/x/eta@v1.11.0/mod.ts";
-import { getComponentName } from "../utils/getComponentName.ts";
+import {lookupCollection, lookupCollections,} from "../npm-deps.ts";
+import {writeAllSync} from "https://deno.land/std@0.176.0/streams/write_all.ts";
+import {emptyDir} from "https://deno.land/std@0.176.0/fs/empty_dir.ts";
+import { parse } from "https://deno.land/std@0.176.0/flags/mod.ts";
+import {render} from "https://deno.land/x/eta@v1.11.0/mod.ts";
+import {VueGenerator} from "../generators/VueGenerator.ts";
+import {getComponentName} from "../utils/getComponentName.ts";
+import {getDescription} from "../utils/getDescription.ts";
+import {getPackageJson} from "../utils/getPackageJson.ts";
+import {join, toFileUrl} from "https://deno.land/std@0.176.0/path/mod.ts";
 
-const OUTPUT = new URL("../generated/", import.meta.url);
+const flags = parse(Deno.args, {
+  negatable: ['replace-ids'],
+  boolean: ['replace-ids'],
+  string: ['version', 'output'],
+  collect: ['prefix'],
+  alias: {
+    prefix: 'p',
+    output: 'o',
+    version: 'v'
+  },
+  default: {
+    'replace-ids': true,
+    version: '0.0',
+    output: '/generated',
+  }
+})
 
-const VERSION = (Deno.args[0] || "0.0").split(".").slice(0, 2).join(".");
+
+const OUTPUT = toFileUrl(join(Deno.cwd(), flags.output, '/'))
+await emptyDir(OUTPUT)
+
+
 const README_TEMPLATE = Deno.readTextFileSync(
   new URL(import.meta.resolve(`../README.npm.md`)),
 );
-
-function getDescription(collection: Pick<IconifyJSON, "info" | "prefix">) {
-  return `${
-    collection.info?.name || collection.prefix
-  } components. Designed for ease of use and high performance`;
-}
-
-function getPackageJson<F extends PackageJson>(
-  collection: Omit<IconifyJSON, "icons" | "aliases">,
-  fields: F,
-) {
-  return {
-    description: getDescription(collection),
-    type: "module",
-    main: "./index.js",
-    types: "./index.d.ts",
-    version: `${VERSION}.${collection.lastModified || 0}`,
-    license: collection.info?.license.spdx,
-    funding: "https://www.buymeacoffee.com/kozack/",
-    sideEffects: false,
-    bugs: "https://github.com/cawa-93/iconify-prerendered/issues",
-    homepage: "https://github.com/cawa-93/iconify-prerendered/",
-    repository: "https://github.com/cawa-93/iconify-prerendered/",
-
-    ...fields,
-
-    exports: typeof fields.exports === "string" ? fields.exports : {
-      ".": {
-        "import": {
-          "types": "./index.d.ts",
-          "default": "./index.js",
-        },
-      },
-      ...fields.exports || {},
-    },
-    author: typeof fields.author === "string" ? fields.author : {
-      "name": "Alex Kozack",
-      "url": "https://kozack.me",
-      ...fields.author || {},
-    },
-    keywords: [
-      "components",
-      "icons",
-      "iconify",
-      collection.prefix,
-      collection.info?.name || "",
-      ...fields.keywords || [],
-    ],
-  } as const satisfies Readonly<PackageJson>;
-}
 
 /**
  * Needs to output log but without new line
  */
 const textEncoder = new TextEncoder();
 
-const generator = new VueGenerator(false);
+const generator = new VueGenerator(flags['replace-ids']);
 
 async function generate(prefix: string) {
   writeAllSync(Deno.stdout, textEncoder.encode(`Generating ${prefix} ...`));
@@ -92,7 +60,7 @@ async function generate(prefix: string) {
     await Deno.writeTextFile(new URL("index.d.ts", pkgDir), type);
 
     // package.json
-    const pkg = getPackageJson(collection, {
+    const pkg = getPackageJson(collection, flags.version,{
       name: `@iconify-prerendered/${pkgName}`,
       keywords: ["vue"],
       description: getDescription(collection).replace(
@@ -122,6 +90,7 @@ async function generate(prefix: string) {
     });
 
     if (typeof content !== "string") {
+      // noinspection ExceptionCaughtLocallyJS
       throw new Error("README content is not a string.");
     }
 
@@ -142,9 +111,10 @@ async function generate(prefix: string) {
   }
 }
 
-const TO_GENERATE = Deno.args[1]
-  ? [...Deno.args[1].split(" ")]
+const TO_GENERATE = flags.prefix && flags.prefix.length
+  ? flags.prefix
   : Object.keys(await lookupCollections());
+
 for (const prefix of TO_GENERATE) {
-  await generate(prefix);
+  await generate(String(prefix));
 }

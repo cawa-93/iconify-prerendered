@@ -221,8 +221,10 @@ icon sets themselves are distributed under the license of their author.
 ## Development setup
 
 1. Install [Deno](https://deno.land/).
-2. Run `deno task generate <VERSION> [PREFIX]` for generate collections with
-   specified `PREFIX`. You can omit prefix, then will be generated all
-   collections.
+2. Run `deno task generate` for generate all collections. Params:
+   - `--version` or `-v` specify version base for generated packages. Optional.
+   - `--prefix` or `-p` specify with collection to generate. May be multiple times. Optional.
+   - `--no-replace-ids` disable replacing ids. Required for test case. Optional.
+   - `--output` or `-o` directory to place generated files. Optional.
 3. Run `deno task test` for run all tests.
-   [See more about test running](https://deno.land/manual@v1.28.3/basics/testing).
+   [See more about test running](https://deno.land/manual@v1.30.1/basics/testing).
