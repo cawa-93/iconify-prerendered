@@ -3,5 +3,10 @@
   "tasks": {
     "generate": "deno run --allow-env --allow-read --allow-write=./generated tasks/generate.ts",
     "test": "deno test --allow-read --allow-env --check"
+  },
+  "fmt": {
+    "files": {
+      "exclude": ["./generated/"]
+    }
   }
 }
