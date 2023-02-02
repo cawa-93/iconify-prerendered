@@ -21,5 +21,5 @@ jobs:
         with:
           deno-version: v1.x
 
-      - run: deno task build
+      - run: deno task generate
       - run: deno task test
