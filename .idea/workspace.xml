@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0e6679-00f3-4482-8d48-a75b9ec7a8ca" name="Changes" comment="Worked prototype">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/tests.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/tests.yml" afterDir="false" />
+    <list default="true" id="de0e6679-00f3-4482-8d48-a75b9ec7a8ca" name="Changes" comment="ci: fix deno task">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deno.lock" beforeDir="false" afterPath="$PROJECT_DIR$/deno.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generators/VueGenerator.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/generators/VueGenerator.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generators/VueGenerator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/generators/VueGenerator.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +94,8 @@
       <workItem from="1675272824552" duration="402000" />
       <workItem from="1675278980400" duration="6598000" />
       <workItem from="1675349281026" duration="3585000" />
-      <workItem from="1675353877952" duration="20000" />
+      <workItem from="1675353877952" duration="528000" />
+      <workItem from="1675366236666" duration="545000" />
     </task>
     <task id="LOCAL-00001" summary="deps: update deno.lock">
       <created>1670154436938</created>
@@ -164,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675352889302</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="ci: fix deno task">
+      <created>1675353924700</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1675353924701</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,7 +197,8 @@
     <MESSAGE value="refactor: Better JS generation" />
     <MESSAGE value="refactor: README generation" />
     <MESSAGE value="Worked prototype" />
-    <option name="LAST_COMMIT_MESSAGE" value="Worked prototype" />
+    <MESSAGE value="ci: fix deno task" />
+    <option name="LAST_COMMIT_MESSAGE" value="ci: fix deno task" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
