@@ -1,7 +1,7 @@
 import {
   assertEquals,
   assertExists,
-  assertNotEquals,
+  assertNotEquals, assertNotMatch,
 } from "https://deno.land/std@0.176.0/testing/asserts.ts";
 import {
   ExtendedIconifyIcon,
@@ -27,14 +27,21 @@ for (const prefix in await lookupCollections()) {
       assertNotEquals(content, "", "package.json empty");
 
       const pkg: PackageJson = JSON.parse(content);
+
+      // name
       assertExists(pkg.name);
-      assertExists(pkg.peerDependencies?.vue, 'Package should contain vue in peerDependencies');
       assertEquals(
         pkg.name.startsWith("@iconify-prerendered/"),
         true,
         "Package name should start with @iconify-prerendered/",
       );
+
+      // dependencies
+      assertExists(pkg.peerDependencies?.vue, 'Package should contain vue in peerDependencies');
+
+      // version
       assertExists(pkg.version);
+      assertNotMatch(pkg.version, /0\.0\./);
     });
 
     // README.md

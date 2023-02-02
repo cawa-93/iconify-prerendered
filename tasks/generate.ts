@@ -11,7 +11,6 @@ import { render } from "https://deno.land/x/eta@v1.11.0/mod.ts";
 import { getComponentName } from "../utils/getComponentName.ts";
 
 const OUTPUT = new URL("../generated/", import.meta.url);
-await emptyDir(OUTPUT);
 
 const VERSION = (Deno.args[0] || "0.0").split(".").slice(0, 2).join(".");
 const README_TEMPLATE = Deno.readTextFileSync(
@@ -75,7 +74,9 @@ const textEncoder = new TextEncoder();
 
 const generator = new VueGenerator(false);
 
-for (const prefix in await lookupCollections()) {
+
+async function generate(prefix: string) {
+
   writeAllSync(Deno.stdout, textEncoder.encode(`Generating ${prefix} ...`));
 
   const startTime = performance.now();
@@ -87,16 +88,18 @@ for (const prefix in await lookupCollections()) {
 
     await emptyDir(pkgDir);
 
+    // JavaScript
     const { implementation, type } = generator.generate(collection);
     await Deno.writeTextFile(new URL("index.js", pkgDir), implementation);
     await Deno.writeTextFile(new URL("index.d.ts", pkgDir), type);
 
+    // package.json
     const pkg = getPackageJson(collection, {
       name: `@iconify-prerendered/${pkgName}`,
       keywords: ["vue"],
       description: getDescription(collection).replace(
-        "components",
-        "components for Vue",
+          "components",
+          "components for Vue",
       ),
       peerDependencies: {
         vue: '^3.0.0'
@@ -104,10 +107,12 @@ for (const prefix in await lookupCollections()) {
     });
 
     await Deno.writeTextFile(
-      new URL("package.json", pkgDir),
-      JSON.stringify(pkg),
+        new URL("package.json", pkgDir),
+        JSON.stringify(pkg),
     );
 
+
+    // README.md
     const content = await render(README_TEMPLATE, {
       pkgName,
       collection,
@@ -126,16 +131,21 @@ for (const prefix in await lookupCollections()) {
     await Deno.writeTextFile(new URL(`README.md`, pkgDir), content);
 
     console.log(
-      ` %cok %c(${Math.round(performance.now() - startTime)}ms)`,
-      "color: green",
-      "color: gray",
+        ` %cok %c(${Math.round(performance.now() - startTime)}ms)`,
+        "color: green",
+        "color: gray",
     );
   } catch (e) {
     console.log(
-      ` %cfail %c(${Math.round(performance.now() - startTime)}ms)`,
-      "color: red",
-      "color: gray",
+        ` %cfail %c(${Math.round(performance.now() - startTime)}ms)`,
+        "color: red",
+        "color: gray",
     );
     throw e;
   }
+}
+
+const TO_GENERATE = Deno.args[1] ? [...Deno.args[1].split(' ')] : Object.keys(await lookupCollections())
+for (const prefix of TO_GENERATE) {
+  await generate(prefix)
 }

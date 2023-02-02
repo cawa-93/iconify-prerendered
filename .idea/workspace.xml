@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0e6679-00f3-4482-8d48-a75b9ec7a8ca" name="Changes" comment="ci: fix deno task">
+    <list default="true" id="de0e6679-00f3-4482-8d48-a75b9ec7a8ca" name="Changes" comment="test: improve type checking">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deno.lock" beforeDir="false" afterPath="$PROJECT_DIR$/deno.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deno.json" beforeDir="false" afterPath="$PROJECT_DIR$/deno.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generators/VueGenerator.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/generators/VueGenerator.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generators/VueGenerator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/generators/VueGenerator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/generate.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/generate.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +95,7 @@
       <workItem from="1675278980400" duration="6598000" />
       <workItem from="1675349281026" duration="3585000" />
       <workItem from="1675353877952" duration="528000" />
-      <workItem from="1675366236666" duration="545000" />
+      <workItem from="1675366236666" duration="1467000" />
     </task>
     <task id="LOCAL-00001" summary="deps: update deno.lock">
       <created>1670154436938</created>
@@ -174,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675353924701</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="test: improve type checking">
+      <created>1675366886900</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1675366886900</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,7 +205,8 @@
     <MESSAGE value="refactor: README generation" />
     <MESSAGE value="Worked prototype" />
     <MESSAGE value="ci: fix deno task" />
-    <option name="LAST_COMMIT_MESSAGE" value="ci: fix deno task" />
+    <MESSAGE value="test: improve type checking" />
+    <option name="LAST_COMMIT_MESSAGE" value="test: improve type checking" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
