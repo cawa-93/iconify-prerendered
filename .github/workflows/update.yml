@@ -19,6 +19,13 @@ jobs:
         with:
           deno-version: v1.x
 
+      # Publish new versions
+      - run: deno task generate
+      - run: deno task publish
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+
       # Update list in README.md
       - run: deno task list
       - run: git config user.name github-actions
@@ -26,9 +33,3 @@ jobs:
       - run: git add README.md
       - run: "git diff-index --quiet HEAD || git commit -m 'docs: Update packages in readme'"
       - run: git push
-
-      # Publish new versions
-      - run: deno task generate
-      - run: deno task publish
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
