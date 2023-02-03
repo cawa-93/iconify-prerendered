@@ -12,6 +12,6 @@ for (const dirEntry of Deno.readDirSync(entry)) {
     package: join(entry, dirEntry.name, `package.json`),
     access: 'public',
     checkVersion: true,
-    token: Deno.env.NPM_TOKEN,
+    token: Deno.env.get('NPM_TOKEN'),
   });
 }
