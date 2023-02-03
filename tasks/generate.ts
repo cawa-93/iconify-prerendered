@@ -26,6 +26,14 @@ const flags = parse(Deno.args, {
   }
 })
 
+if (flags.version === '0.0') {
+  try {
+    flags.version = JSON.parse(Deno.readTextFileSync(join(Deno.cwd(), 'generating.config.json'))).version
+  } catch (e) {
+    console.error(e)
+  }
+}
+
 
 const OUTPUT = toFileUrl(join(Deno.cwd(), flags.output, '/'))
 await emptyDir(OUTPUT)
@@ -114,6 +122,8 @@ async function generate(prefix: string) {
 const TO_GENERATE = flags.prefix && flags.prefix.length
   ? flags.prefix
   : Object.keys(await lookupCollections());
+
+console.log(`Generation ${TO_GENERATE} with version ${flags.version}`)
 
 for (const prefix of TO_GENERATE) {
   await generate(String(prefix));

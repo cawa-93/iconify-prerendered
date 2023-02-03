@@ -27,4 +27,8 @@ jobs:
       - run: "git diff-index --quiet HEAD || git commit -m 'docs: Update packages in readme'"
       - run: git push
 
-
+      # Publish new versions
+      - run: deno task generate
+      - run: deno task publish
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

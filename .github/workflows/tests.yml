@@ -21,5 +21,5 @@ jobs:
         with:
           deno-version: v1.x
 
-      - run: deno task generate --no-replace-ids --version=1.0
+      - run: deno task generate --no-replace-ids
       - run: deno task test
