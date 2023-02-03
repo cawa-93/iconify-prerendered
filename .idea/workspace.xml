@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0e6679-00f3-4482-8d48-a75b9ec7a8ca" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="de0e6679-00f3-4482-8d48-a75b9ec7a8ca" name="Changes" comment="Merge branch 'deno'&#10;&#10;# Conflicts:&#10;#&#9;.idea/jsonSchemas.xml&#10;#&#9;README.md&#10;#&#9;builder/create-package-json.js&#10;#&#9;builder/create-vue-components.js&#10;#&#9;package-lock.json&#10;#&#9;package.json">
+      <change beforePath="$PROJECT_DIR$/generating.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/generating.config.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675435126020</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Merge branch 'deno'&#10;&#10;# Conflicts:&#10;#&#9;.idea/jsonSchemas.xml&#10;#&#9;README.md&#10;#&#9;builder/create-package-json.js&#10;#&#9;builder/create-vue-components.js&#10;#&#9;package-lock.json&#10;#&#9;package.json">
+      <created>1675435904606</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1675435904606</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,7 +314,8 @@
     <MESSAGE value="style: Format code" />
     <MESSAGE value="tests: add lint test" />
     <MESSAGE value="ci: change order of steps" />
-    <option name="LAST_COMMIT_MESSAGE" value="ci: change order of steps" />
+    <MESSAGE value="Merge branch 'deno'&#10;&#10;# Conflicts:&#10;#&#9;.idea/jsonSchemas.xml&#10;#&#9;README.md&#10;#&#9;builder/create-package-json.js&#10;#&#9;builder/create-vue-components.js&#10;#&#9;package-lock.json&#10;#&#9;package.json" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'deno'&#10;&#10;# Conflicts:&#10;#&#9;.idea/jsonSchemas.xml&#10;#&#9;README.md&#10;#&#9;builder/create-package-json.js&#10;#&#9;builder/create-vue-components.js&#10;#&#9;package-lock.json&#10;#&#9;package.json" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
