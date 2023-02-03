@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "vue": "npm:vue@latest"
+  }
+}
