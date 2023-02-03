@@ -17,6 +17,9 @@
                   <Item>
                     <option name="path" value=".github/workflows/update-packages-list.yml" />
                   </Item>
+                  <Item>
+                    <option name="path" value=".github/workflows/update.yml" />
+                  </Item>
                 </list>
               </option>
             </SchemaInfo>

@@ -1,6 +1,11 @@
 on:
   schedule:
     - 0 12 * * *
+  push:
+    branches:
+      - main
+    paths:
+      - generating.config.json
 
 concurrency:
   group: update-${{ github.ref }}
