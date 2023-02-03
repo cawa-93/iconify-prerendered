@@ -46,6 +46,12 @@ for (const prefix in await lookupCollections()) {
       // version
       assertExists(pkg.version);
       assertNotMatch(pkg.version, /0\.0\./);
+
+      // main
+      assertEquals(pkg.main, 'index.js');
+      // types
+      assertEquals(pkg.types, 'index.d.ts');
+
     });
 
     // README.md

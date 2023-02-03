@@ -1,4 +1,4 @@
-import {lookupCollection, lookupCollections,} from "../npm-deps.ts";
+import {lookupCollection, lookupCollections} from "../npm-deps.ts";
 import {writeAllSync} from "https://deno.land/std@0.176.0/streams/write_all.ts";
 import {emptyDir} from "https://deno.land/std@0.176.0/fs/empty_dir.ts";
 import { parse } from "https://deno.land/std@0.176.0/flags/mod.ts";

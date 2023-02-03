@@ -10,8 +10,8 @@ export function getPackageJson<F extends PackageJson>(
     return {
         description: getDescription(collection),
         type: "module",
-        main: "./index.js",
-        types: "./index.d.ts",
+        main: "index.js",
+        types: "index.d.ts",
         version: `${baseVersion}.${collection.lastModified || 0}`,
         license: collection.info?.license.spdx,
         funding: "https://www.buymeacoffee.com/kozack/",
