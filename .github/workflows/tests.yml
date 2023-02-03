@@ -1,16 +1,4 @@
-on:
-  workflow_call:
-  push:
-    branches-ignore:
-      - main
-    paths-ignore:
-      - .github/FUNDING.yml
-      - .github/renovate.json
-      - '**.md'
-      - .idea
-      - .editorconfig
-      - .gitignore
-  pull_request:
+on: [workflow_call, push, pull_request]
 
 jobs:
   tests:

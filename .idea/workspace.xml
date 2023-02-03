@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0e6679-00f3-4482-8d48-a75b9ec7a8ca" name="Changes" comment="0.19.0">
+    <list default="true" id="de0e6679-00f3-4482-8d48-a75b9ec7a8ca" name="Changes" comment="ci: run updating on `generating.config.json` changed">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/tests.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/tests.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/workflows/update.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/update.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675435943906</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="ci: run updating on `generating.config.json` changed">
+      <created>1675436153460</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1675436153460</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,7 +332,8 @@
     <MESSAGE value="ci: change order of steps" />
     <MESSAGE value="Merge branch 'deno'&#10;&#10;# Conflicts:&#10;#&#9;.idea/jsonSchemas.xml&#10;#&#9;README.md&#10;#&#9;builder/create-package-json.js&#10;#&#9;builder/create-vue-components.js&#10;#&#9;package-lock.json&#10;#&#9;package.json" />
     <MESSAGE value="0.19.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.19.0" />
+    <MESSAGE value="ci: run updating on `generating.config.json` changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="ci: run updating on `generating.config.json` changed" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
