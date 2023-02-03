@@ -26,6 +26,10 @@ jobs:
           deno-version: v1.x
 
       # Publish new versions
+      - uses: actions/setup-node@v3 # npm needed to publish
+        with:
+          node-version: 18
+          cache: 'npm'
       - run: deno task generate
       - run: deno task publish
         env:
