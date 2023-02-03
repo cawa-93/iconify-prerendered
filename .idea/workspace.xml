@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0e6679-00f3-4482-8d48-a75b9ec7a8ca" name="Changes" comment="tests: add lint test">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/update.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/update.yml" afterDir="false" />
+    <list default="true" id="de0e6679-00f3-4482-8d48-a75b9ec7a8ca" name="Changes" comment="ci: change order of steps">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/vue.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tests/vue.test.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +100,7 @@
       <workItem from="1675349281026" duration="3585000" />
       <workItem from="1675353877952" duration="528000" />
       <workItem from="1675366236666" duration="5578000" />
-      <workItem from="1675431295887" duration="3771000" />
+      <workItem from="1675431295887" duration="4134000" />
     </task>
     <task id="LOCAL-00001" summary="deps: update deno.lock">
       <created>1670154436938</created>
@@ -262,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675434995126</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="ci: change order of steps">
+      <created>1675435126020</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1675435126020</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,7 +304,8 @@
     <MESSAGE value="feat: Auto-publish" />
     <MESSAGE value="style: Format code" />
     <MESSAGE value="tests: add lint test" />
-    <option name="LAST_COMMIT_MESSAGE" value="tests: add lint test" />
+    <MESSAGE value="ci: change order of steps" />
+    <option name="LAST_COMMIT_MESSAGE" value="ci: change order of steps" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

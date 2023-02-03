@@ -111,17 +111,20 @@ for (const prefix in await lookupCollections()) {
             true,
             'Functional component should return VNode',
           );
-          assertEquals(node.type, 'svg');
 
-          const svg = iconToSVG(iconData);
-          const expectedAttrs = {
-            ...svg.attributes,
-            'aria-hidden': true,
-            role: 'img',
-            ...(userAttrs || {}),
-            innerHTML: svg.body,
-          };
-          assertEquals(node.props, expectedAttrs);
+          if (isVNode(node)) {
+            assertEquals(node.type, 'svg');
+
+            const svg = iconToSVG(iconData);
+            const expectedAttrs = {
+              ...svg.attributes,
+              'aria-hidden': true,
+              role: 'img',
+              ...(userAttrs || {}),
+              innerHTML: svg.body,
+            };
+            assertEquals(node.props, expectedAttrs);
+          }
         }
       });
     });
