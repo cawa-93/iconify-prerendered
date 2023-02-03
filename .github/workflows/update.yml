@@ -1,0 +1,35 @@
+on:
+  schedule:
+    - 0 12 * * *
+
+concurrency:
+  group: update-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  tests:
+    uses: ./.github/workflows/tests.yml
+
+  update:
+    needs: [ tests ]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
+      # Publish new versions
+      - run: deno task generate
+      - run: deno task publish
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+
+      # Update list in README.md
+      - run: deno task list
+      - run: git config user.name github-actions
+      - run: git config user.email github-actions@github.com
+      - run: git add README.md
+      - run: "git diff-index --quiet HEAD || git commit -m 'docs: Update packages in readme'"
+      - run: git push

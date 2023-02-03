@@ -13,14 +13,16 @@ on:
   pull_request:
 
 jobs:
-  unit:
+  tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: denoland/setup-deno@v1
         with:
-          node-version: 16
-          cache: 'npm'
+          deno-version: v1.x
 
-      - run: npm ci
-      - run: npm run test
+      - run: deno task generate --no-replace-ids
+      - run: deno task test
+      - run: deno lint
+      - run: deno fmt --check
+
