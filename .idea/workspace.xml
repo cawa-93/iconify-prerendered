@@ -4,16 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0e6679-00f3-4482-8d48-a75b9ec7a8ca" name="Changes" comment="feat: Update list of packages in README">
-      <change afterPath="$PROJECT_DIR$/generating.config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tasks/publish.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/publish.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/tests.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/tests.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/update-packages-list.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/update.yml" afterDir="false" />
+    <list default="true" id="de0e6679-00f3-4482-8d48-a75b9ec7a8ca" name="Changes" comment="style: Format code">
+      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deno.json" beforeDir="false" afterPath="$PROJECT_DIR$/deno.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deno.lock" beforeDir="false" afterPath="$PROJECT_DIR$/deno.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generating.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/generating.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generators/VueGenerator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/generators/VueGenerator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/npm-deps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/npm-deps.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tasks/generate.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/generate.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/list.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/list.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/publish.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/publish.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/vue.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tests/vue.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/getComponentName.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/getComponentName.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/getDescription.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/getDescription.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/getPackageJson.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/getPackageJson.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/pkg-type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/pkg-type.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +112,7 @@
       <workItem from="1675349281026" duration="3585000" />
       <workItem from="1675353877952" duration="528000" />
       <workItem from="1675366236666" duration="5578000" />
-      <workItem from="1675431295887" duration="2908000" />
+      <workItem from="1675431295887" duration="3536000" />
     </task>
     <task id="LOCAL-00001" summary="deps: update deno.lock">
       <created>1670154436938</created>
@@ -249,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675433156884</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="feat: Auto-publish">
+      <created>1675434370360</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1675434370360</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,7 +292,9 @@
     <MESSAGE value="chore: add cli flags" />
     <MESSAGE value="chore: improve tests" />
     <MESSAGE value="feat: Update list of packages in README" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Update list of packages in README" />
+    <MESSAGE value="feat: Auto-publish" />
+    <MESSAGE value="style: Format code" />
+    <option name="LAST_COMMIT_MESSAGE" value="style: Format code" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,5 +1,5 @@
-import { capitalize } from "./capitalize.ts";
-import { camelize } from "../npm-deps.ts";
+import { capitalize } from './capitalize.ts';
+import { camelize } from '../npm-deps.ts';
 
 export function getComponentName(iconName: string) {
   /**
@@ -8,7 +8,7 @@ export function getComponentName(iconName: string) {
    * @type {Map<string, string>}
    */
   const specialCases = new Map([
-    ["menu-alt-2", "IconMenuAltDash2"], // dashicon/menu-alt-2 will be resolved as `IconMenuAlt2` but it's alias for `IconMenuAlt3`
+    ['menu-alt-2', 'IconMenuAltDash2'], // dashicon/menu-alt-2 will be resolved as `IconMenuAlt2` but it's alias for `IconMenuAlt3`
   ]);
 
   const specialCase = specialCases.get(iconName);
@@ -17,10 +17,10 @@ export function getComponentName(iconName: string) {
   }
 
   let name = capitalize(
-    camelize(`icon${iconName.startsWith("-") ? iconName : `-${iconName}`}`),
+    camelize(`icon${iconName.startsWith('-') ? iconName : `-${iconName}`}`),
   );
-  if (name.endsWith("-")) {
-    name = name.replace(/-$/, "Minus");
+  if (name.endsWith('-')) {
+    name = name.replace(/-$/, 'Minus');
   }
   return name;
 }

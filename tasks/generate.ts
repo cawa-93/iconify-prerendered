@@ -1,13 +1,13 @@
-import {lookupCollection, lookupCollections} from "../npm-deps.ts";
-import {writeAllSync} from "https://deno.land/std@0.176.0/streams/write_all.ts";
-import {emptyDir} from "https://deno.land/std@0.176.0/fs/empty_dir.ts";
-import { parse } from "https://deno.land/std@0.176.0/flags/mod.ts";
-import {render} from "https://deno.land/x/eta@v1.11.0/mod.ts";
-import {VueGenerator} from "../generators/VueGenerator.ts";
-import {getComponentName} from "../utils/getComponentName.ts";
-import {getDescription} from "../utils/getDescription.ts";
-import {getPackageJson} from "../utils/getPackageJson.ts";
-import {join, toFileUrl} from "https://deno.land/std@0.176.0/path/mod.ts";
+import { lookupCollection, lookupCollections } from '../npm-deps.ts';
+import { writeAllSync } from 'https://deno.land/std@0.176.0/streams/write_all.ts';
+import { emptyDir } from 'https://deno.land/std@0.176.0/fs/empty_dir.ts';
+import { parse } from 'https://deno.land/std@0.176.0/flags/mod.ts';
+import { render } from 'https://deno.land/x/eta@v1.11.0/mod.ts';
+import { VueGenerator } from '../generators/VueGenerator.ts';
+import { getComponentName } from '../utils/getComponentName.ts';
+import { getDescription } from '../utils/getDescription.ts';
+import { getPackageJson } from '../utils/getPackageJson.ts';
+import { join, toFileUrl } from 'https://deno.land/std@0.176.0/path/mod.ts';
 
 const flags = parse(Deno.args, {
   negatable: ['replace-ids'],
@@ -17,27 +17,27 @@ const flags = parse(Deno.args, {
   alias: {
     prefix: 'p',
     output: 'o',
-    version: 'v'
+    version: 'v',
   },
   default: {
     'replace-ids': true,
     version: '0.0',
     output: '/generated',
-  }
-})
+  },
+});
 
 if (flags.version === '0.0') {
   try {
-    flags.version = JSON.parse(Deno.readTextFileSync(join(Deno.cwd(), 'generating.config.json'))).version
+    flags.version = JSON.parse(
+      Deno.readTextFileSync(join(Deno.cwd(), 'generating.config.json')),
+    ).version;
   } catch (e) {
-    console.error(e)
+    console.error(e);
   }
 }
 
-
-const OUTPUT = toFileUrl(join(Deno.cwd(), flags.output, '/'))
-await emptyDir(OUTPUT)
-
+const OUTPUT = toFileUrl(join(Deno.cwd(), flags.output, '/'));
+await emptyDir(OUTPUT);
 
 const README_TEMPLATE = Deno.readTextFileSync(
   new URL(import.meta.resolve(`../README.npm.md`)),
@@ -64,24 +64,24 @@ async function generate(prefix: string) {
 
     // JavaScript
     const { implementation, type } = generator.generate(collection);
-    await Deno.writeTextFile(new URL("index.js", pkgDir), implementation);
-    await Deno.writeTextFile(new URL("index.d.ts", pkgDir), type);
+    await Deno.writeTextFile(new URL('index.js', pkgDir), implementation);
+    await Deno.writeTextFile(new URL('index.d.ts', pkgDir), type);
 
     // package.json
-    const pkg = getPackageJson(collection, flags.version,{
+    const pkg = getPackageJson(collection, flags.version, {
       name: `@iconify-prerendered/${pkgName}`,
-      keywords: ["vue"],
+      keywords: ['vue'],
       description: getDescription(collection).replace(
-        "components",
-        "components for Vue",
+        'components',
+        'components for Vue',
       ),
       peerDependencies: {
-        vue: "^3.0.0",
+        vue: '^3.0.0',
       },
     });
 
     await Deno.writeTextFile(
-      new URL("package.json", pkgDir),
+      new URL('package.json', pkgDir),
       JSON.stringify(pkg),
     );
 
@@ -93,27 +93,27 @@ async function generate(prefix: string) {
     }, {
       async: true,
       cache: true,
-      name: "readme",
-      filename: "README.md",
+      name: 'readme',
+      filename: 'README.md',
     });
 
-    if (typeof content !== "string") {
+    if (typeof content !== 'string') {
       // noinspection ExceptionCaughtLocallyJS
-      throw new Error("README content is not a string.");
+      throw new Error('README content is not a string.');
     }
 
     await Deno.writeTextFile(new URL(`README.md`, pkgDir), content);
 
     console.log(
       ` %cok %c(${Math.round(performance.now() - startTime)}ms)`,
-      "color: green",
-      "color: gray",
+      'color: green',
+      'color: gray',
     );
   } catch (e) {
     console.log(
       ` %cfail %c(${Math.round(performance.now() - startTime)}ms)`,
-      "color: red",
-      "color: gray",
+      'color: red',
+      'color: gray',
     );
     throw e;
   }
@@ -123,7 +123,7 @@ const TO_GENERATE = flags.prefix && flags.prefix.length
   ? flags.prefix
   : Object.keys(await lookupCollections());
 
-console.log(`Generation ${TO_GENERATE} with version ${flags.version}`)
+console.log(`Generation ${TO_GENERATE} with version ${flags.version}`);
 
 for (const prefix of TO_GENERATE) {
   await generate(String(prefix));

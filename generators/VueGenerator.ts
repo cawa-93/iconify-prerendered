@@ -1,11 +1,11 @@
-import type { IconifyJSON } from "../npm-deps.ts";
+import type { IconifyJSON } from '../npm-deps.ts';
 import {
   type ExtendedIconifyIcon,
   iconToSVG,
   parseIconSet,
   replaceIDs,
-} from "../npm-deps.ts";
-import { getComponentName } from "../utils/getComponentName.ts";
+} from '../npm-deps.ts';
+import { getComponentName } from '../utils/getComponentName.ts';
 
 export class VueGenerator {
   constructor(private replaceIds: boolean) {
@@ -57,14 +57,14 @@ export class VueGenerator {
     );
 
     if (aliases.size > 0) {
-      implementationOutput += "export {\n";
-      typesOutput += "export {\n";
+      implementationOutput += 'export {\n';
+      typesOutput += 'export {\n';
       for (const [component, alias] of aliases) {
         implementationOutput += `${alias} as ${component},\n`;
         typesOutput += `${alias} as ${component},\n`;
       }
-      implementationOutput += "}\n";
-      typesOutput += "}\n";
+      implementationOutput += '}\n';
+      typesOutput += '}\n';
     }
 
     return {
@@ -73,10 +73,10 @@ export class VueGenerator {
     };
   }
 
-  private aliasTo(name: string, aliases: IconifyJSON["aliases"]) {
+  private aliasTo(name: string, aliases: IconifyJSON['aliases']) {
     const isAlias = aliases && // collection has some aliases
       (name in aliases) && // current icon is in alias
-      ("parent" in aliases[name]) && // current icon has parent icon
+      ('parent' in aliases[name]) && // current icon has parent icon
       Object.keys(aliases[name]).length === 1; // current icon doesn't have any changed properties from parent
 
     return isAlias ? getComponentName(aliases[name].parent) : null;
@@ -107,8 +107,8 @@ export class VueGenerator {
     prefix,
   }: { data: ExtendedIconifyIcon; name: string; prefix: string }): string {
     const defaultInlinedProps = {
-      "aria-hidden": true,
-      "role": "img",
+      'aria-hidden': true,
+      'role': 'img',
     };
 
     const svg = iconToSVG(data);
@@ -120,7 +120,7 @@ export class VueGenerator {
       ...svg.attributes,
     };
 
-    const paramName = "p";
+    const paramName = 'p';
     const attributesString = JSON.stringify(props).replace(
       /}$/,
       `,...${paramName}}`,

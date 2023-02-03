@@ -9,6 +9,16 @@
   "fmt": {
     "files": {
       "exclude": ["./generated/"]
+    },
+    "options": {
+      "singleQuote": true,
+      "indentWidth": 2,
+      "useTabs": false
+    }
+  },
+  "lint": {
+    "files": {
+      "exclude": ["./generated/"]
     }
   }
 }
