@@ -36,6 +36,4 @@ jobs:
       - run: deno task list
       - run: git config user.name github-actions
       - run: git config user.email github-actions@github.com
-      - run: git add README.md
-      - run: "git diff-index --quiet HEAD || git commit -m 'docs: Update packages in readme'"
-      - run: git push
+      - run: "git diff --exit-code README.md || (git add README.md && git commit -m 'docs: Update packages in readme' && git push)"
