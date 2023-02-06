@@ -34,6 +34,11 @@ jobs:
 
       # Update list in README.md
       - run: deno task list
-      - run: git config user.name github-actions
-      - run: git config user.email github-actions@github.com
-      - run: "git diff --exit-code README.md || (git add README.md && git commit -m 'docs: Update packages in readme' && git push)"
+      - run: |
+          git diff --exit-code README.md || (
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add README.md
+          git commit -m 'docs: Update packages in readme'
+          git push
+          )
