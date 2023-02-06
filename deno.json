@@ -8,7 +8,7 @@
   },
   "fmt": {
     "files": {
-      "exclude": ["./generated/"]
+      "exclude": ["./generated/", "./benckmarks/generated/"]
     },
     "options": {
       "singleQuote": true,

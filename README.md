@@ -236,9 +236,13 @@ icon sets themselves are distributed under the license of their author.
    [See more about test running](https://deno.land/manual@v1.30.1/basics/testing).
 
 ## Benchmarking
+
 You can benchmark two version of icon sets. To do that:
-1. Generate _baseline_ icon set by command: `deno task generate -p=fluent-emoji -o=benckmarks/generated/baseline`
+
+1. Generate _baseline_ icon set by command:
+   `deno task generate -p=fluent-emoji -o=benckmarks/generated/baseline`
 2. Make any changes to generation process or whatever
-3. Generate _tested_ icon set by command: `deno task generate -p=fluent-emoji -o=benckmarks/generated/test`
+3. Generate _tested_ icon set by command:
+   `deno task generate -p=fluent-emoji -o=benckmarks/generated/test`
 4. Run benchmark by `deno bench --allow-env`
 5. Go to step #2
