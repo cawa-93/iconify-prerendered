@@ -97,7 +97,7 @@ export class VueGenerator {
         })
       }`,
       type:
-        `export declare const ${componentName}: (p: SVGAttributes) => VNode`,
+        `export declare const ${componentName}: (p?: SVGAttributes) => VNode`,
     };
   }
 

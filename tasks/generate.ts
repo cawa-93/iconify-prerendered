@@ -123,8 +123,6 @@ const TO_GENERATE = flags.prefix && flags.prefix.length
   ? flags.prefix
   : Object.keys(await lookupCollections());
 
-console.log(`Generation ${TO_GENERATE} with version ${flags.version}`);
-
 for (const prefix of TO_GENERATE) {
   await generate(String(prefix));
 }
