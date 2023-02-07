@@ -16,7 +16,7 @@ export class VueGenerator {
       `/// <reference types="./index.d.ts" />\nimport {createElementVNode} from 'vue';\n`;
     let typesOutput = `import type {SVGAttributes, VNode} from 'vue';\n`;
 
-    const implToComponents = new Map<string, Set<string>>()
+    const implToComponents = new Map<string, Set<string>>();
 
     parseIconSet(
       collection,
@@ -26,37 +26,39 @@ export class VueGenerator {
           return;
         }
 
-        const body = this.getInnerHTML(data, collection.prefix, name)
-        const attributes = this.getAttributes(data)
+        const body = this.getInnerHTML(data, collection.prefix, name);
+        const attributes = this.getAttributes(data);
 
-        const implementation = this.getImplementation(body, attributes)
+        const implementation = this.getImplementation(body, attributes);
 
-        const namesSet = implToComponents.get(implementation) || new Set<string>()
-        namesSet.add(getComponentName(name))
-        implToComponents.set(implementation, namesSet)
+        const namesSet = implToComponents.get(implementation) ||
+          new Set<string>();
+        namesSet.add(getComponentName(name));
+        implToComponents.set(implementation, namesSet);
       },
     );
 
-
-    let aliases = ''
+    let aliases = '';
 
     for (const [implementation, namesSet] of implToComponents) {
-      const namesIterator = namesSet.values()
+      const namesIterator = namesSet.values();
 
-      const firstComponentName = namesIterator.next().value
+      const firstComponentName = namesIterator.next().value;
 
-      implementationOutput += `export const ${firstComponentName}=${implementation};\n`;
-      typesOutput += `export declare const ${firstComponentName}: (p?: SVGAttributes) => VNode;\n`;
+      implementationOutput +=
+        `export const ${firstComponentName}=${implementation};\n`;
+      typesOutput +=
+        `export declare const ${firstComponentName}: (p?: SVGAttributes) => VNode;\n`;
 
       for (const name of namesIterator) {
-        aliases += `${aliases ? ',' : ''}${firstComponentName} as ${name}`
+        aliases += `${aliases ? ',' : ''}${firstComponentName} as ${name}`;
       }
     }
 
     if (aliases) {
-      const exportAliases = `export {${aliases}};\n`
-      implementationOutput += exportAliases
-      typesOutput += exportAliases
+      const exportAliases = `export {${aliases}};\n`;
+      implementationOutput += exportAliases;
+      typesOutput += exportAliases;
     }
 
     return {
@@ -65,7 +67,10 @@ export class VueGenerator {
     };
   }
 
-  private getImplementation(innerHTML: string, attributes: Record<string, string | number | boolean>): string {
+  private getImplementation(
+    innerHTML: string,
+    attributes: Record<string, string | number | boolean>,
+  ): string {
     const props = {
       'aria-hidden': true,
       'role': 'img',
@@ -75,23 +80,24 @@ export class VueGenerator {
 
     const paramName = 'p';
     const attributesString = JSON.stringify(props).replace(
-        /}$/,
-        `,...${paramName}}`,
+      /}$/,
+      `,...${paramName}}`,
     );
 
     return `${paramName}=>createElementVNode('svg',${attributesString},null,16)`;
   }
 
-  private getInnerHTML(data: ExtendedIconifyIcon, prefix: string, name: string) {
+  private getInnerHTML(
+    data: ExtendedIconifyIcon,
+    prefix: string,
+    name: string,
+  ) {
     const svg = iconToSVG(data);
 
-    return this.replaceIds
-        ? replaceIDs(svg.body, prefix + name)
-        : svg.body;
+    return this.replaceIds ? replaceIDs(svg.body, prefix + name) : svg.body;
   }
 
-
   private getAttributes(data: ExtendedIconifyIcon) {
-    return iconToSVG(data).attributes
+    return iconToSVG(data).attributes;
   }
 }
