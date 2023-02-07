@@ -1,6 +1,6 @@
-import type { IconifyJSON } from '../npm-deps.ts';
 import {
   type ExtendedIconifyIcon,
+  type IconifyJSON,
   iconToSVG,
   parseIconSet,
   replaceIDs,
@@ -16,7 +16,7 @@ export class VueGenerator {
       `/// <reference types="./index.d.ts" />\nimport {createElementVNode} from 'vue';\n`;
     let typesOutput = `import type {SVGAttributes, VNode} from 'vue';\n`;
 
-    const aliases = new Map<string, string>();
+    const implToComponents = new Map<string, Set<string>>()
 
     parseIconSet(
       collection,
@@ -26,45 +26,37 @@ export class VueGenerator {
           return;
         }
 
-        const alias = this.aliasTo(name, collection.aliases);
+        const body = this.getInnerHTML(data, collection.prefix, name)
+        const attributes = this.getAttributes(data)
 
-        if (alias) {
-          const componentName = getComponentName(name);
+        const implementation = this.getImplementation(body, attributes)
 
-          // Skip aliases like unlock2 -> unlock-2
-          if (alias === componentName) {
-            return;
-          }
-
-          const existedAlias = aliases.get(componentName);
-          if (existedAlias && existedAlias !== alias) {
-            throw new Error(
-              `You tried export two components (${existedAlias}, ${componentName}) with same name ${alias}`,
-            );
-          }
-
-          aliases.set(componentName, alias);
-        } else {
-          const { implementation, type } = this.getComponentDeclaration({
-            name,
-            data,
-            collection,
-          });
-          implementationOutput += `${implementation};\n`;
-          typesOutput += `${type};\n`;
-        }
+        const namesSet = implToComponents.get(implementation) || new Set<string>()
+        namesSet.add(getComponentName(name))
+        implToComponents.set(implementation, namesSet)
       },
     );
 
-    if (aliases.size > 0) {
-      implementationOutput += 'export {\n';
-      typesOutput += 'export {\n';
-      for (const [component, alias] of aliases) {
-        implementationOutput += `${alias} as ${component},\n`;
-        typesOutput += `${alias} as ${component},\n`;
+
+    let aliases = ''
+
+    for (const [implementation, namesSet] of implToComponents) {
+      const namesIterator = namesSet.values()
+
+      const firstComponentName = namesIterator.next().value
+
+      implementationOutput += `export const ${firstComponentName}=${implementation};\n`;
+      typesOutput += `export declare const ${firstComponentName}: (p?: SVGAttributes) => VNode;\n`;
+
+      for (const name of namesIterator) {
+        aliases += `${aliases ? ',' : ''}${firstComponentName} as ${name}`
       }
-      implementationOutput += '}\n';
-      typesOutput += '}\n';
+    }
+
+    if (aliases) {
+      const exportAliases = `export {${aliases}};\n`
+      implementationOutput += exportAliases
+      typesOutput += exportAliases
     }
 
     return {
@@ -73,58 +65,33 @@ export class VueGenerator {
     };
   }
 
-  private aliasTo(name: string, aliases: IconifyJSON['aliases']) {
-    const isAlias = aliases && // collection has some aliases
-      (name in aliases) && // current icon is in alias
-      ('parent' in aliases[name]) && // current icon has parent icon
-      Object.keys(aliases[name]).length === 1; // current icon doesn't have any changed properties from parent
-
-    return isAlias ? getComponentName(aliases[name].parent) : null;
-  }
-
-  private getComponentDeclaration({
-    data,
-    name,
-    collection,
-  }: { data: ExtendedIconifyIcon; name: string; collection: IconifyJSON }) {
-    const componentName = getComponentName(name);
-    return {
-      implementation: `export const ${componentName}=${
-        this.getComponentImplementation({
-          data,
-          name,
-          prefix: collection.prefix,
-        })
-      }`,
-      type:
-        `export declare const ${componentName}: (p?: SVGAttributes) => VNode`,
-    };
-  }
-
-  private getComponentImplementation({
-    data,
-    name,
-    prefix,
-  }: { data: ExtendedIconifyIcon; name: string; prefix: string }): string {
-    const defaultInlinedProps = {
+  private getImplementation(innerHTML: string, attributes: Record<string, string | number | boolean>): string {
+    const props = {
       'aria-hidden': true,
       'role': 'img',
-    };
-
-    const svg = iconToSVG(data);
-    const props = {
-      ...defaultInlinedProps,
-      innerHTML: this.replaceIds
-        ? replaceIDs(svg.body, prefix + name)
-        : svg.body,
-      ...svg.attributes,
+      innerHTML,
+      ...attributes,
     };
 
     const paramName = 'p';
     const attributesString = JSON.stringify(props).replace(
-      /}$/,
-      `,...${paramName}}`,
+        /}$/,
+        `,...${paramName}}`,
     );
-    return `${paramName}=>createElementVNode('svg', ${attributesString}, null, 16)`;
+
+    return `${paramName}=>createElementVNode('svg',${attributesString},null,16)`;
+  }
+
+  private getInnerHTML(data: ExtendedIconifyIcon, prefix: string, name: string) {
+    const svg = iconToSVG(data);
+
+    return this.replaceIds
+        ? replaceIDs(svg.body, prefix + name)
+        : svg.body;
+  }
+
+
+  private getAttributes(data: ExtendedIconifyIcon) {
+    return iconToSVG(data).attributes
   }
 }
