@@ -42,3 +42,12 @@ jobs:
           git commit -m 'docs: Update packages in readme'
           git push
           )
+
+      - run: |
+          git diff --exit-code deno.lock || (
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add deno.lock
+          git commit -m 'deps: update deno.lock'
+          git push
+          )
