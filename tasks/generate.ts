@@ -87,7 +87,7 @@ async function generate(prefix: string) {
 
     // README.md
     const content = await render(README_TEMPLATE, {
-      pkgName,
+      pkgName: `@iconify-prerendered/${pkgName}`,
       collection,
       sampleComponents: (collection.info?.samples || []).map(getComponentName),
     }, {
