@@ -3,7 +3,7 @@
   "remote": {},
   "npm": {
     "specifiers": {
-      "@iconify/json@latest": "@iconify/json@2.2.48",
+      "@iconify/json@latest": "@iconify/json@2.2.49",
       "@iconify/types@2.0.0": "@iconify/types@2.0.0",
       "@iconify/utils@2.0.2": "@iconify/utils@2.0.2"
     },
@@ -19,8 +19,8 @@
         "integrity": "sha512-CQkeV+oJxUazwjlHD0/3ZD08QWKuGQkhnrKo3e6ly5pd48VUpXbb77q0xMU4+vc2CkJnDS02Eq/M9ugyX20XZA==",
         "dependencies": {}
       },
-      "@iconify/json@2.2.48": {
-        "integrity": "sha512-UIx3Gja7Gdqs0ACvDIVhBUKCxOupMBsVcLwRDhIXskRxA/MZs7zNyoQM560ZHpQBcp2DklzvavjYro5tlifsIQ==",
+      "@iconify/json@2.2.49": {
+        "integrity": "sha512-s0KqXftC4jgxqXvihQWHadxX8tHe3HHdARgd32Y3otWEhGMBl/ZkneBvYFlYKkh1LEAKDJXkkV35U3nCDnBmBA==",
         "dependencies": {
           "@iconify/types": "@iconify/types@2.0.0",
           "pathe": "pathe@1.1.0"
