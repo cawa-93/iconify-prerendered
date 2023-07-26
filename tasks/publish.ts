@@ -12,7 +12,9 @@ if (!token) {
     );
   } else {
     console.error(
-      `NODE_AUTH_TOKEN is ${JSON.stringify(token)}. Forced to dry-run publishing`,
+      `NODE_AUTH_TOKEN is ${
+        JSON.stringify(token)
+      }. Forced to dry-run publishing`,
     );
   }
 }
@@ -27,6 +29,6 @@ for (const dirEntry of Deno.readDirSync(entry)) {
     access: 'public',
     token: token || 'dry-run-token-placeholder',
     dryRun: !token,
-    provenance: true
-});
+    provenance: true,
+  });
 }
