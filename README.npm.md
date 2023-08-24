@@ -7,7 +7,8 @@ component.
 
 - **Easy to use**
   - No plugins required! Compatible with any build tools.
-  - Designed for best compatibility with IDE auto-completion ([Demo](https://twitter.com/alex_kozack/status/1560608558127140865)).
+  - Designed for best compatibility with IDE auto-completion
+    ([Demo](https://twitter.com/alex_kozack/status/1560608558127140865)).
   - Zero dependencies.
   - SSR / SSG friendly.
   - TypeScript support.
@@ -42,22 +43,28 @@ That's all you need. No plugins, extra configs, IDE extensions or something
 else.
 
 ## Customizing icon default attributes
-By default, all icons have only two attributes: `role="img"` and `aria-hidden="true"`. While you are free to redefine these attributes or add new ones for each individual icon, you might want to apply certain attributes, such as `class` or `style`, to all icons within a set.
 
-To achieve this, you can re-export icons through a `new Proxy` and include default attributes
+By default, all icons have only two attributes: `role="img"` and
+`aria-hidden="true"`. While you are free to redefine these attributes or add new
+ones for each individual icon, you might want to apply certain attributes, such
+as `class` or `style`, to all icons within a set.
+
+To achieve this, you can re-export icons through a `new Proxy` and include
+default attributes
 
 ```javascript
-import * as defaultIcons from '<%= it.pkgName %>'
+import * as defaultIcons from '<%= it.pkgName %>';
 
 // accessing to icon through this Proxy will add additional attributes
 export const themedIcons = new Proxy({}, {
-    get(_, iconKey) {
-        return () => defaultIcons[iconKey]({
-            class: 'pre-defined-class',
-            // ... any other attributes
-        })
-    }
-})
+  get(_, iconKey) {
+    return () =>
+      defaultIcons[iconKey]({
+        class: 'pre-defined-class',
+        // ... any other attributes
+      });
+  },
+});
 ```
 
 See [full docs](https://github.com/cawa-93/iconify-prerendered/#readme) or
