@@ -71,12 +71,12 @@ By default, all icons have only two attributes: `role="img"` and `aria-hidden="t
 
 To achieve this, you can re-export icons through a `new Proxy` and include default attributes
 
-```javascript
+```typescript
 import * as defaultIcons from '@iconify-prerendered/vue-mdi'
 
 // accessing to icon through this Proxy will add additional attributes
-export const themedIcons = new Proxy({}, {
-    get(_, iconKey) {
+export const themedIcons = new Proxy({} as typeof defaultIcons, {
+    get(_, iconKey: keyof typeof defaultIcons) {
         return () => defaultIcons[iconKey]({
             class: 'pre-defined-class',
             // ... any other attributes
