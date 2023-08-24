@@ -9,9 +9,11 @@ for ease of use and high performance.
 
 - **Easy to use**
   - No plugins required! Compatible with any build tools.
+  - Designed for best compatibility with IDE auto-completion ([Demo](https://twitter.com/alex_kozack/status/1560608558127140865)).
   - Zero dependencies.
   - SSR / SSG friendly.
   - TypeScript support.
+  - Unified API across all icon sets.
 - **High performance**
   - Does not require any external resources like fonts, css, images.
   - The icon code is embedded in your bundle.
@@ -63,7 +65,6 @@ tree-shaken by your bundler.
 
 That's all you need. No plugins, extra configs, IDE extensions or something
 else.
-[It just works](https://twitter.com/alex_kozack/status/1560608558127140865).
 
 
 ## Customizing icon default attributes
