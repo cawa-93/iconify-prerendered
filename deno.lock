@@ -1,13 +1,12 @@
 {
-  "version": "2",
-  "remote": {},
-  "npm": {
+  "version": "3",
+  "packages": {
     "specifiers": {
-      "@iconify/json@latest": "@iconify/json@2.2.117",
-      "@iconify/types@2.0.0": "@iconify/types@2.0.0",
-      "@iconify/utils@2.0.2": "@iconify/utils@2.0.2"
+      "npm:@iconify/json@latest": "npm:@iconify/json@2.2.118",
+      "npm:@iconify/types@2.0.0": "npm:@iconify/types@2.0.0",
+      "npm:@iconify/utils@2.0.2": "npm:@iconify/utils@2.0.2"
     },
-    "packages": {
+    "npm": {
       "@antfu/install-pkg@0.1.1": {
         "integrity": "sha512-LyB/8+bSfa0DFGC06zpCEfs89/XoWZwws5ygEa5D+Xsm3OfI+aXQ86VgVG7Acyef+rSZ5HE7J8rrxzrQeM3PjQ==",
         "dependencies": {
@@ -19,8 +18,8 @@
         "integrity": "sha512-CQkeV+oJxUazwjlHD0/3ZD08QWKuGQkhnrKo3e6ly5pd48VUpXbb77q0xMU4+vc2CkJnDS02Eq/M9ugyX20XZA==",
         "dependencies": {}
       },
-      "@iconify/json@2.2.117": {
-        "integrity": "sha512-JJO8TzYJHq1geopQOOO2B1n5D0brls9RUcgaZ9+B8qpkJ9FZrwLv0gd50lySLqVEruhp8WJg1ujULispbVcOpw==",
+      "@iconify/json@2.2.118": {
+        "integrity": "sha512-nQvWSyimrU3fXtK0aDc6LkTc85H29jid1x3synkrscTpS8R0CkNe0qPh5ko2+SGrQKcyiaw7yKnEHp9Ar6HrgA==",
         "dependencies": {
           "@iconify/types": "@iconify/types@2.0.0",
           "pathe": "pathe@1.1.1"
@@ -183,5 +182,6 @@
         "dependencies": {}
       }
     }
-  }
+  },
+  "remote": {}
 }
