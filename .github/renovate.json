@@ -7,7 +7,6 @@
     ":disableDependencyDashboard",
     ":pinVersions",
     ":automergeMinor",
-    ":automergeBranch",
-    ":onlyNpm"
+    ":automergeBranch"
   ]
 }
