@@ -125,8 +125,8 @@ export const themedIcons = new Proxy({} as typeof defaultIcons, {
 | [Cryptocurrency Icons](https://icon-sets.iconify.design/cryptocurrency)                   | `@iconify-prerendered/vue-cryptocurrency`             | Nov 28, 2023  |
 | [css.gg](https://icon-sets.iconify.design/gg)                                             | `@iconify-prerendered/vue-gg`                         | Nov 28, 2023  |
 | [Dashicons](https://icon-sets.iconify.design/dashicons)                                   | `@iconify-prerendered/vue-dashicons`                  | Nov 28, 2023  |
-| [Devicon](https://icon-sets.iconify.design/devicon)                                       | `@iconify-prerendered/vue-devicon`                    | Nov 28, 2023  |
-| [Devicon Plain](https://icon-sets.iconify.design/devicon-plain)                           | `@iconify-prerendered/vue-devicon-plain`              | Nov 28, 2023  |
+| [Devicon](https://icon-sets.iconify.design/devicon)                                       | `@iconify-prerendered/vue-devicon`                    | Dec 4, 2023   |
+| [Devicon Plain](https://icon-sets.iconify.design/devicon-plain)                           | `@iconify-prerendered/vue-devicon-plain`              | Dec 4, 2023   |
 | [Elegant](https://icon-sets.iconify.design/et)                                            | `@iconify-prerendered/vue-et`                         | Nov 28, 2023  |
 | [Element Plus](https://icon-sets.iconify.design/ep)                                       | `@iconify-prerendered/vue-ep`                         | Nov 26, 2023  |
 | [Elusive Icons](https://icon-sets.iconify.design/el)                                      | `@iconify-prerendered/vue-el`                         | Nov 28, 2023  |
@@ -180,7 +180,7 @@ export const themedIcons = new Proxy({} as typeof defaultIcons, {
 | [Icalicons](https://icon-sets.iconify.design/il)                                          | `@iconify-prerendered/vue-il`                         | Nov 28, 2023  |
 | [IcoMoon Free](https://icon-sets.iconify.design/icomoon-free)                             | `@iconify-prerendered/vue-icomoon-free`               | Nov 28, 2023  |
 | [IconaMoon](https://icon-sets.iconify.design/iconamoon)                                   | `@iconify-prerendered/vue-iconamoon`                  | Nov 28, 2023  |
-| [Iconoir](https://icon-sets.iconify.design/iconoir)                                       | `@iconify-prerendered/vue-iconoir`                    | Nov 28, 2023  |
+| [Iconoir](https://icon-sets.iconify.design/iconoir)                                       | `@iconify-prerendered/vue-iconoir`                    | Dec 4, 2023   |
 | [IconPark](https://icon-sets.iconify.design/icon-park)                                    | `@iconify-prerendered/vue-icon-park`                  | Nov 26, 2023  |
 | [IconPark Outline](https://icon-sets.iconify.design/icon-park-outline)                    | `@iconify-prerendered/vue-icon-park-outline`          | Nov 28, 2023  |
 | [IconPark Solid](https://icon-sets.iconify.design/icon-park-solid)                        | `@iconify-prerendered/vue-icon-park-solid`            | Nov 28, 2023  |
@@ -209,7 +209,7 @@ export const themedIcons = new Proxy({} as typeof defaultIcons, {
 | [MingCute Icon](https://icon-sets.iconify.design/mingcute)                                | `@iconify-prerendered/vue-mingcute`                   | Nov 28, 2023  |
 | [Mono Icons](https://icon-sets.iconify.design/mi)                                         | `@iconify-prerendered/vue-mi`                         | Nov 28, 2023  |
 | [Mono Icons](https://icon-sets.iconify.design/mono-icons)                                 | `@iconify-prerendered/vue-mono-icons`                 | Nov 28, 2023  |
-| [Myna UI Icons](https://icon-sets.iconify.design/mynaui)                                  | `@iconify-prerendered/vue-mynaui`                     | Nov 28, 2023  |
+| [Myna UI Icons](https://icon-sets.iconify.design/mynaui)                                  | `@iconify-prerendered/vue-mynaui`                     | Dec 4, 2023   |
 | [Nimbus](https://icon-sets.iconify.design/nimbus)                                         | `@iconify-prerendered/vue-nimbus`                     | Nov 28, 2023  |
 | [Nonicons](https://icon-sets.iconify.design/nonicons)                                     | `@iconify-prerendered/vue-nonicons`                   | Nov 28, 2023  |
 | [Noto Emoji](https://icon-sets.iconify.design/noto)                                       | `@iconify-prerendered/vue-noto`                       | Nov 28, 2023  |
@@ -230,7 +230,7 @@ export const themedIcons = new Proxy({} as typeof defaultIcons, {
 | [Radix Icons](https://icon-sets.iconify.design/radix-icons)                               | `@iconify-prerendered/vue-radix-icons`                | Nov 28, 2023  |
 | [Raphael](https://icon-sets.iconify.design/raphael)                                       | `@iconify-prerendered/vue-raphael`                    | Nov 28, 2023  |
 | [Remix Icon](https://icon-sets.iconify.design/ri)                                         | `@iconify-prerendered/vue-ri`                         | Nov 30, 2023  |
-| [Simple Icons](https://icon-sets.iconify.design/simple-icons)                             | `@iconify-prerendered/vue-simple-icons`               | Nov 28, 2023  |
+| [Simple Icons](https://icon-sets.iconify.design/simple-icons)                             | `@iconify-prerendered/vue-simple-icons`               | Dec 4, 2023   |
 | [Simple line icons](https://icon-sets.iconify.design/simple-line-icons)                   | `@iconify-prerendered/vue-simple-line-icons`          | Nov 28, 2023  |
 | [Skill Icons](https://icon-sets.iconify.design/skill-icons)                               | `@iconify-prerendered/vue-skill-icons`                | Nov 28, 2023  |
 | [SmartIcons Glyph](https://icon-sets.iconify.design/si-glyph)                             | `@iconify-prerendered/vue-si-glyph`                   | Nov 28, 2023  |
