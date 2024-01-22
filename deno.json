@@ -7,14 +7,10 @@
     "publish": "deno run --allow-read --allow-env --allow-run --allow-write tasks/publish.ts"
   },
   "fmt": {
-    "files": {
-      "exclude": ["./generated/", "./benckmarks/generated/"]
-    },
-    "options": {
-      "singleQuote": true,
-      "indentWidth": 2,
-      "useTabs": false
-    }
+    "exclude": ["./generated/", "./benckmarks/generated/"],
+    "singleQuote": true,
+    "indentWidth": 2,
+    "useTabs": false
   },
   "lint": {
     "files": {
