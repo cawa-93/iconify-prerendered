@@ -35,7 +35,7 @@
           "@antfu/install-pkg": "@antfu/install-pkg@0.1.1",
           "@antfu/utils": "@antfu/utils@0.5.2",
           "@iconify/types": "@iconify/types@2.0.0",
-          "debug": "debug@4.3.5",
+          "debug": "debug@4.3.6",
           "kolorist": "kolorist@1.8.0",
           "local-pkg": "local-pkg@0.4.3"
         }
@@ -48,8 +48,8 @@
           "which": "which@2.0.2"
         }
       },
-      "debug@4.3.5": {
-        "integrity": "sha512-pt0bNEmneDIvdL1Xsd9oDQ/wrQRkXDT4AUWlNZNPKvW5x/jyO9VFXkJUP07vQ2upmw5PlaITaPKc31jK13V+jg==",
+      "debug@4.3.6": {
+        "integrity": "sha512-O/09Bd4Z1fBrU4VzkhFqVgpPzaGbw6Sm9FEkBT1A/YBXQFGuuSxa1dN2nxgxS34JmKXqYx8CZAwEVoJFImUXIg==",
         "dependencies": {
           "ms": "ms@2.1.2"
         }
