@@ -116,7 +116,7 @@ export const themedIcons = new Proxy({} as typeof defaultIcons, {
 | [Academicons](https://icon-sets.iconify.design/academicons)                               | `@iconify-prerendered/vue-academicons`                | Aug 4, 2024   |
 | [Akar Icons](https://icon-sets.iconify.design/akar-icons)                                 | `@iconify-prerendered/vue-akar-icons`                 | Aug 4, 2024   |
 | [Ant Design Icons](https://icon-sets.iconify.design/ant-design)                           | `@iconify-prerendered/vue-ant-design`                 | Apr 9, 2024   |
-| [Arcticons](https://icon-sets.iconify.design/arcticons)                                   | `@iconify-prerendered/vue-arcticons`                  | Aug 4, 2024   |
+| [Arcticons](https://icon-sets.iconify.design/arcticons)                                   | `@iconify-prerendered/vue-arcticons`                  | Aug 8, 2024   |
 | [Basil](https://icon-sets.iconify.design/basil)                                           | `@iconify-prerendered/vue-basil`                      | Aug 4, 2024   |
 | [Bitcoin Icons](https://icon-sets.iconify.design/bitcoin-icons)                           | `@iconify-prerendered/vue-bitcoin-icons`              | Aug 4, 2024   |
 | [Bootstrap Icons](https://icon-sets.iconify.design/bi)                                    | `@iconify-prerendered/vue-bi`                         | Jan 5, 2024   |
@@ -127,7 +127,7 @@ export const themedIcons = new Proxy({} as typeof defaultIcons, {
 | [Brandico](https://icon-sets.iconify.design/brandico)                                     | `@iconify-prerendered/vue-brandico`                   | Aug 4, 2024   |
 | [Bytesize Icons](https://icon-sets.iconify.design/bytesize)                               | `@iconify-prerendered/vue-bytesize`                   | Aug 4, 2024   |
 | [Carbon](https://icon-sets.iconify.design/carbon)                                         | `@iconify-prerendered/vue-carbon`                     | Jun 19, 2024  |
-| [Catppuccin Icons](https://icon-sets.iconify.design/catppuccin)                           | `@iconify-prerendered/vue-catppuccin`                 | Jul 17, 2024  |
+| [Catppuccin Icons](https://icon-sets.iconify.design/catppuccin)                           | `@iconify-prerendered/vue-catppuccin`                 | Aug 8, 2024   |
 | [Charm Icons](https://icon-sets.iconify.design/charm)                                     | `@iconify-prerendered/vue-charm`                      | Aug 4, 2024   |
 | [Circle Flags](https://icon-sets.iconify.design/circle-flags)                             | `@iconify-prerendered/vue-circle-flags`               | Jun 24, 2024  |
 | [Circum Icons](https://icon-sets.iconify.design/circum)                                   | `@iconify-prerendered/vue-circum`                     | Apr 22, 2024  |
@@ -225,8 +225,8 @@ export const themedIcons = new Proxy({} as typeof defaultIcons, {
 | [Material Design Icons](https://icon-sets.iconify.design/mdi)                             | `@iconify-prerendered/vue-mdi`                        | Jun 20, 2024  |
 | [Material Design Light](https://icon-sets.iconify.design/mdi-light)                       | `@iconify-prerendered/vue-mdi-light`                  | Aug 4, 2024   |
 | [Material Line Icons](https://icon-sets.iconify.design/line-md)                           | `@iconify-prerendered/vue-line-md`                    | Jun 20, 2024  |
-| [Material Symbols](https://icon-sets.iconify.design/material-symbols)                     | `@iconify-prerendered/vue-material-symbols`           | Aug 4, 2024   |
-| [Material Symbols Light](https://icon-sets.iconify.design/material-symbols-light)         | `@iconify-prerendered/vue-material-symbols-light`     | Aug 4, 2024   |
+| [Material Symbols](https://icon-sets.iconify.design/material-symbols)                     | `@iconify-prerendered/vue-material-symbols`           | Aug 8, 2024   |
+| [Material Symbols Light](https://icon-sets.iconify.design/material-symbols-light)         | `@iconify-prerendered/vue-material-symbols-light`     | Aug 8, 2024   |
 | [Medical Icons](https://icon-sets.iconify.design/medical-icon)                            | `@iconify-prerendered/vue-medical-icon`               | Aug 4, 2024   |
 | [Memory Icons](https://icon-sets.iconify.design/memory)                                   | `@iconify-prerendered/vue-memory`                     | Jan 2, 2024   |
 | [Meteocons](https://icon-sets.iconify.design/meteocons)                                   | `@iconify-prerendered/vue-meteocons`                  | Jul 1, 2024   |
