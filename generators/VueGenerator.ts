@@ -6,7 +6,7 @@ import {
   replaceIDs,
 } from '../npm-deps.ts';
 import { getComponentName } from '../utils/getComponentName.ts';
-import JSON5 from 'npm:json5@2.2.3'
+import JSON5 from 'npm:json5@2.2.3';
 
 export class VueGenerator {
   constructor(private replaceIds: boolean) {
@@ -31,6 +31,8 @@ export class VueGenerator {
         const attributes = this.getAttributes(data);
 
         const implementation = this.getImplementation(body, attributes);
+        console.log(implementation);
+        
 
         const namesSet = implToComponents.get(implementation) ||
           new Set<string>();
