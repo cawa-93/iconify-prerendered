@@ -13,7 +13,7 @@ export class VueGenerator {
 
   generate(collection: IconifyJSON) {
     let implementationOutput =
-      `/// <reference types="./index.d.ts" />\nimport {createElementVNode} from 'vue';\n`;
+      `/// <reference types="./index.d.ts" />\nimport {createElementVNode as h} from 'vue';\n`;
     let typesOutput = `import type {SVGAttributes, VNode} from 'vue';\n`;
 
     const implToComponents = new Map<string, Set<string>>();
@@ -84,7 +84,7 @@ export class VueGenerator {
       `,...${paramName}}`,
     );
 
-    return `${paramName}=>createElementVNode('svg',${attributesString},null,16)`;
+    return `${paramName}=>h('svg',${attributesString},null,16)`;
   }
 
   private getInnerHTML(
