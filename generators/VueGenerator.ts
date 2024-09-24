@@ -6,6 +6,7 @@ import {
   replaceIDs,
 } from '../npm-deps.ts';
 import { getComponentName } from '../utils/getComponentName.ts';
+import JSON5 from 'npm:json5@2.2.3'
 
 export class VueGenerator {
   constructor(private replaceIds: boolean) {
@@ -79,7 +80,7 @@ export class VueGenerator {
     };
 
     const paramName = 'p';
-    const attributesString = JSON.stringify(props).replace(
+    const attributesString = JSON5.stringify(props).replace(
       /}$/,
       `,...${paramName}}`,
     );
