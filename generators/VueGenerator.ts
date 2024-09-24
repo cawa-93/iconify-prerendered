@@ -31,8 +31,6 @@ export class VueGenerator {
         const attributes = this.getAttributes(data);
 
         const implementation = this.getImplementation(body, attributes);
-        console.log(implementation);
-        
 
         const namesSet = implToComponents.get(implementation) ||
           new Set<string>();
