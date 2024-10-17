@@ -220,7 +220,7 @@ export const themedIcons = new Proxy({} as typeof defaultIcons, {
 | [Line Awesome](https://icon-sets.iconify.design/la)                                       | `@iconify-prerendered/vue-la`                         | Aug 4, 2024   |
 | [Lineicons](https://icon-sets.iconify.design/lineicons)                                   | `@iconify-prerendered/vue-lineicons`                  | Oct 8, 2024   |
 | [Lsicon](https://icon-sets.iconify.design/lsicon)                                         | `@iconify-prerendered/vue-lsicon`                     | Oct 3, 2024   |
-| [Lucide](https://icon-sets.iconify.design/lucide)                                         | `@iconify-prerendered/vue-lucide`                     | Oct 14, 2024  |
+| [Lucide](https://icon-sets.iconify.design/lucide)                                         | `@iconify-prerendered/vue-lucide`                     | Oct 16, 2024  |
 | [Lucide Lab](https://icon-sets.iconify.design/lucide-lab)                                 | `@iconify-prerendered/vue-lucide-lab`                 | Aug 24, 2024  |
 | [Mage Icons](https://icon-sets.iconify.design/mage)                                       | `@iconify-prerendered/vue-mage`                       | Aug 4, 2024   |
 | [Majesticons](https://icon-sets.iconify.design/majesticons)                               | `@iconify-prerendered/vue-majesticons`                | Aug 4, 2024   |
@@ -294,7 +294,7 @@ export const themedIcons = new Proxy({} as typeof defaultIcons, {
 | [Weather Icons](https://icon-sets.iconify.design/wi)                                      | `@iconify-prerendered/vue-wi`                         | Aug 4, 2024   |
 | [Web Symbols Liga](https://icon-sets.iconify.design/websymbol)                            | `@iconify-prerendered/vue-websymbol`                  | Dec 11, 2023  |
 | [Web3 Icons](https://icon-sets.iconify.design/token)                                      | `@iconify-prerendered/vue-token`                      | Aug 20, 2024  |
-| [Web3 Icons Branded](https://icon-sets.iconify.design/token-branded)                      | `@iconify-prerendered/vue-token-branded`              | Aug 23, 2024  |
+| [Web3 Icons Branded](https://icon-sets.iconify.design/token-branded)                      | `@iconify-prerendered/vue-token-branded`              | Oct 16, 2024  |
 | [WebHostingHub Glyphs](https://icon-sets.iconify.design/whh)                              | `@iconify-prerendered/vue-whh`                        | Aug 4, 2024   |
 | [WeUI Icon](https://icon-sets.iconify.design/weui)                                        | `@iconify-prerendered/vue-weui`                       | Jun 20, 2024  |
 | [Zondicons](https://icon-sets.iconify.design/zondicons)                                   | `@iconify-prerendered/vue-zondicons`                  | Aug 4, 2024   |
