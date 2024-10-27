@@ -19,14 +19,14 @@
 
 # <%= it.collection.info?.name || it.collection.prefix %> components for Vue
 
-Designed for ease of use and high performance. Each icon in set is standalone
+Designed for ease of use and high performance. Each icon in set is a standalone
 component.
 
 ## Features
 
 - **Easy to use**
   - No plugins required! Compatible with any build tools.
-  - Designed for best compatibility with IDE auto-completion
+  - Designed for the best compatibility with IDE auto-completion
     ([Demo](https://twitter.com/alex_kozack/status/1560608558127140865)).
   - Zero dependencies.
   - SSR / SSG friendly.
@@ -55,8 +55,8 @@ import {
 </template>
 ```
 
-Only these three icons will be included in your bundle. All other icons may be
-tree-shaken by your bundler.
+Only these three icons will be included in your bundle. Your bundler may
+tree-shake all other icons.
 
 That's all you need. No plugins, extra configs, IDE extensions or something
 else.
@@ -65,8 +65,8 @@ else.
 
 By default, all icons have only two attributes: `role="img"` and
 `aria-hidden="true"`. While you are free to redefine these attributes or add new
-ones for each individual icon, you might want to apply certain attributes, such
-as `class` or `style`, to all icons within a set.
+ones for each icon, you might want to apply certain attributes, such as `class`
+or `style`, to all icons within a set.
 
 To achieve this, you can re-export icons through a `new Proxy` and include
 default attributes

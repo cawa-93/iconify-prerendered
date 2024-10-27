@@ -24,7 +24,7 @@ for ease of use and high performance.
 
 - **Easy to use**
   - No plugins required! Compatible with any build tools.
-  - Designed for best compatibility with IDE auto-completion
+  - Designed for the best compatibility with IDE auto-completion
     ([Demo](https://twitter.com/alex_kozack/status/1560608558127140865)).
   - Zero dependencies.
   - SSR / SSG friendly.
@@ -57,7 +57,7 @@ npm i @iconify-prerendered/vue-mdi
 
 ## Usage
 
-Just import icon-component from set like usual.
+Import icon-component from a set like usual.
 
 ```vue
 <script setup>
@@ -76,8 +76,8 @@ import { IconCardsHeart } from '@iconify-prerendered/vue-mdi';
 </template>
 ```
 
-Only these three icons will be included in your bundle. All other icons may be
-tree-shaken by your bundler.
+Only these three icons will be included in your bundle. Your bundler may
+tree-shake all other icons.
 
 That's all you need. No plugins, extra configs, IDE extensions or something
 else.
@@ -86,8 +86,8 @@ else.
 
 By default, all icons have only two attributes: `role="img"` and
 `aria-hidden="true"`. While you are free to redefine these attributes or add new
-ones for each individual icon, you might want to apply certain attributes, such
-as `class` or `style`, to all icons within a set.
+ones for each icon, you might want to apply certain attributes, such as `class`
+or `style`, to all icons within a set.
 
 To achieve this, you can re-export icons through a `new Proxy` and include
 default attributes
@@ -311,20 +311,21 @@ icon sets themselves are distributed under the license of their author.
 1. Install [Deno](https://deno.land/).
 2. Run `deno task generate` for generate all collections. Params:
    - `--version` or `-v` specify version base for generated packages. Optional.
-   - `--prefix` or `-p` specify with collection to generate. May be multiple
+   - `--prefix` or `-p` specify with a collection to generate. Maybe multiple
      times. Optional.
-   - `--no-replace-ids` disable replacing ids. Required for test case. Optional.
+   - `--no-replace-ids` disable replacing ids. Required for a test case.
+     Optional.
    - `--output` or `-o` directory to place generated files. Optional.
 3. Run `deno task test` for run all tests.
    [See more about test running](https://deno.land/manual@v1.30.1/basics/testing).
 
 ## Benchmarking
 
-You can benchmark two version of icon sets. To do that:
+You can benchmark two versions of icon sets. To do that:
 
 1. Generate _baseline_ icon set by command:
    `deno task generate -p=fluent-emoji -o=benckmarks/generated/baseline`
-2. Make any changes to generation process or whatever
+2. Make any changes to the generation process or whatever
 3. Generate _tested_ icon set by command:
    `deno task generate -p=fluent-emoji -o=benckmarks/generated/test`
 4. Run benchmark by `deno bench --allow-env`
