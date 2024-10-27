@@ -1,4 +1,6 @@
-> [!Important] This project is maintained by **developer from Ukraine** 🇺🇦
+> [!Important]
+>
+> This project is maintained by **developer from Ukraine** 🇺🇦
 >
 > Due to the ongoing war resulting from Russia's full-scale invasion of Ukraine,
 > I currently lack the time for the full development of this open-source
