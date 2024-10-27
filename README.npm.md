@@ -1,4 +1,5 @@
-> [!Important]
+> **Important**
+> 
 > This project is maintained by **developer from Ukraine** 🇺🇦
 >
 > Due to the ongoing war resulting from Russia's full-scale invasion of Ukraine,
