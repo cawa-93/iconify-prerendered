@@ -266,7 +266,7 @@ export const themedIcons = new Proxy({} as typeof defaultIcons, {
 | [Remix Icon](https://icon-sets.iconify.design/ri)                                         | `@iconify-prerendered/vue-ri`                         | Oct 23, 2024  |
 | [Rivet Icons](https://icon-sets.iconify.design/rivet-icons)                               | `@iconify-prerendered/vue-rivet-icons`                | Jun 20, 2024  |
 | [Sargam Icons](https://icon-sets.iconify.design/si)                                       | `@iconify-prerendered/vue-si`                         | Oct 8, 2024   |
-| [Simple Icons](https://icon-sets.iconify.design/simple-icons)                             | `@iconify-prerendered/vue-simple-icons`               | Oct 20, 2024  |
+| [Simple Icons](https://icon-sets.iconify.design/simple-icons)                             | `@iconify-prerendered/vue-simple-icons`               | Oct 28, 2024  |
 | [Simple line icons](https://icon-sets.iconify.design/simple-line-icons)                   | `@iconify-prerendered/vue-simple-line-icons`          | Aug 4, 2024   |
 | [Skill Icons](https://icon-sets.iconify.design/skill-icons)                               | `@iconify-prerendered/vue-skill-icons`                | Jul 17, 2024  |
 | [SmartIcons Glyph](https://icon-sets.iconify.design/si-glyph)                             | `@iconify-prerendered/vue-si-glyph`                   | Aug 4, 2024   |
