@@ -2,7 +2,7 @@
   "version": "3",
   "packages": {
     "specifiers": {
-      "npm:@iconify/json@latest": "npm:@iconify/json@2.2.268",
+      "npm:@iconify/json@latest": "npm:@iconify/json@2.2.269",
       "npm:@iconify/types@2.0.0": "npm:@iconify/types@2.0.0",
       "npm:@iconify/utils@2.0.2": "npm:@iconify/utils@2.0.2"
     },
@@ -18,8 +18,8 @@
         "integrity": "sha512-CQkeV+oJxUazwjlHD0/3ZD08QWKuGQkhnrKo3e6ly5pd48VUpXbb77q0xMU4+vc2CkJnDS02Eq/M9ugyX20XZA==",
         "dependencies": {}
       },
-      "@iconify/json@2.2.268": {
-        "integrity": "sha512-iGeNYAX81qJAMjQaOV3dSk1ybcPHTiRI8fppZALqJB6xrRrAiDev+Lzuua4DjGv7xHAHvADbeUlNXm/1eLRubQ==",
+      "@iconify/json@2.2.269": {
+        "integrity": "sha512-ouyDWNdmdtwhmIjZt1+wKj8nCq/V8PrT748exRnlXG//Hb8eLc/K4q4nKiO18gQNnwESMPQDGlrk5aTZaANoHg==",
         "dependencies": {
           "@iconify/types": "@iconify/types@2.0.0",
           "pathe": "pathe@1.1.2"
@@ -40,8 +40,8 @@
           "local-pkg": "local-pkg@0.4.3"
         }
       },
-      "cross-spawn@7.0.3": {
-        "integrity": "sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==",
+      "cross-spawn@7.0.4": {
+        "integrity": "sha512-9KdyVPPtLHjPAD7tcuzSFs64UfHlLJt7U6qP4/bFVLyjLceyizj6s6jO6YBaV5d0G7g/9KnY/dOpLR4Rcg8YDg==",
         "dependencies": {
           "path-key": "path-key@3.1.1",
           "shebang-command": "shebang-command@2.0.0",
@@ -57,7 +57,7 @@
       "execa@5.1.1": {
         "integrity": "sha512-8uSpZZocAZRBAPIEINJj3Lo9HyGitllczc27Eh5YYojjMFMn8yHMDMaUHE2Jqfq05D/wucwI4JGURyXt1vchyg==",
         "dependencies": {
-          "cross-spawn": "cross-spawn@7.0.3",
+          "cross-spawn": "cross-spawn@7.0.4",
           "get-stream": "get-stream@6.0.1",
           "human-signals": "human-signals@2.1.0",
           "is-stream": "is-stream@2.0.1",
