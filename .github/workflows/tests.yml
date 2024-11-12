@@ -12,5 +12,5 @@ jobs:
       - run: deno task generate --no-replace-ids
       - run: deno task test
       - run: deno lint
-      - run: deno fmt --check
+      - run: deno fmt --check --ext=ts
 
