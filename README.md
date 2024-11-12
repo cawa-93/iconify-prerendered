@@ -1,19 +1,9 @@
 > [!Important]
+> This project is maintained by developer from Ukraine 🇺🇦
+> 
+> I do my best, but due to Russia's ongoing full-scale invasion of Ukraine, I barely have the energy to support open source projects.
 >
-> This project is maintained by **developer from Ukraine** 🇺🇦
->
-> Due to the ongoing war resulting from Russia's full-scale invasion of Ukraine,
-> I currently lack the time for the full development of this open-source
-> project. My primary focus is on ensuring the well-being of myself and my
-> family.
->
-> I'll prioritize and review all new contributions as soon as possible.
->
-> If you can, please consider
-> [supporting Ukraine](https://stand-with-ukraine.pp.ua/) or
-> [me personally](https://www.buymeacoffee.com/kozack).
->
-> Thank you for your understanding and support.
+> If my work has been useful to you, please consider [supporting Ukraine](https://stand-with-ukraine.pp.ua/) or [me personally](https://send.monobank.ua/6SmojkkR9i). Even your **$1** has an impact!
 
 ---
 
