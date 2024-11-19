@@ -40,8 +40,8 @@
           "local-pkg": "local-pkg@0.4.3"
         }
       },
-      "cross-spawn@7.0.5": {
-        "integrity": "sha512-ZVJrKKYunU38/76t0RMOulHOnUcbU9GbpWKAOZ0mhjr7CX6FVrH+4FrAapSOekrgFQ3f/8gwMEuIft0aKq6Hug==",
+      "cross-spawn@7.0.6": {
+        "integrity": "sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==",
         "dependencies": {
           "path-key": "path-key@3.1.1",
           "shebang-command": "shebang-command@2.0.0",
@@ -57,7 +57,7 @@
       "execa@5.1.1": {
         "integrity": "sha512-8uSpZZocAZRBAPIEINJj3Lo9HyGitllczc27Eh5YYojjMFMn8yHMDMaUHE2Jqfq05D/wucwI4JGURyXt1vchyg==",
         "dependencies": {
-          "cross-spawn": "cross-spawn@7.0.5",
+          "cross-spawn": "cross-spawn@7.0.6",
           "get-stream": "get-stream@6.0.1",
           "human-signals": "human-signals@2.1.0",
           "is-stream": "is-stream@2.0.1",
