@@ -168,8 +168,8 @@ export const themedIcons = new Proxy({} as typeof defaultIcons, {
 | [Fluent Emoji Flat](https://icon-sets.iconify.design/fluent-emoji-flat)                   | `@iconify-prerendered/vue-fluent-emoji-flat`          | Oct 3, 2024   |
 | [Fluent Emoji High Contrast](https://icon-sets.iconify.design/fluent-emoji-high-contrast) | `@iconify-prerendered/vue-fluent-emoji-high-contrast` | Feb 2, 2025   |
 | [Fluent UI MDL2](https://icon-sets.iconify.design/fluent-mdl2)                            | `@iconify-prerendered/vue-fluent-mdl2`                | Apr 7, 2024   |
-| [Fluent UI System Color Icons](https://icon-sets.iconify.design/fluent-color)             | `@iconify-prerendered/vue-fluent-color`               | Mar 31, 2025  |
-| [Fluent UI System Icons](https://icon-sets.iconify.design/fluent)                         | `@iconify-prerendered/vue-fluent`                     | Apr 2, 2025   |
+| [Fluent UI System Color Icons](https://icon-sets.iconify.design/fluent-color)             | `@iconify-prerendered/vue-fluent-color`               | Apr 12, 2025  |
+| [Fluent UI System Icons](https://icon-sets.iconify.design/fluent)                         | `@iconify-prerendered/vue-fluent`                     | Apr 12, 2025  |
 | [Font Awesome 4](https://icon-sets.iconify.design/fa)                                     | `@iconify-prerendered/vue-fa`                         | Dec 11, 2023  |
 | [Font Awesome 5 Brands](https://icon-sets.iconify.design/fa-brands)                       | `@iconify-prerendered/vue-fa-brands`                  | Aug 4, 2024   |
 | [Font Awesome 5 Regular](https://icon-sets.iconify.design/fa-regular)                     | `@iconify-prerendered/vue-fa-regular`                 | Aug 4, 2024   |
@@ -229,9 +229,9 @@ export const themedIcons = new Proxy({} as typeof defaultIcons, {
 | [Material Design Icons](https://icon-sets.iconify.design/mdi)                             | `@iconify-prerendered/vue-mdi`                        | Jan 20, 2025  |
 | [Material Design Light](https://icon-sets.iconify.design/mdi-light)                       | `@iconify-prerendered/vue-mdi-light`                  | Aug 4, 2024   |
 | [Material Icon Theme](https://icon-sets.iconify.design/material-icon-theme)               | `@iconify-prerendered/vue-material-icon-theme`        | Apr 9, 2025   |
-| [Material Line Icons](https://icon-sets.iconify.design/line-md)                           | `@iconify-prerendered/vue-line-md`                    | Apr 9, 2025   |
-| [Material Symbols](https://icon-sets.iconify.design/material-symbols)                     | `@iconify-prerendered/vue-material-symbols`           | Apr 9, 2025   |
-| [Material Symbols Light](https://icon-sets.iconify.design/material-symbols-light)         | `@iconify-prerendered/vue-material-symbols-light`     | Apr 9, 2025   |
+| [Material Line Icons](https://icon-sets.iconify.design/line-md)                           | `@iconify-prerendered/vue-line-md`                    | Apr 12, 2025  |
+| [Material Symbols](https://icon-sets.iconify.design/material-symbols)                     | `@iconify-prerendered/vue-material-symbols`           | Apr 12, 2025  |
+| [Material Symbols Light](https://icon-sets.iconify.design/material-symbols-light)         | `@iconify-prerendered/vue-material-symbols-light`     | Apr 12, 2025  |
 | [Medical Icons](https://icon-sets.iconify.design/medical-icon)                            | `@iconify-prerendered/vue-medical-icon`               | Aug 4, 2024   |
 | [Memory Icons](https://icon-sets.iconify.design/memory)                                   | `@iconify-prerendered/vue-memory`                     | Jan 2, 2024   |
 | [Meteocons](https://icon-sets.iconify.design/meteocons)                                   | `@iconify-prerendered/vue-meteocons`                  | Jul 1, 2024   |
@@ -244,7 +244,7 @@ export const themedIcons = new Proxy({} as typeof defaultIcons, {
 | [Nonicons](https://icon-sets.iconify.design/nonicons)                                     | `@iconify-prerendered/vue-nonicons`                   | Dec 16, 2024  |
 | [Noto Emoji](https://icon-sets.iconify.design/noto)                                       | `@iconify-prerendered/vue-noto`                       | Oct 7, 2024   |
 | [Noto Emoji (v1)](https://icon-sets.iconify.design/noto-v1)                               | `@iconify-prerendered/vue-noto-v1`                    | Aug 4, 2024   |
-| [NRK Core Icons](https://icon-sets.iconify.design/nrk)                                    | `@iconify-prerendered/vue-nrk`                        | Nov 14, 2024  |
+| [NRK Core Icons](https://icon-sets.iconify.design/nrk)                                    | `@iconify-prerendered/vue-nrk`                        | Apr 12, 2025  |
 | [Octicons](https://icon-sets.iconify.design/octicon)                                      | `@iconify-prerendered/vue-octicon`                    | Feb 20, 2025  |
 | [OOUI](https://icon-sets.iconify.design/ooui)                                             | `@iconify-prerendered/vue-ooui`                       | Jan 23, 2025  |
 | [Open Iconic](https://icon-sets.iconify.design/oi)                                        | `@iconify-prerendered/vue-oi`                         | Aug 4, 2024   |
