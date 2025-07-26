@@ -2,7 +2,7 @@
   "version": "3",
   "packages": {
     "specifiers": {
-      "npm:@iconify/json@latest": "npm:@iconify/json@2.2.362",
+      "npm:@iconify/json@latest": "npm:@iconify/json@2.2.363",
       "npm:@iconify/types@2.0.0": "npm:@iconify/types@2.0.0",
       "npm:@iconify/utils@2.0.2": "npm:@iconify/utils@2.0.2"
     },
@@ -18,8 +18,8 @@
         "integrity": "sha512-CQkeV+oJxUazwjlHD0/3ZD08QWKuGQkhnrKo3e6ly5pd48VUpXbb77q0xMU4+vc2CkJnDS02Eq/M9ugyX20XZA==",
         "dependencies": {}
       },
-      "@iconify/json@2.2.362": {
-        "integrity": "sha512-Xr0aGINCS453Bp3zKgp30H8FtT2T4lTqB1T9QVHD3ougPgKjfuQM3ij08mY06+4HkVFdllCuReEilo32p7yVlQ==",
+      "@iconify/json@2.2.363": {
+        "integrity": "sha512-iSNBti18BhOizJSZCQr/1Mqp9kyqncQfSUElkScsQ0KyLNU2XUNuQ93JAMYtqJbtqtdjjWKidCJu9yfksIQmxA==",
         "dependencies": {
           "@iconify/types": "@iconify/types@2.0.0",
           "pathe": "pathe@1.1.2"
