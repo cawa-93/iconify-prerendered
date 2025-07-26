@@ -138,12 +138,12 @@ export const themedIcons = new Proxy({} as typeof defaultIcons, {
 | [Cryptocurrency Icons](https://icon-sets.iconify.design/cryptocurrency)                   | `@iconify-prerendered/vue-cryptocurrency`             | Aug 4, 2024   |
 | [css.gg](https://icon-sets.iconify.design/gg)                                             | `@iconify-prerendered/vue-gg`                         | Aug 4, 2024   |
 | [Cuida Icons](https://icon-sets.iconify.design/cuida)                                     | `@iconify-prerendered/vue-cuida`                      | Jul 23, 2025  |
-| [Custom Brand Icons](https://icon-sets.iconify.design/cbi)                                | `@iconify-prerendered/vue-cbi`                        | Jun 12, 2025  |
+| [Custom Brand Icons](https://icon-sets.iconify.design/cbi)                                | `@iconify-prerendered/vue-cbi`                        | Jul 26, 2025  |
 | [Cyber color icons](https://icon-sets.iconify.design/streamline-cyber-color)              | `@iconify-prerendered/vue-streamline-cyber-color`     | Jun 2, 2025   |
 | [Cyber free icons](https://icon-sets.iconify.design/streamline-cyber)                     | `@iconify-prerendered/vue-streamline-cyber`           | May 27, 2025  |
 | [Dashicons](https://icon-sets.iconify.design/dashicons)                                   | `@iconify-prerendered/vue-dashicons`                  | May 27, 2024  |
-| [Devicon](https://icon-sets.iconify.design/devicon)                                       | `@iconify-prerendered/vue-devicon`                    | Jul 23, 2025  |
-| [Devicon Plain](https://icon-sets.iconify.design/devicon-plain)                           | `@iconify-prerendered/vue-devicon-plain`              | Jul 23, 2025  |
+| [Devicon](https://icon-sets.iconify.design/devicon)                                       | `@iconify-prerendered/vue-devicon`                    | Jul 26, 2025  |
+| [Devicon Plain](https://icon-sets.iconify.design/devicon-plain)                           | `@iconify-prerendered/vue-devicon-plain`              | Jul 26, 2025  |
 | [Dinkie Icons](https://icon-sets.iconify.design/dinkie-icons)                             | `@iconify-prerendered/vue-dinkie-icons`               | Jun 2, 2025   |
 | [Duoicons](https://icon-sets.iconify.design/duo-icons)                                    | `@iconify-prerendered/vue-duo-icons`                  | Sep 28, 2024  |
 | [Elegant](https://icon-sets.iconify.design/et)                                            | `@iconify-prerendered/vue-et`                         | Aug 4, 2024   |
@@ -174,7 +174,7 @@ export const themedIcons = new Proxy({} as typeof defaultIcons, {
 | [Fluent Emoji High Contrast](https://icon-sets.iconify.design/fluent-emoji-high-contrast) | `@iconify-prerendered/vue-fluent-emoji-high-contrast` | Feb 2, 2025   |
 | [Fluent UI MDL2](https://icon-sets.iconify.design/fluent-mdl2)                            | `@iconify-prerendered/vue-fluent-mdl2`                | Apr 7, 2024   |
 | [Fluent UI System Color Icons](https://icon-sets.iconify.design/fluent-color)             | `@iconify-prerendered/vue-fluent-color`               | Jun 18, 2025  |
-| [Fluent UI System Icons](https://icon-sets.iconify.design/fluent)                         | `@iconify-prerendered/vue-fluent`                     | Jul 14, 2025  |
+| [Fluent UI System Icons](https://icon-sets.iconify.design/fluent)                         | `@iconify-prerendered/vue-fluent`                     | Jul 26, 2025  |
 | [Font Awesome 4](https://icon-sets.iconify.design/fa)                                     | `@iconify-prerendered/vue-fa`                         | Dec 11, 2023  |
 | [Font Awesome 5 Brands](https://icon-sets.iconify.design/fa-brands)                       | `@iconify-prerendered/vue-fa-brands`                  | Aug 4, 2024   |
 | [Font Awesome 5 Regular](https://icon-sets.iconify.design/fa-regular)                     | `@iconify-prerendered/vue-fa-regular`                 | Aug 4, 2024   |
@@ -257,7 +257,7 @@ export const themedIcons = new Proxy({} as typeof defaultIcons, {
 | [Noto Emoji](https://icon-sets.iconify.design/noto)                                       | `@iconify-prerendered/vue-noto`                       | Oct 7, 2024   |
 | [Noto Emoji (v1)](https://icon-sets.iconify.design/noto-v1)                               | `@iconify-prerendered/vue-noto-v1`                    | Aug 4, 2024   |
 | [NRK Core Icons](https://icon-sets.iconify.design/nrk)                                    | `@iconify-prerendered/vue-nrk`                        | Jun 24, 2025  |
-| [Octicons](https://icon-sets.iconify.design/octicon)                                      | `@iconify-prerendered/vue-octicon`                    | Jul 20, 2025  |
+| [Octicons](https://icon-sets.iconify.design/octicon)                                      | `@iconify-prerendered/vue-octicon`                    | Jul 26, 2025  |
 | [OOUI](https://icon-sets.iconify.design/ooui)                                             | `@iconify-prerendered/vue-ooui`                       | May 14, 2025  |
 | [Open Iconic](https://icon-sets.iconify.design/oi)                                        | `@iconify-prerendered/vue-oi`                         | Aug 4, 2024   |
 | [OpenMoji](https://icon-sets.iconify.design/openmoji)                                     | `@iconify-prerendered/vue-openmoji`                   | May 11, 2025  |
@@ -285,6 +285,7 @@ export const themedIcons = new Proxy({} as typeof defaultIcons, {
 | [Sargam Icons](https://icon-sets.iconify.design/si)                                       | `@iconify-prerendered/vue-si`                         | Oct 8, 2024   |
 | [Sharp color icons](https://icon-sets.iconify.design/streamline-sharp-color)              | `@iconify-prerendered/vue-streamline-sharp-color`     | Jun 2, 2025   |
 | [Sharp free icons](https://icon-sets.iconify.design/streamline-sharp)                     | `@iconify-prerendered/vue-streamline-sharp`           | Jun 2, 2025   |
+| [SidekickIcons](https://icon-sets.iconify.design/sidekickicons)                           | `@iconify-prerendered/vue-sidekickicons`              | Jul 26, 2025  |
 | [Siemens Industrial Experience Icons](https://icon-sets.iconify.design/ix)                | `@iconify-prerendered/vue-ix`                         | Jun 15, 2025  |
 | [Simple Icons](https://icon-sets.iconify.design/simple-icons)                             | `@iconify-prerendered/vue-simple-icons`               | Jul 20, 2025  |
 | [Simple line icons](https://icon-sets.iconify.design/simple-line-icons)                   | `@iconify-prerendered/vue-simple-line-icons`          | Aug 4, 2024   |
