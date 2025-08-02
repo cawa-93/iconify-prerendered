@@ -163,7 +163,7 @@ export const themedIcons = new Proxy({} as typeof defaultIcons, {
 | [File Icons](https://icon-sets.iconify.design/file-icons)                                 | `@iconify-prerendered/vue-file-icons`                 | Jul 17, 2024  |
 | [Firefox OS Emoji](https://icon-sets.iconify.design/fxemoji)                              | `@iconify-prerendered/vue-fxemoji`                    | Aug 4, 2024   |
 | [Flag Icons](https://icon-sets.iconify.design/flag)                                       | `@iconify-prerendered/vue-flag`                       | May 30, 2025  |
-| [Flagpack](https://icon-sets.iconify.design/flagpack)                                     | `@iconify-prerendered/vue-flagpack`                   | Aug 4, 2024   |
+| [Flagpack](https://icon-sets.iconify.design/flagpack)                                     | `@iconify-prerendered/vue-flagpack`                   | Aug 2, 2025   |
 | [Flat Color Icons](https://icon-sets.iconify.design/flat-color-icons)                     | `@iconify-prerendered/vue-flat-color-icons`           | Aug 4, 2024   |
 | [Flat UI Icons](https://icon-sets.iconify.design/flat-ui)                                 | `@iconify-prerendered/vue-flat-ui`                    | Aug 4, 2024   |
 | [Flex color icons](https://icon-sets.iconify.design/streamline-flex-color)                | `@iconify-prerendered/vue-streamline-flex-color`      | Jun 2, 2025   |
@@ -209,7 +209,7 @@ export const themedIcons = new Proxy({} as typeof defaultIcons, {
 | [HeroIcons v1 Outline](https://icon-sets.iconify.design/heroicons-outline)                | `@iconify-prerendered/vue-heroicons-outline`          | Aug 4, 2024   |
 | [HeroIcons v1 Solid](https://icon-sets.iconify.design/heroicons-solid)                    | `@iconify-prerendered/vue-heroicons-solid`            | Aug 4, 2024   |
 | [Huge Icons](https://icon-sets.iconify.design/hugeicons)                                  | `@iconify-prerendered/vue-hugeicons`                  | Jul 10, 2025  |
-| [Humbleicons](https://icon-sets.iconify.design/humbleicons)                               | `@iconify-prerendered/vue-humbleicons`                | Jun 19, 2025  |
+| [Humbleicons](https://icon-sets.iconify.design/humbleicons)                               | `@iconify-prerendered/vue-humbleicons`                | Aug 2, 2025   |
 | [Icalicons](https://icon-sets.iconify.design/il)                                          | `@iconify-prerendered/vue-il`                         | Dec 11, 2023  |
 | [IcoMoon Free](https://icon-sets.iconify.design/icomoon-free)                             | `@iconify-prerendered/vue-icomoon-free`               | Aug 4, 2024   |
 | [IconaMoon](https://icon-sets.iconify.design/iconamoon)                                   | `@iconify-prerendered/vue-iconamoon`                  | Aug 4, 2024   |
@@ -230,7 +230,7 @@ export const themedIcons = new Proxy({} as typeof defaultIcons, {
 | [Lineicons](https://icon-sets.iconify.design/lineicons)                                   | `@iconify-prerendered/vue-lineicons`                  | Oct 26, 2024  |
 | [Logos free icons](https://icon-sets.iconify.design/streamline-logos)                     | `@iconify-prerendered/vue-streamline-logos`           | Jun 2, 2025   |
 | [Lsicon](https://icon-sets.iconify.design/lsicon)                                         | `@iconify-prerendered/vue-lsicon`                     | Oct 3, 2024   |
-| [Lucide](https://icon-sets.iconify.design/lucide)                                         | `@iconify-prerendered/vue-lucide`                     | Jul 30, 2025  |
+| [Lucide](https://icon-sets.iconify.design/lucide)                                         | `@iconify-prerendered/vue-lucide`                     | Aug 2, 2025   |
 | [Lucide Lab](https://icon-sets.iconify.design/lucide-lab)                                 | `@iconify-prerendered/vue-lucide-lab`                 | Nov 9, 2024   |
 | [Mage Icons](https://icon-sets.iconify.design/mage)                                       | `@iconify-prerendered/vue-mage`                       | Aug 4, 2024   |
 | [Majesticons](https://icon-sets.iconify.design/majesticons)                               | `@iconify-prerendered/vue-majesticons`                | Aug 4, 2024   |
@@ -275,7 +275,7 @@ export const themedIcons = new Proxy({} as typeof defaultIcons, {
 | [Plump free icons](https://icon-sets.iconify.design/streamline-plump)                     | `@iconify-prerendered/vue-streamline-plump`           | Jun 2, 2025   |
 | [PrestaShop Icons](https://icon-sets.iconify.design/ps)                                   | `@iconify-prerendered/vue-ps`                         | Aug 4, 2024   |
 | [Prime Icons](https://icon-sets.iconify.design/prime)                                     | `@iconify-prerendered/vue-prime`                      | May 9, 2024   |
-| [ProIcons](https://icon-sets.iconify.design/proicons)                                     | `@iconify-prerendered/vue-proicons`                   | May 5, 2025   |
+| [ProIcons](https://icon-sets.iconify.design/proicons)                                     | `@iconify-prerendered/vue-proicons`                   | Aug 2, 2025   |
 | [Qlementine Icons](https://icon-sets.iconify.design/qlementine-icons)                     | `@iconify-prerendered/vue-qlementine-icons`           | Jun 24, 2025  |
 | [Quill Icons](https://icon-sets.iconify.design/quill)                                     | `@iconify-prerendered/vue-quill`                      | Aug 4, 2024   |
 | [Radix Icons](https://icon-sets.iconify.design/radix-icons)                               | `@iconify-prerendered/vue-radix-icons`                | Aug 4, 2024   |
