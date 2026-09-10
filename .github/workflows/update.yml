@@ -25,10 +25,10 @@ jobs:
     needs: [ tests ]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: denoland/setup-deno@v1
+      - uses: actions/checkout@v4.4.0
+      - uses: denoland/setup-deno@v1.5.2
         with:
-          deno-version: v1.x
+          deno-version: 1.46.3
 
       # Publish new versions
       - run: deno task generate
