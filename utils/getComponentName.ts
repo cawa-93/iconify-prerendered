@@ -17,7 +17,12 @@ export function getComponentName(iconName: string) {
   }
 
   let name = capitalize(
-    camelize(`icon${iconName.startsWith('-') ? iconName : `-${iconName}`}`),
+    camelize(
+      `icon${iconName.startsWith('-') ? iconName : `-${iconName}`}`.replace(
+        /-(\d)/g,
+        'Dash$1',
+      ),
+    ),
   );
   if (name.endsWith('-')) {
     name = name.replace(/-$/, 'Minus');
